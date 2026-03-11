@@ -1,11 +1,247 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import resources from '../data/resources.json';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const categories = ['全部', ...new Set(resources.map((item) => item.category))];
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JayYu 资源导航</title>
+    <meta name="description" content="收录常用工具、VPS、域名、学术资源和程序员网站。" />
+    <style>
+      :root {
+        --bg: #0b1020;
+        --panel: #121a2b;
+        --panel-2: #18233a;
+        --text: #e9eefb;
+        --muted: #9fb0d1;
+        --line: #26314d;
+        --accent: #7aa2ff;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC",
+          "Segoe UI", sans-serif;
+        background: linear-gradient(180deg, #0b1020 0%, #0d1426 100%);
+        color: var(--text);
+      }
+
+      .wrap {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 40px 20px 80px;
+      }
+
+      .hero {
+        margin-bottom: 28px;
+      }
+
+      h1 {
+        font-size: 40px;
+        margin: 0 0 12px;
+      }
+
+      .sub {
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.7;
+        max-width: 760px;
+      }
+
+      .toolbar {
+        display: grid;
+        gap: 16px;
+        margin: 28px 0;
+      }
+
+      .search {
+        width: 100%;
+        padding: 14px 16px;
+        border-radius: 14px;
+        border: 1px solid var(--line);
+        background: var(--panel);
+        color: var(--text);
+        font-size: 16px;
+      }
+
+      .filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .filter {
+        border: 1px solid var(--line);
+        background: var(--panel);
+        color: var(--text);
+        border-radius: 999px;
+        padding: 10px 14px;
+        cursor: pointer;
+      }
+
+      .filter.active {
+        background: var(--accent);
+        color: #08111f;
+        border-color: var(--accent);
+        font-weight: 700;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 16px;
+      }
+
+      .card {
+        background: rgba(18, 26, 43, 0.95);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 18px;
+      }
+
+      .card h2 {
+        margin: 0 0 10px;
+        font-size: 20px;
+      }
+
+      .card a {
+        color: var(--text);
+        text-decoration: none;
+      }
+
+      .card a:hover {
+        color: var(--accent);
+      }
+
+      .meta {
+        color: var(--muted);
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+
+      .summary {
+        line-height: 1.7;
+        color: #d8e0f4;
+        margin-bottom: 12px;
+      }
+
+      .note {
+        font-size: 14px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 12px;
+      }
+
+      .tag {
+        font-size: 12px;
+        border-radius: 999px;
+        padding: 6px 10px;
+        background: var(--panel-2);
+        border: 1px solid var(--line);
+        color: #cfe0ff;
+      }
+
+      footer {
+        margin-top: 40px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <h1>JayYu 资源导航</h1>
+        <p class="sub">
+          收录我常用的工具、VPS、域名服务、学术资源和程序员网站，
+          并逐步补充使用心得、避坑记录和轻评测。
+        </p>
+      </section>
+
+      <section class="toolbar">
+        <input id="search" class="search" type="text" placeholder="搜索资源、标签、分类..." />
+
+        <div class="filters">
+          {categories.map((category) => (
+            <button
+              class={`filter ${category === '全部' ? 'active' : ''}`}
+              data-filter={category}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+      </section>
+
+      <section id="grid" class="grid">
+        {resources.map((item) => (
+          <article
+            class="card"
+            data-category={item.category}
+            data-search={`${item.title} ${item.category} ${item.summary} ${item.tags.join(' ')} ${item.note}`.toLowerCase()}
+          >
+            <h2>
+              <a href={item.url} target="_blank" rel="noreferrer">{item.title}</a>
+            </h2>
+            <div class="meta">{item.category}</div>
+            <div class="summary">{item.summary}</div>
+            <div class="note">心得：{item.note}</div>
+            <div class="tags">
+              {item.tags.map((tag) => <span class="tag">{tag}</span>)}
+            </div>
+          </article>
+        ))}
+      </section>
+
+      <footer>
+        © 2026 JayYu · 持续更新中
+      </footer>
+    </main>
+
+    <script>
+      const input = document.getElementById('search');
+      const buttons = Array.from(document.querySelectorAll('.filter'));
+      const cards = Array.from(document.querySelectorAll('.card'));
+
+      let activeCategory = '全部';
+
+      function applyFilters() {
+        const keyword = (input.value || '').trim().toLowerCase();
+
+        cards.forEach((card) => {
+          const category = card.dataset.category || '';
+          const searchText = card.dataset.search || '';
+
+          const matchCategory =
+            activeCategory === '全部' || category === activeCategory;
+          const matchKeyword =
+            keyword === '' || searchText.includes(keyword);
+
+          card.style.display = matchCategory && matchKeyword ? 'block' : 'none';
+        });
+      }
+
+      buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+          buttons.forEach((b) => b.classList.remove('active'));
+          button.classList.add('active');
+          activeCategory = button.dataset.filter || '全部';
+          applyFilters();
+        });
+      });
+
+      input.addEventListener('input', applyFilters);
+    </script>
+  </body>
+</html>

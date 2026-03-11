@@ -1,0 +1,66 @@
+[
+  {
+    "title": "Hetzner",
+    "url": "https://www.hetzner.com/cloud",
+    "category": "VPS / 云服务",
+    "tags": ["VPS", "性价比", "云主机"],
+    "summary": "适合个人项目和轻量服务。",
+    "note": "价格友好，适合博客和小工具站。"
+  },
+  {
+    "title": "DigitalOcean",
+    "url": "https://www.digitalocean.com/",
+    "category": "VPS / 云服务",
+    "tags": ["VPS", "新手友好", "文档"],
+    "summary": "控制台直观，文档丰富。",
+    "note": "适合第一次上云的个人开发者。"
+  },
+  {
+    "title": "Cloudflare",
+    "url": "https://www.cloudflare.com/",
+    "category": "域名 / DNS / 建站",
+    "tags": ["DNS", "CDN", "域名"],
+    "summary": "适合托管 DNS、站点加速和 Pages 部署。",
+    "note": "很适合个人站。"
+  },
+  {
+    "title": "Namecheap",
+    "url": "https://www.namecheap.com/",
+    "category": "域名 / DNS / 建站",
+    "tags": ["域名", "注册商"],
+    "summary": "常见域名注册商。",
+    "note": "适合做价格对比。"
+  },
+  {
+    "title": "arXiv",
+    "url": "https://arxiv.org/",
+    "category": "学术资源",
+    "tags": ["论文", "预印本", "学术"],
+    "summary": "常用开放学术预印本平台。",
+    "note": "适合技术和 AI 方向检索。"
+  },
+  {
+    "title": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org/",
+    "category": "学术资源",
+    "tags": ["论文", "搜索", "学术"],
+    "summary": "适合快速查找论文和引用关系。",
+    "note": "检索体验不错。"
+  },
+  {
+    "title": "MDN",
+    "url": "https://developer.mozilla.org/",
+    "category": "程序员常用网站",
+    "tags": ["前端", "文档", "Web"],
+    "summary": "Web 开发文档站。",
+    "note": "前端基础必备。"
+  },
+  {
+    "title": "DevDocs",
+    "url": "https://devdocs.io/",
+    "category": "程序员常用网站",
+    "tags": ["文档", "API", "开发"],
+    "summary": "聚合式开发文档检索。",
+    "note": "查文档很快。"
+  }
+]
