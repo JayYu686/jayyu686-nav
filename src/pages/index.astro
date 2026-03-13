@@ -2,6 +2,14 @@
 import resources from '../data/resources.json';
 
 const categories = ['全部', ...new Set(resources.map((item) => item.category))];
+
+const getDomain = (url) => {
+  try {
+    return new URL(url).hostname;
+  } catch (e) {
+    return '';
+  }
+};
 ---
 
 <html lang="zh-CN">
@@ -28,20 +36,55 @@ const categories = ['全部', ...new Set(resources.map((item) => item.category))
         margin: 0;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Segoe UI", sans-serif;
         background-color: #0b1020;
-        background-image: url('https://images.unsplash.com/photo-1550684848-fa1ce0425ec3?q=80&w=2560&auto=format&fit=crop');
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
         color: var(--text);
         min-height: 100vh;
+        overflow-x: hidden;
       }
 
-      body::before {
-        content: '';
+      .aurora-bg {
         position: fixed;
-        inset: 0;
-        background: radial-gradient(circle at 50% 0%, rgba(11, 16, 32, 0.75) 0%, rgba(4, 9, 20, 0.95) 100%);
+        top: 0; left: 0; right: 0; bottom: 0;
         z-index: -1;
+        overflow: hidden;
+        background: #0b1020;
+      }
+
+      .orb {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(120px);
+        opacity: 0.5;
+        animation: float 20s infinite ease-in-out alternate;
+      }
+
+      .orb-1 {
+        width: 60vw; height: 60vh;
+        background: radial-gradient(circle, #0e5a9c, transparent 60%);
+        top: -10%; left: -10%;
+        animation-delay: 0s;
+      }
+
+      .orb-2 {
+        width: 50vw; height: 50vh;
+        background: radial-gradient(circle, #5b28a2, transparent 60%);
+        bottom: -10%; right: -10%;
+        animation-delay: -5s;
+        animation-duration: 25s;
+      }
+
+      .orb-3 {
+        width: 70vw; height: 70vh;
+        background: radial-gradient(circle, #028e96, transparent 60%);
+        top: 30%; left: 40%;
+        animation-delay: -10s;
+        animation-duration: 22s;
+      }
+
+      @keyframes float {
+        0% { transform: translate(0, 0) scale(1); }
+        33% { transform: translate(30px, -50px) scale(1.1); }
+        66% { transform: translate(-20px, 20px) scale(0.9); }
+        100% { transform: translate(0, 0) scale(1); }
       }
 
       .wrap {
@@ -141,12 +184,13 @@ const categories = ['全部', ...new Set(resources.map((item) => item.category))
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         gap: 24px;
+        perspective: 1000px;
       }
 
       .card {
         background: var(--panel);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         border: 1px solid var(--line);
         border-radius: 20px;
         padding: 24px;
@@ -154,19 +198,45 @@ const categories = ['全部', ...new Set(resources.map((item) => item.category))
         display: flex;
         flex-direction: column;
         box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+        animation: fadeInUp 0.6s ease-out both;
+        will-change: transform, opacity;
+      }
+
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
       }
 
       .card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
-        border-color: rgba(255, 255, 255, 0.15);
-        background: rgba(24, 34, 55, 0.65);
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(88, 166, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.2);
+        background: rgba(24, 34, 55, 0.7);
+        z-index: 2;
+      }
+
+      .card-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+
+      .icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 4px;
+        object-fit: contain;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
       }
 
       .card h2 {
-        margin: 0 0 12px;
-        font-size: 22px;
+        margin: 0;
+        font-size: 20px;
         font-weight: 600;
+        line-height: 1.3;
       }
 
       .card a {
@@ -242,6 +312,12 @@ const categories = ['全部', ...new Set(resources.map((item) => item.category))
   </head>
 
   <body>
+    <div class="aurora-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+
     <main class="wrap">
       <section class="hero">
         <h1>JayYu 资源导航</h1>
@@ -267,15 +343,19 @@ const categories = ['全部', ...new Set(resources.map((item) => item.category))
       </section>
 
       <section id="grid" class="grid">
-        {resources.map((item) => (
+        {resources.map((item, index) => (
           <article
             class="card"
+            style={`animation-delay: ${Math.min(index * 0.05, 1)}s`}
             data-category={item.category}
             data-search={`${item.title} ${item.category} ${item.summary} ${item.tags.join(' ')} ${item.note || ''}`.toLowerCase()}
           >
-            <h2>
-              <a href={item.url} target="_blank" rel="noreferrer">{item.title}</a>
-            </h2>
+            <div class="card-header">
+              <img class="icon" src={`https://www.google.com/s2/favicons?domain=${getDomain(item.url)}&sz=128`} alt={item.title} loading="lazy" />
+              <h2>
+                <a href={item.url} target="_blank" rel="noreferrer">{item.title}</a>
+              </h2>
+            </div>
             <div class="meta">{item.category}</div>
             <div class="summary">{item.summary}</div>
             {item.note && <div class="note">🌟 {item.note}</div>}
