@@ -703,5 +703,125 @@
     ],
     "summary": "快速且易懂的 Cron 表达式在线编辑器和时间计算器。",
     "note": "只要不知道怎么写表达式，就打开这个网站。"
+  },
+  {
+    "title": "DMIT",
+    "url": "https://www.dmit.io",
+    "category": "VPS / 云服务",
+    "summary": "高性能、低延迟的全球优质云服务器提供商"
+  },
+  {
+    "title": "GreenCloud",
+    "url": "https://greencloudvps.com",
+    "category": "VPS / 云服务",
+    "summary": "高性价比、配置丰富的绿色环保 VPS 主机"
+  },
+  {
+    "title": "丽萨主机",
+    "url": "https://lisahost.com",
+    "category": "VPS / 云服务",
+    "summary": "稳定可靠的高防 VPS 及ISP住宅IP服务商"
+  },
+  {
+    "title": "BandwagonHost",
+    "url": "https://bwh81.net",
+    "category": "VPS / 云服务",
+    "summary": "搬瓦工，极其稳定且速度极快的 CN2 GIA 线路提供商"
+  },
+  {
+    "title": "Vercel",
+    "url": "https://vercel.com",
+    "category": "域名 / DNS / 建站",
+    "summary": "开发者首选的前端应用和 Serverless 免费部署平台"
+  },
+  {
+    "title": "Netlify",
+    "url": "https://www.netlify.com",
+    "category": "域名 / DNS / 建站",
+    "summary": "现代化的自动化 Web 构建和快速静态站点部署平台"
+  },
+  {
+    "title": "Stack Overflow",
+    "url": "https://stackoverflow.com",
+    "category": "程序员常用网站",
+    "summary": "全球最大的程序员技术问答和交流社区"
+  },
+  {
+    "title": "Hugging Face",
+    "url": "https://huggingface.co",
+    "category": "程序员常用网站",
+    "summary": "非常活跃的机器学习和 AI 模型开源社区与托管平台"
+  },
+  {
+    "title": "V2EX",
+    "url": "https://v2ex.com",
+    "category": "程序员常用网站",
+    "summary": "极具氛围的创意工作者及开发者交流分享社区"
+  },
+  {
+    "title": "Bilibili",
+    "url": "https://www.bilibili.com",
+    "category": "娱乐",
+    "summary": "国内知名的视频弹幕网站与内容共创社区"
+  },
+  {
+    "title": "YouTube",
+    "url": "https://www.youtube.com",
+    "category": "娱乐",
+    "summary": "全球最大的视频搜索、分享和流媒体观看平台"
+  },
+  {
+    "title": "Netflix",
+    "url": "https://www.netflix.com",
+    "category": "娱乐",
+    "summary": "提供海量优质影视剧的海内外流媒体综合平台"
+  },
+  {
+    "title": "Spotify",
+    "url": "https://open.spotify.com",
+    "category": "娱乐",
+    "summary": "全球最受欢迎的音乐播客流媒体在线服务软件"
+  },
+  {
+    "title": "豆瓣",
+    "url": "https://www.douban.com",
+    "category": "娱乐",
+    "summary": "发现和评价好电影、好书、好音乐的文化社区"
+  },
+  {
+    "title": "LIBVIO",
+    "url": "https://www.libvio.cc/",
+    "category": "娱乐",
+    "summary": "提供海量热门高清影视剧集的优质视频网站"
+  },
+  {
+    "title": "樱花动漫",
+    "url": "https://www.yhdmp.cc/",
+    "category": "娱乐",
+    "summary": "二次元专注的日本番剧动画免费追番站点"
+  },
+  {
+    "title": "Gamer520",
+    "url": "https://www.gamer520.com/",
+    "category": "资源",
+    "summary": "非常丰富的热门优质PC单机游戏资源下载网站"
+  },
+  {
+    "title": "FLiNG Trainer",
+    "url": "https://flingtrainer.com/",
+    "category": "资源",
+    "summary": "风灵月影，最权威和更新最快的单机游戏修改器网"
+  },
+  {
+    "title": "资源帝电子书",
+    "url": "http://shu.ziyuandi.cn/",
+    "category": "资源",
+    "summary": "整合全网各类电子书搜索与下载导航的资源帝站点"
+  },
+  {
+    "title": "RARBG",
+    "url": "https://rarbgprx.org/torrents.php",
+    "category": "资源",
+    "summary": "经典的影视 BT 种子下载镜像站，资源更新速度快"
   }
 ]
