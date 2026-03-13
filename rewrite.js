@@ -3,7 +3,7 @@ let code = fs.readFileSync('src/pages/index.astro', 'utf8');
 
 // Theming variables. 
 code = code.replace(
-      /:root {[^}]*}/,
+      /:root \{[^}]*\}/,
       \:root {
         --panel: rgba(18, 26, 43, 0.55);
         --panel-active: rgba(255, 255, 255, 0.12);
@@ -15,7 +15,7 @@ code = code.replace(
         --accent-hover: #79c0ff;
         --gradient: linear-gradient(135deg, #58a6ff 0%, #00f2fe 100%);
         --bg-color: #0b1020;
-        --card-hover-shadow: 0 12px 32px rgba(88, 166, 255, 0.15);
+        --card-bg: rgba(22, 27, 34, 0.5);
       }
       
       :root[data-theme="light"] {
@@ -29,12 +29,12 @@ code = code.replace(
         --accent-hover: #0077ed;
         --gradient: linear-gradient(135deg, #001f3f 0%, #0088ff 100%);
         --bg-color: #fbfbfd;
-        --card-hover-shadow: 0 12px 32px rgba(0, 102, 204, 0.15);
+        --card-bg: rgba(255, 255, 255, 0.7);
       }\
 );
 
 code = code.replace(
-      /body {[\s\S]*?}/,
+      /body \{[\s\S]*?\}/,
       \ody {
         margin: 0;
         font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", "PingFang SC", "Segoe UI", sans-serif;
@@ -48,7 +48,7 @@ code = code.replace(
 );
 
 code = code.replace(
-      /\.aurora-bg {[\s\S]*?}/,
+      /\.aurora-bg \{[\s\S]*?\}/,
       \.aurora-bg {
         position: fixed;
         top: 0; left: 0; right: 0; bottom: 0;
@@ -62,7 +62,7 @@ code = code.replace(
 code = code.replace(
       /<head>/,
       \<head>
-    <script>
+    <script is:inline>
       (function(){
         try {
           var localTheme = localStorage.getItem('theme');
@@ -76,9 +76,7 @@ code = code.replace(
     </script>\
 );
 
-// Toggle button css
-const newCSS = \
-      .theme-btn {
+const newCSS = \.theme-btn {
         position: fixed;
         top: 24px;
         right: 24px;
@@ -101,19 +99,14 @@ const newCSS = \
         background: var(--panel-active);
         transform: scale(1.05);
       }
-      .theme-btn svg {
-        width: 20px;
-        height: 20px;
-        fill: currentColor;
-      }
+      .theme-btn svg { width: 20px; height: 20px; fill: currentColor; }
       :root[data-theme="light"] .sun-icon { display: none; }
       :root:not([data-theme="light"]) .moon-icon { display: none; }
       
       .wrap {\;
 
-code = code.replace(/.wrap {/, newCSS);
+code = code.replace(/\.wrap \{/, newCSS);
 
-// Insert HTML for the button
 const heroHTML = \<main class="wrap">
       <section class="hero">\;
 const heroNewHTML = \<button class="theme-btn" id="theme-toggle" aria-label="Toggle Theme">
@@ -128,11 +121,13 @@ const heroNewHTML = \<button class="theme-btn" id="theme-toggle" aria-label="Tog
       <section class="hero">\;
 code = code.replace(heroHTML, heroNewHTML);
 
-// Script at bottom
+
+code = code.replace(".card {", \.card { background: var(--card-bg);\);
+
 const endScript = \      input.addEventListener('input', applyFilters);
     </script>\;
 
-const toggleJS = \      input.addEventListener('input', applyFilters);
+const newScript = \      input.addEventListener('input', applyFilters);
 
       const themeToggleBtn = document.getElementById('theme-toggle');
       if (themeToggleBtn) {
@@ -148,8 +143,6 @@ const toggleJS = \      input.addEventListener('input', applyFilters);
         });
       }
     </script>\;
-
-code = code.replace(endScript, toggleJS);
+code = code.replace(endScript, newScript);
 
 fs.writeFileSync('src/pages/index.astro', code);
-console.log('Done rewriting.');
