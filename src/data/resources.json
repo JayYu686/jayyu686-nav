@@ -823,5 +823,245 @@
     "url": "https://rarbgprx.org/torrents.php",
     "category": "资源",
     "summary": "经典的影视 BT 种子下载镜像站，资源更新速度快"
+  },
+  {
+    "title": "Steam",
+    "url": "https://store.steampowered.com/",
+    "category": "娱乐",
+    "summary": "全球最大的综合性数字发行平台，提供海量PC游戏下载与社区交流"
+  },
+  {
+    "title": "Epic Games",
+    "url": "https://store.epicgames.com/",
+    "category": "娱乐",
+    "summary": "知名的PC数字游戏平台，经常提供免费的高品质游戏领取福利"
+  },
+  {
+    "title": "游民星空",
+    "url": "https://www.gamersky.com/",
+    "category": "娱乐",
+    "summary": "国内知名的单机游戏与主机游戏资讯、下载及互动社区"
+  },
+  {
+    "title": "NGA玩家社区",
+    "url": "https://bbs.nga.cn/",
+    "category": "娱乐",
+    "summary": "国内最活跃的硬核游戏玩家与电竞泛娱乐综合论坛"
+  },
+  {
+    "title": "TapTap",
+    "url": "https://www.taptap.com/",
+    "category": "娱乐",
+    "summary": "发现好玩的手游并且分享游戏评价的高品质玩家社区"
+  },
+  {
+    "title": "AcFun",
+    "url": "https://www.acfun.cn/",
+    "category": "娱乐",
+    "summary": "国内老牌的硬核二次元弹幕视频网站"
+  },
+  {
+    "title": "4399小游戏",
+    "url": "https://www.4399.com/",
+    "category": "娱乐",
+    "summary": "经典的休闲小游戏大全网站，提供无数童年页游回忆"
+  },
+  {
+    "title": "Twitch",
+    "url": "https://www.twitch.tv/",
+    "category": "娱乐",
+    "summary": "全球领先的游戏直播和电子竞技流媒体交互平台"
+  },
+  {
+    "title": "SoundCloud",
+    "url": "https://soundcloud.com/",
+    "category": "娱乐",
+    "summary": "探索和分享全球独立音乐人创作声音的音频社区"
+  },
+  {
+    "title": "Vimeo",
+    "url": "https://vimeo.com/",
+    "category": "娱乐",
+    "summary": "纯净无广告的高质量视频流媒体分享平台，深受创作者喜爱"
+  },
+  {
+    "title": "Unsplash",
+    "url": "https://unsplash.com/",
+    "category": "资源",
+    "summary": "提供海量完全免费且可商用的极高质量摄影图片资源网站"
+  },
+  {
+    "title": "Pexels",
+    "url": "https://www.pexels.com/",
+    "category": "资源",
+    "summary": "无版权的高清图片与视频素材库，支持商业用途免费下载"
+  },
+  {
+    "title": "Pixabay",
+    "url": "https://pixabay.com/",
+    "category": "资源",
+    "summary": "汇聚众多免费正版高清图片、插画与视频的素材平台"
+  },
+  {
+    "title": "Iconfont",
+    "url": "https://www.iconfont.cn/",
+    "category": "资源",
+    "summary": "阿里巴巴出品的大型矢量图标管理与下载库，前端及设计必备"
+  },
+  {
+    "title": "鸠摩搜书",
+    "url": "https://www.jiumodiary.com/",
+    "category": "资源",
+    "summary": "非常好用的电子书搜索引擎，支持多种格式正版下载查找"
+  },
+  {
+    "title": "Yande.re",
+    "url": "https://yande.re/",
+    "category": "资源",
+    "summary": "超高品质的ACG动漫二次元高清插画及壁纸图库资源"
+  },
+  {
+    "title": "Wallhaven",
+    "url": "https://wallhaven.cc/",
+    "category": "资源",
+    "summary": "被很多网友誉为最佳的高清电脑壁纸下载网站，各种分辨率齐全"
+  },
+  {
+    "title": "Itch.io",
+    "url": "https://itch.io/",
+    "category": "资源",
+    "summary": "聚集了海量优秀的独立游戏资源的平台，支持自由下载和购买"
+  },
+  {
+    "title": "Gitee",
+    "url": "https://gitee.com/",
+    "category": "资源",
+    "summary": "国内老牌稳定的开源代码托管与项目管理平台资源库"
+  },
+  {
+    "title": "CGjoy",
+    "url": "https://www.cgjoy.com/",
+    "category": "资源",
+    "summary": "聚集大量游戏动画、特效、美术与3D模型素材分享资源的专业论坛"
+  },
+  {
+    "title": "LKs网页推荐站",
+    "url": "https://lkssite.vip/",
+    "category": "有趣",
+    "summary": "B站UP主整理分享的数百个神奇网站汇总，寻找灵感枯竭时的百宝箱"
+  },
+  {
+    "title": "Neal.fun",
+    "url": "https://neal.fun/",
+    "category": "有趣",
+    "summary": "集合了众多极其富有创意和杀时间的奇妙网页互动小游戏"
+  },
+  {
+    "title": "WindowSwap",
+    "url": "https://www.window-swap.com/",
+    "category": "有趣",
+    "summary": "在屏幕上打开一扇全新窗户，看看世界上另一个角落此刻的风景"
+  },
+  {
+    "title": "Drive & Listen",
+    "url": "https://driveandlisten.herokuapp.com/",
+    "category": "有趣",
+    "summary": "提供在世界各大城市街头飙车的视角，并伴随当地真实广播电台体验"
+  },
+  {
+    "title": "Pointer Pointer",
+    "url": "https://pointerpointer.com/",
+    "category": "有趣",
+    "summary": "极其无聊但在某个瞬间会逗笑你的网站：总有一根手指指向你的鼠标"
+  },
+  {
+    "title": "The Useless Web",
+    "url": "https://theuselessweb.com/",
+    "category": "有趣",
+    "summary": "带你随机跳转到一个奇奇怪怪然而却毫无生产力的废柴有趣网站"
+  },
+  {
+    "title": "A Soft Murmur",
+    "url": "https://asoftmurmur.com/",
+    "category": "有趣",
+    "summary": "定制多种底噪混音(如雨声、打雷、咖啡馆)，带你快速进入专注心流状态"
+  },
+  {
+    "title": "Radiooooo",
+    "url": "https://radiooooo.com/",
+    "category": "有趣",
+    "summary": "音乐时光机，只需在地图上选择年代与国家，就能收听那时的流行音乐"
+  },
+  {
+    "title": "地球3D",
+    "url": "https://earth3dmap.com/",
+    "category": "有趣",
+    "summary": "逼真三维视角的地球在线交互地图与街景漫游观光"
+  },
+  {
+    "title": "MuscleWiki",
+    "url": "https://musclewiki.com/",
+    "category": "有趣",
+    "summary": "简单直白地以身体肌肉交互图谱教你如何锻炼指定部位的实用平台"
+  },
+  {
+    "title": "TinyPNG",
+    "url": "https://tinypng.com/",
+    "category": "实用工具",
+    "summary": "熊猫压图，使用智能有损压缩技术将图片文件大小减至最小的利器"
+  },
+  {
+    "title": "ILovePDF",
+    "url": "https://www.ilovepdf.com/",
+    "category": "实用工具",
+    "summary": "几乎拥有一切PDF处理转换和合并功能的免费在线工具箱"
+  },
+  {
+    "title": "Remove.bg",
+    "url": "https://www.remove.bg/",
+    "category": "实用工具",
+    "summary": "依靠强大的AI智能算法，只需5秒就能实现精准全自动人像或商品抠图"
+  },
+  {
+    "title": "Canva可画",
+    "url": "https://www.canva.com/",
+    "category": "实用工具",
+    "summary": "极其简单易用、就算不懂PS也能快速做出高大上设计作品的平面神器"
+  },
+  {
+    "title": "Figma",
+    "url": "https://www.figma.com/",
+    "category": "实用工具",
+    "summary": "基于浏览器端，风靡全球的团队协作现代UI与UX界面原型设计工具"
+  },
+  {
+    "title": "Excalidraw",
+    "url": "https://excalidraw.com/",
+    "category": "实用工具",
+    "summary": "具有清爽手绘风格、无需注册打开即用的极其好用的在线白板原型工具"
+  },
+  {
+    "title": "Photopea",
+    "url": "https://www.photopea.com/",
+    "category": "实用工具",
+    "summary": "直接存在于网页里支持PSD的高级图片修图套件，堪称云端Photoshop"
+  },
+  {
+    "title": "JSON Crack",
+    "url": "https://jsoncrack.com/",
+    "category": "实用工具",
+    "summary": "将枯燥难以阅读的纯文本JSON对象转换成直观的嵌套树状图关系"
+  },
+  {
+    "title": "Regex101",
+    "url": "https://regex101.com/",
+    "category": "实用工具",
+    "summary": "程序开发人员必备的利器，最好用的正则表达式分享、学习与可视化调试工具"
+  },
+  {
+    "title": "在线文件转换",
+    "url": "https://convertio.co/zh/",
+    "category": "实用工具",
+    "summary": "支持将图像、文档乃至视音频任意转换的在线格式神兵利器"
   }
 ]
