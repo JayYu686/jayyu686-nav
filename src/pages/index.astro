@@ -1,7 +1,7 @@
 ---
 import resources from '../data/resources.json';
 
-const categories = ['ȫ��', ...new Set(resources.map((item) => item.category))];
+const categories = ['全部', ...new Set(resources.map((item) => item.category))];
 
 const getDomain = (url) => {
   try {
@@ -16,8 +16,8 @@ const getDomain = (url) => {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JayYu ��Դ����</title>
-    <meta name="description" content="��ѡ���ʵĸ�Ч���ߡ���ƽ̨������ʩ��ǰ��ѧ����Դ�������߱ر�վ�㣬��������ʵ���ĵ���ܿ�ָ�ϡ�" />
+    <title>JayYu 资源导航</title>
+    <meta name="description" content="精选优质的高效工具、云平台基础设施、前沿学术资源及开发者必备站点，持续沉淀实用心得与避坑指南。" />
     <script is:inline>
       (function(){
         try {
@@ -212,10 +212,10 @@ const getDomain = (url) => {
     <main class="wrap">
       <section class="hero">
         <h1>JayYu Nav</h1>
-        <p class="sub">��ѡ���ʵĸ�Ч���ߡ���ƽ̨������ʩ��ǰ��ѧ����Դ�������߱ر�վ�㣬��������ʵ���ĵ���ܿ�ָ�ϡ�</p>
+        <p class="sub">精选优质的高效工具、云平台基础设施、前沿学术资源及开发者必备站点，持续沉淀实用心得与避坑指南。</p>
         
         <div class="toolbar">
-          <input type="text" class="search" placeholder="�������ƻ�ƴ��ȫƴ����..." />
+          <input type="text" class="search" placeholder="输入名称或拼音全拼搜索..." />
           <div class="filters">
             {categories.map((cat, idx) => (
               <button class={['filter-btn', idx === 0 ? 'active' : ''].join(' ')} data-cat={cat}>
@@ -241,7 +241,7 @@ const getDomain = (url) => {
             <p class="desc">{item.summary}</p>
           </a>
         ))}
-        <div class="empty">û���ҵ�ƥ�����Դ </div>
+        <div class="empty">没有找到匹配的资源 </div>
       </div>
     </main>
 
@@ -250,14 +250,14 @@ const getDomain = (url) => {
       const cards = document.querySelectorAll('.card');
       const btns = document.querySelectorAll('.filter-btn');
       const empty = document.querySelector('.empty');
-      let currentCat = 'ȫ��';
+      let currentCat = '全部';
 
       function applyFilters() {
         const query = input.value.trim().toLowerCase();
         let visibleCount = 0;
 
         cards.forEach(card => {
-          const matchCat = currentCat === 'ȫ��' || card.dataset.cat === currentCat;
+          const matchCat = currentCat === '全部' || card.dataset.cat === currentCat;
           const matchText = !query || 
                           card.querySelector('.title').textContent.toLowerCase().includes(query) || 
                           card.querySelector('.desc').textContent.toLowerCase().includes(query) ||
