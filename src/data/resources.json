@@ -1063,5 +1063,197 @@
     "url": "https://convertio.co/zh/",
     "category": "实用工具",
     "summary": "支持将图像、文档乃至视音频任意转换的在线格式神兵利器"
+  },
+  {
+    "title": "ChatGPT",
+    "url": "https://chatgpt.com/",
+    "category": "AI",
+    "summary": "OpenAI开发的强大语言模型，引领AI行业的主流聊天机器人"
+  },
+  {
+    "title": "Claude",
+    "url": "https://claude.ai/",
+    "category": "AI",
+    "summary": "Anthropic开发的AI助手，以安全性、超长上下文和出色文本能力著称"
+  },
+  {
+    "title": "Google Gemini",
+    "url": "https://gemini.google.com/",
+    "category": "AI",
+    "summary": "谷歌推出的大型语言模型，支持多模态交互和长文本处理"
+  },
+  {
+    "title": "DeepSeek (深度求索)",
+    "url": "https://chat.deepseek.com/",
+    "category": "AI",
+    "summary": "国产开源之光，提供极其划算且强大的代码与语言大模型"
+  },
+  {
+    "title": "Kimi",
+    "url": "https://kimi.moonshot.cn/",
+    "category": "AI",
+    "summary": "月之暗面推出，支持超长文本网页文件解析和阅读的国产大模型"
+  },
+  {
+    "title": "豆包",
+    "url": "https://www.doubao.com/",
+    "category": "AI",
+    "summary": "字节跳动出品的免费强力AI对话和创作助手"
+  },
+  {
+    "title": "通义千问",
+    "url": "https://tongyi.aliyun.com/",
+    "category": "AI",
+    "summary": "阿里云推出的大语言模型，多模态能力拔尖，功能非常全面"
+  },
+  {
+    "title": "智谱清言",
+    "url": "https://chatglm.cn/",
+    "category": "AI",
+    "summary": "智谱AI推出的国产强力AI助手，数据分析和文档处理很实用"
+  },
+  {
+    "title": "Grok",
+    "url": "https://x.com/i/grok",
+    "category": "AI",
+    "summary": "马斯克旗下xAI公司推出的幽默且实时获取X平台信息的AI模型"
+  },
+  {
+    "title": "Copilot",
+    "url": "https://copilot.microsoft.com/",
+    "category": "AI",
+    "summary": "微软整合进Bing与Office生态的智能生产力AI"
+  },
+  {
+    "title": "Perplexity",
+    "url": "https://www.perplexity.ai/",
+    "category": "AI",
+    "summary": "革新式的AI搜索引擎，直接给你整理好附带来源答案的下一代搜索"
+  },
+  {
+    "title": "Suno",
+    "url": "https://suno.com/",
+    "category": "AI",
+    "summary": "让人人都能成为音乐人的极其强大的AI歌曲音乐生成平台"
+  },
+  {
+    "title": "Midjourney",
+    "url": "https://www.midjourney.com/",
+    "category": "AI",
+    "summary": "目前生成质量和艺术感最强的AI绘图与图像生成工具"
+  },
+  {
+    "title": "Poe",
+    "url": "https://poe.com/",
+    "category": "AI",
+    "summary": "Quora推出的AI聚合平台，可以一站式体验多种主流大语言模型"
+  },
+  {
+    "title": "HuggingChat",
+    "url": "https://huggingface.co/chat/",
+    "category": "AI",
+    "summary": "Hugging Face推出的开源AI聊天界面，支持体验各大最新开源模型"
+  },
+  {
+    "title": "LiveBench",
+    "url": "https://livebench.ai/",
+    "category": "AI",
+    "summary": "大型语言模型各种能力的实时基准测试排行榜"
+  },
+  {
+    "title": "OpenRouter",
+    "url": "https://openrouter.ai/",
+    "category": "AI",
+    "summary": "统一的大模型API接口平台，方便开发者调用各类热门AI并查看榜单"
+  },
+  {
+    "title": "Google AI Studio",
+    "url": "https://aistudio.google.com/",
+    "category": "AI",
+    "summary": "方便开发者测试和集成谷歌Gemini系列前沿API及多模态能力的控制台"
+  },
+  {
+    "title": "Manus",
+    "url": "https://manus.im/",
+    "category": "AI",
+    "summary": "新晋首个通用个人AI智能体黑马，能够自主操控浏览器并执行复杂任务"
+  },
+  {
+    "title": "Coze (扣子)",
+    "url": "https://www.coze.com/",
+    "category": "AI",
+    "summary": "字节跳动出品的零代码搭建个性化AI Agent和Bot的开发平台"
+  },
+  {
+    "title": "Stable Video",
+    "url": "https://www.stablevideo.com/",
+    "category": "AI",
+    "summary": "Stability AI推出的根据图片或文本快速生成短视频的模型工具"
+  },
+  {
+    "title": "Viggle AI",
+    "url": "https://viggle.ai/",
+    "category": "AI",
+    "summary": "让任何角色图片根据指定动作视频动起来的AI视频生成创意工具"
+  },
+  {
+    "title": "DeepSeek 开放平台",
+    "url": "https://platform.deepseek.com/",
+    "category": "AI",
+    "summary": "DeepSeek API 开发者控制台，调用极其低价且表现顶尖的国产模型"
+  },
+  {
+    "title": "txyz.ai",
+    "url": "https://www.txyz.ai/",
+    "category": "AI",
+    "summary": "面向科研工作者的文献阅读助手，极其强大的学术AI检索和集成工具"
+  },
+  {
+    "title": "LYi 林哥的大模型野榜",
+    "url": "https://lyihub.com/",
+    "category": "AI",
+    "summary": "客观且民间视角维护的大型语言模型性能横向测评排名站点"
+  },
+  {
+    "title": "Nano Banana",
+    "url": "https://nanobanana.ai/",
+    "category": "AI",
+    "summary": "轻量且便捷的基于AI智能驱动的图像编辑器与快速修改工具"
+  },
+  {
+    "title": "Wolfram|Alpha",
+    "url": "https://www.wolframalpha.com/",
+    "category": "AI",
+    "summary": "计算型智能引擎，最严谨理性的回答助手，极其擅长解答理科计算问题"
+  },
+  {
+    "title": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/",
+    "category": "AI",
+    "summary": "客观专业的大语言模型基准测评、速度以及API服务商价格分析对比"
+  },
+  {
+    "title": "DeepWiki",
+    "url": "https://deepwiki.org/",
+    "category": "AI",
+    "summary": "能够与所有开源项目代码及开发文档进行无缝对话和解读的智能文档AI"
+  },
+  {
+    "title": "OpenClaw",
+    "url": "https://openclaw.ai/",
+    "category": "AI",
+    "summary": "个人AI专属助理系统与人工智能客户端"
+  },
+  {
+    "title": "Best AI Gate",
+    "url": "https://bestaigate.top/",
+    "category": "AI",
+    "summary": "挖掘和聚合各种最新优质大模型和前沿AI应用的资源大门"
+  },
+  {
+    "title": "Zed",
+    "url": "https://zed.dev/",
+    "category": "AI",
+    "summary": "用Rust编写，运行极快、自带AI深入辅助协作功能的高级代码编辑器"
   }
 ]
