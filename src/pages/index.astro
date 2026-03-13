@@ -12,25 +12,36 @@ const categories = ['全部', ...new Set(resources.map((item) => item.category))
     <meta name="description" content="收录常用工具、VPS、域名、学术资源和程序员网站。" />
     <style>
       :root {
-        --bg: #0b1020;
-        --panel: #121a2b;
-        --panel-2: #18233a;
-        --text: #e9eefb;
-        --muted: #9fb0d1;
-        --line: #26314d;
-        --accent: #7aa2ff;
-        --accent-hover: #5a88ff;
+        --panel: rgba(18, 26, 43, 0.55);
+        --panel-active: rgba(255, 255, 255, 0.12);
+        --text: #f0f6fc;
+        --muted: #8b949e;
+        --line: rgba(255, 255, 255, 0.08);
+        --accent: #58a6ff;
+        --accent-hover: #79c0ff;
+        --gradient: linear-gradient(135deg, #58a6ff 0%, #00f2fe 100%);
       }
 
       * { box-sizing: border-box; }
+      
       body {
         margin: 0;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC",
-          "Segoe UI", sans-serif;
-        background: var(--bg);
-        background-image: radial-gradient(circle at 50% 0%, rgba(122, 162, 255, 0.1) 0%, transparent 50%);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Segoe UI", sans-serif;
+        background-color: #0b1020;
+        background-image: url('https://images.unsplash.com/photo-1550684848-fa1ce0425ec3?q=80&w=2560&auto=format&fit=crop');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
         color: var(--text);
         min-height: 100vh;
+      }
+
+      body::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background: radial-gradient(circle at 50% 0%, rgba(11, 16, 32, 0.75) 0%, rgba(4, 9, 20, 0.95) 100%);
+        z-index: -1;
       }
 
       .wrap {
@@ -48,9 +59,10 @@ const categories = ['全部', ...new Set(resources.map((item) => item.category))
         font-size: 48px;
         font-weight: 800;
         margin: 0 0 16px;
-        background: linear-gradient(135deg, #fff, var(--accent));
+        background: var(--gradient);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        letter-spacing: -0.5px;
       }
 
       .sub {
@@ -75,18 +87,20 @@ const categories = ['全部', ...new Set(resources.map((item) => item.category))
         padding: 16px 24px;
         border-radius: 999px;
         border: 1px solid var(--line);
-        background: var(--panel);
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
         color: var(--text);
         font-size: 16px;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
       }
 
       .search:focus {
         outline: none;
         border-color: var(--accent);
-        box-shadow: 0 4px 24px rgba(122, 162, 255, 0.15);
-        background: #151e32;
+        box-shadow: 0 8px 32px rgba(88, 166, 255, 0.2);
+        background: rgba(0, 0, 0, 0.6);
       }
 
       .filters {
@@ -99,24 +113,28 @@ const categories = ['全部', ...new Set(resources.map((item) => item.category))
       .filter {
         border: 1px solid var(--line);
         background: var(--panel);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
         color: var(--text);
         border-radius: 999px;
         padding: 8px 18px;
         font-size: 14px;
         cursor: pointer;
-        transition: all 0.2s ease;
+        transition: all 0.3s ease;
       }
 
       .filter:hover {
-        background: var(--panel-2);
-        border-color: var(--muted);
+        background: var(--panel-active);
+        border-color: rgba(255, 255, 255, 0.2);
+        transform: translateY(-1px);
       }
 
       .filter.active {
-        background: var(--accent);
-        color: #08111f;
-        border-color: var(--accent);
+        background: var(--gradient);
+        color: #000;
+        border-color: transparent;
         font-weight: 600;
+        box-shadow: 0 4px 12px rgba(88, 166, 255, 0.25);
       }
 
       .grid {
@@ -127,18 +145,22 @@ const categories = ['全部', ...new Set(resources.map((item) => item.category))
 
       .card {
         background: var(--panel);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
         border: 1px solid var(--line);
         border-radius: 20px;
         padding: 24px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         display: flex;
         flex-direction: column;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
       }
 
       .card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-        border-color: #3b4b73;
+        transform: translateY(-6px);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+        border-color: rgba(255, 255, 255, 0.15);
+        background: rgba(24, 34, 55, 0.65);
       }
 
       .card h2 {
@@ -151,6 +173,7 @@ const categories = ['全部', ...new Set(resources.map((item) => item.category))
         color: var(--text);
         text-decoration: none;
         display: inline-block;
+        transition: color 0.2s;
       }
 
       .card a:hover {
@@ -160,7 +183,7 @@ const categories = ['全部', ...new Set(resources.map((item) => item.category))
       .meta {
         color: var(--accent);
         font-size: 13px;
-        font-weight: 500;
+        font-weight: 600;
         margin-bottom: 12px;
         text-transform: uppercase;
         letter-spacing: 0.5px;
@@ -168,7 +191,7 @@ const categories = ['全部', ...new Set(resources.map((item) => item.category))
 
       .summary {
         line-height: 1.6;
-        color: #d8e0f4;
+        color: #c9d1d9;
         margin-bottom: 16px;
         font-size: 15px;
         flex-grow: 1;
@@ -176,9 +199,9 @@ const categories = ['全部', ...new Set(resources.map((item) => item.category))
 
       .note {
         font-size: 14px;
-        color: var(--muted);
+        color: #a5b4fc;
         line-height: 1.6;
-        background: rgba(0, 0, 0, 0.2);
+        background: rgba(0, 0, 0, 0.25);
         padding: 12px;
         border-radius: 12px;
         margin-bottom: 16px;
@@ -196,14 +219,15 @@ const categories = ['全部', ...new Set(resources.map((item) => item.category))
         font-size: 12px;
         border-radius: 6px;
         padding: 4px 10px;
-        background: var(--panel-2);
-        color: #cfe0ff;
+        background: rgba(255, 255, 255, 0.08);
+        color: #c9d1d9;
         border: 1px solid transparent;
-        transition: border-color 0.2s ease;
+        transition: all 0.2s ease;
       }
 
       .tag:hover {
-        border-color: var(--line);
+        border-color: rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.12);
       }
 
       footer {
