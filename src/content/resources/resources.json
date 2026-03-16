@@ -1,1263 +1,1173 @@
 {
   "resources": {
     "items": [
-    {
-      "title": "Hetzner",
-      "url": "https://www.hetzner.com/cloud",
-      "category": "VPS / 云服务",
-      "tags": [
-        "VPS",
-        "性价比",
-        "云主机"
-      ],
-      "summary": "欧洲高性价比云服务器提供商，适合个人项目。",
-      "note": "价格极度友好，适合自建服务和博客。"
-    },
-    {
-      "title": "DigitalOcean",
-      "url": "https://www.digitalocean.com/",
-      "category": "VPS / 云服务",
-      "tags": [
-        "VPS",
-        "新手友好",
-        "文档"
-      ],
-      "summary": "知名的海外云服务商，控制面板现代直观。",
-      "note": "社区文档极为丰富，非常适合第一次上云的个人开发者。"
-    },
-    {
-      "title": "Vultr",
-      "url": "https://www.vultr.com/",
-      "category": "VPS / 云服务",
-      "tags": [
-        "VPS",
-        "全球节点"
-      ],
-      "summary": "按小时计费的云服务商，全球数据中心多。",
-      "note": "可以随时开通或销毁实例，测试项目首选。"
-    },
-    {
-      "title": "Linode (Akamai)",
-      "url": "https://www.linode.com/",
-      "category": "VPS / 云服务",
-      "tags": [
-        "VPS",
-        "老牌"
-      ],
-      "summary": "老牌优质云服务器提供商，现已被Akamai收购。",
-      "note": "稳定且网络质量较高。"
-    },
-    {
-      "title": "AWS",
-      "url": "https://aws.amazon.com/",
-      "category": "VPS / 云服务",
-      "tags": [
-        "云平台",
-        "企业级"
-      ],
-      "summary": "全球市场份额最大的云计算平台。",
-      "note": "提供第一年免费套餐，适合学习企业级架构。"
-    },
-    {
-      "title": "Google Cloud (GCP)",
-      "url": "https://cloud.google.com/",
-      "category": "VPS / 云服务",
-      "tags": [
-        "云平台",
-        "骨干网"
-      ],
-      "summary": "依托谷歌强大的全球骨干网。",
-      "note": "网络质量极佳，新用户有免费赠金。"
-    },
-    {
-      "title": "Oracle Cloud",
-      "url": "https://www.oracle.com/cloud/",
-      "category": "VPS / 云服务",
-      "tags": [
-        "云平台",
-        "免费"
-      ],
-      "summary": "甲骨文云服务，以慷慨的免费套餐（Always Free）闻名。",
-      "note": "提供免费的ARM架构高配实例，极适合白嫖党，但注册难度较高。"
-    },
-    {
-      "title": "阿里云",
-      "url": "https://www.aliyun.com/",
-      "category": "VPS / 云服务",
-      "tags": [
-        "国内云",
-        "大厂"
-      ],
-      "summary": "国内市场份额最大的云服务商。",
-      "note": "适合部署需备案的国内项目。"
-    },
-    {
-      "title": "腾讯云",
-      "url": "https://cloud.tencent.com/",
-      "category": "VPS / 云服务",
-      "tags": [
-        "国内云",
-        "轻量应用服务器"
-      ],
-      "summary": "国内知名云服务商，轻量应用服务器性价比极高。",
-      "note": "经常有打折活动，适合学生和个人开发者。"
-    },
-    {
-      "title": "BandwagonHost (搬瓦工)",
-      "url": "https://bwh81.net/",
-      "category": "VPS / 云服务",
-      "tags": [
-        "VPS",
-        "CN2 GIA"
-      ],
-      "summary": "以中国大陆优化线路（CN2 GIA）闻名的老牌商家。",
-      "note": "网络极佳，但价格目前越来越贵。"
-    },
-    {
-      "title": "RackNerd",
-      "url": "https://www.racknerd.com/",
-      "category": "VPS / 云服务",
-      "tags": [
-        "VPS",
-        "低价"
-      ],
-      "summary": "主打低价年付机器的海外服务商。",
-      "note": "黑五等节日促销价格极低，适合做备用机或轻量任务。"
-    },
-    {
-      "title": "Cloudflare",
-      "url": "https://www.cloudflare.com/",
-      "category": "域名 / DNS / 建站",
-      "tags": [
-        "DNS",
-        "CDN",
-        "域名"
-      ],
-      "summary": "全球最强大的免费CDN和DNS解析服务商。",
-      "note": "做个人网站必不可少的基础设施。"
-    },
-    {
-      "title": "Namecheap",
-      "url": "https://www.namecheap.com/",
-      "category": "域名 / DNS / 建站",
-      "tags": [
-        "域名",
-        "注册商"
-      ],
-      "summary": "常见的海外域名注册商，主打高性价比。",
-      "note": "买偏门后缀很便宜，包含免费隐私保护。"
-    },
-    {
-      "title": "Namesilo",
-      "url": "https://www.namesilo.com/",
-      "category": "域名 / DNS / 建站",
-      "tags": [
-        "域名",
-        "续费便宜"
-      ],
-      "summary": "以低廉的注册和续费价格闻名。",
-      "note": "界面虽然老旧，但价格透明且便宜。"
-    },
-    {
-      "title": "Porkbun",
-      "url": "https://porkbun.com/",
-      "category": "域名 / DNS / 建站",
-      "tags": [
-        "域名",
-        "良心商家"
-      ],
-      "summary": "口碑极好的新晋域名注册商，界面可爱。",
-      "note": "经常会赠送首年域名，续费也非常实在。"
-    },
-    {
-      "title": "Vercel",
-      "url": "https://vercel.com/",
-      "category": "域名 / DNS / 建站",
-      "tags": [
-        "前端托管",
-        "Serverless"
-      ],
-      "summary": "强大的前端项目托管平台，Next.js 的母公司。",
-      "note": "GitHub一键部署，免费且自动化极高。"
-    },
-    {
-      "title": "Netlify",
-      "url": "https://www.netlify.com/",
-      "category": "域名 / DNS / 建站",
-      "tags": [
-        "前端托管",
-        "自动化构建"
-      ],
-      "summary": "另一个顶级静态站点和前端应用托管平台。",
-      "note": "非常适合部署 React/Vue 单页应用。"
-    },
-    {
-      "title": "Zeabur",
-      "url": "https://zeabur.com/",
-      "category": "域名 / DNS / 建站",
-      "tags": [
-        "PaaS",
-        "全栈部署"
-      ],
-      "summary": "国人开发的 PaaS 平台，支持一键部署各种框架和数据库。",
-      "note": "对开发者非常友好，无需关注底层运维。"
-    },
-    {
-      "title": "Render",
-      "url": "https://render.com/",
-      "category": "域名 / DNS / 建站",
-      "tags": [
-        "PaaS",
-        "全栈部署"
-      ],
-      "summary": "被认为是 Heroku 最佳替代品的云托管服务。",
-      "note": "支持 Docker 容器、Web 服务和数据库的托管。"
-    },
-    {
-      "title": "Railway",
-      "url": "https://railway.app/",
-      "category": "域名 / DNS / 建站",
-      "tags": [
-        "PaaS",
-        "全栈部署"
-      ],
-      "summary": "现代化的一键式应用部署平台，体验极佳。",
-      "note": "目前已取消每月免费额度，但总体性价比仍高。"
-    },
-    {
-      "title": "Spaceship",
-      "url": "https://www.spaceship.com/",
-      "category": "域名 / DNS / 建站",
-      "tags": [
-        "域名",
-        "新兴"
-      ],
-      "summary": "Namecheap 旗下的新一代域名商，界面极具科技感。",
-      "note": "首年注册极其便宜，解析生效极快。"
-    },
-    {
-      "title": "arXiv",
-      "url": "https://arxiv.org/",
-      "category": "学术资源",
-      "tags": [
-        "论文",
-        "预印本"
-      ],
-      "summary": "物理、数学、计算机科学等领域的开放预印本平台。",
-      "note": "AI 和计算机最新论文第一时间首发站。"
-    },
-    {
-      "title": "Semantic Scholar",
-      "url": "https://www.semanticscholar.org/",
-      "category": "学术资源",
-      "tags": [
-        "论文搜索",
-        "AI赋能"
-      ],
-      "summary": "由艾伦人工智能研究所打造的免费学术搜索引擎。",
-      "note": "能自动提取核心引用和总结，检索体验出色。"
-    },
-    {
-      "title": "Google Scholar",
-      "url": "https://scholar.google.com/",
-      "category": "学术资源",
-      "tags": [
-        "文献检索"
-      ],
-      "summary": "全球最大、最全的免费学术搜索工具。",
-      "note": "查被引次数和找 PDF 的首选工具，需科学上网。"
-    },
-    {
-      "title": "PubMed",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/",
-      "category": "学术资源",
-      "tags": [
-        "生物医学",
-        "生命科学"
-      ],
-      "summary": "免费的生物医学和生命科学文献搜索引擎。",
-      "note": "医学和自然科学领域的核心数据库。"
-    },
-    {
-      "title": "ResearchGate",
-      "url": "https://www.researchgate.net/",
-      "category": "学术资源",
-      "tags": [
-        "学术社交"
-      ],
-      "summary": "面向科研人员和科学家的社交网络和协作平台。",
-      "note": "可以直接向论文作者索要完整版 PDF 论文。"
-    },
-    {
-      "title": "DBLP",
-      "url": "https://dblp.org/",
-      "category": "学术资源",
-      "tags": [
-        "计算机科学",
-        "文献索引"
-      ],
-      "summary": "专注于计算机科学领域的英文文献库。",
-      "note": "查找某个作者的所有计算机方向文章极快。"
-    },
-    {
-      "title": "中国知网 (CNKI)",
-      "url": "https://www.cnki.net/",
-      "category": "学术资源",
-      "tags": [
-        "中文文献",
-        "大而全"
-      ],
-      "summary": "中国最权威的学术文献、论文数据库。",
-      "note": "查阅中文期刊和硕博毕业论文必备。"
-    },
-    {
-      "title": "Web of Science",
-      "url": "https://www.webofscience.com/",
-      "category": "学术资源",
-      "tags": [
-        "SCI",
-        "期刊数据"
-      ],
-      "summary": "全球最权威的引文索引数据库之一。",
-      "note": "多通过机构邮箱访问，用于查期刊等级和影响因子。"
-    },
-    {
-      "title": "Zotero",
-      "url": "https://www.zotero.org/",
-      "category": "学术资源",
-      "tags": [
-        "文献管理",
-        "免费开源"
-      ],
-      "summary": "免费且强大的多平台文献管理工具。",
-      "note": "科研小白救星，配合插件可一键下载网页文献。"
-    },
-    {
-      "title": "MDN Web Docs",
-      "url": "https://developer.mozilla.org/",
-      "category": "程序员常用网站",
-      "tags": [
-        "前端",
-        "文档"
-      ],
-      "summary": "由 Mozilla 维护的 Web 开发基础文档。",
-      "note": "前端开发者的圣经，查阅 JS/HTML/CSS API 首选。"
-    },
-    {
-      "title": "DevDocs",
-      "url": "https://devdocs.io/",
-      "category": "程序员常用网站",
-      "tags": [
-        "API字典",
-        "离线文档"
-      ],
-      "summary": "整合了多个语言和框架的 API 文档。",
-      "note": "支持下载离线查看，写代码时当字典查非常方便。"
-    },
-    {
-      "title": "GitHub",
-      "url": "https://github.com/",
-      "category": "程序员常用网站",
-      "tags": [
-        "代码托管",
-        "开源社区"
-      ],
-      "summary": "全球最大开源软件代码托管平台和开发者社区。",
-      "note": "寻找轮子和维护项目的集中地。"
-    },
-    {
-      "title": "Stack Overflow",
-      "url": "https://stackoverflow.com/",
-      "category": "程序员常用网站",
-      "tags": [
-        "问答",
-        "报错检索"
-      ],
-      "summary": "全球最活跃的程序员技术问答网站。",
-      "note": "遇到报错搜一下，99% 的问题已被解答过。"
-    },
-    {
-      "title": "V2EX",
-      "url": "https://www.v2ex.com/",
-      "category": "程序员常用网站",
-      "tags": [
-        "技术论坛",
-        "摸鱼"
-      ],
-      "summary": "国内活跃的技术交流与极客生活探讨社区。",
-      "note": "不仅有技术讨论，还有大量的数码、求职话题。"
-    },
-    {
-      "title": "LeetCode",
-      "url": "https://leetcode.com/",
-      "category": "程序员常用网站",
-      "tags": [
-        "刷题",
-        "算法"
-      ],
-      "summary": "知名的在线编程刷题平台，侧重算法和数据结构。",
-      "note": "准备互联网大厂面试必经之路。"
-    },
-    {
-      "title": "Hacker News",
-      "url": "https://news.ycombinator.com/",
-      "category": "程序员常用网站",
-      "tags": [
-        "极客新闻",
-        "视野"
-      ],
-      "summary": "Y Combinator 旗下的高质量科技新闻与讨论区。",
-      "note": "获取最新技术趋势和高质量讨论。"
-    },
-    {
-      "title": "稀土掘金",
-      "url": "https://juejin.cn/",
-      "category": "程序员常用网站",
-      "tags": [
-        "技术博客",
-        "国内社区"
-      ],
-      "summary": "国内优质的面向开发者的技术内容分享平台。",
-      "note": "大前端文章质量较高，经常有干货总结。"
-    },
-    {
-      "title": "roadmap.sh",
-      "url": "https://roadmap.sh/",
-      "category": "程序员常用网站",
-      "tags": [
-        "学习路线",
-        "图谱"
-      ],
-      "summary": "社区共建的各领域开发者学习路线图。",
-      "note": "当你不知道学什么的时候，看看它的路线图。"
-    },
-    {
-      "title": "Can I use",
-      "url": "https://caniuse.com/",
-      "category": "程序员常用网站",
-      "tags": [
-        "兼容性",
-        "前端"
-      ],
-      "summary": "提供前端 Web 技术浏览器支持情况查询表。",
-      "note": "前端适配必备，想用新特性前必查。"
-    },
-    {
-      "title": "老乡鸡开源菜谱",
-      "url": "https://cooklikehoc.soilzhu.su",
-      "category": "有趣",
-      "tags": [
-        "做菜",
-        "开源"
-      ],
-      "summary": "详尽的老乡鸡官方菜品做法指南。",
-      "note": "程序员也要好好吃饭，按文档写代码一样做菜。"
-    },
-    {
-      "title": "小霸王其乐无穷",
-      "url": "https://www.yikm.net/",
-      "category": "有趣",
-      "tags": [
-        "游戏",
-        "怀旧",
-        "FC"
-      ],
-      "summary": "在线网页版 FC 小霸王红白机游戏聚合站。",
-      "note": "上班摸鱼神器，找回童年的记忆。"
-    },
-    {
-      "title": "Neal.fun",
-      "url": "https://neal.fun/",
-      "category": "有趣",
-      "tags": [
-        "小游戏",
-        "脑洞"
-      ],
-      "summary": "一系列极具创意、脑洞大开的趣味可视化工具。",
-      "note": "强烈推荐 Asteroid Crash 等应用。"
-    },
-    {
-      "title": "The Useless Web",
-      "url": "https://theuselessweb.com/",
-      "category": "有趣",
-      "tags": [
-        "无聊",
-        "盲盒"
-      ],
-      "summary": "带你去那些极其无聊又带点意思的随机网站。",
-      "note": "当你觉得无聊时，能杀掉一下午的时间。"
-    },
-    {
-      "title": "Pointer Pointer",
-      "url": "https://pointerpointer.com/",
-      "category": "有趣",
-      "tags": [
-        "无聊",
-        "图片"
-      ],
-      "summary": "鼠标悬停在哪里，就会随机出现图中的人指着你的鼠标。",
-      "note": "不可思议的数据集搜集能力，十分魔性。"
-    },
-    {
-      "title": "Window Swap",
-      "url": "https://www.window-swap.com/",
-      "category": "有趣",
-      "tags": [
-        "风景",
-        "白噪音"
-      ],
-      "summary": "随机打开世界上某个角落的真实窗外风景视频。",
-      "note": "工作疲惫时，看看别人窗外的雨，非常治愈。"
-    },
-    {
-      "title": "My 90s TV",
-      "url": "https://www.my90stv.com/",
-      "category": "有趣",
-      "tags": [
-        "复古",
-        "电视"
-      ],
-      "summary": "模拟了90年代的电视机，播放那个年代的节目。",
-      "note": "极具沉浸感，可以换台、看广告或打游戏片段。"
-    },
-    {
-      "title": "A Soft Murmur",
-      "url": "https://asoftmurmur.com/",
-      "category": "有趣",
-      "tags": [
-        "白噪音",
-        "专注"
-      ],
-      "summary": "自定义混合各种环境白噪音的网站。",
-      "note": "适合带上耳机沉浸式写代码或看书。"
-    },
-    {
-      "title": "Earth 3D",
-      "url": "https://earth.nullschool.net/",
-      "category": "有趣",
-      "tags": [
-        "3D地球",
-        "可视化"
-      ],
-      "summary": "实时查看全球风向、气温、洋流等数据的地球仪。",
-      "note": "数据可视化做得极为惊艳。"
-    },
-    {
-      "title": "Drive & Listen",
-      "url": "https://driveandlisten.herokuapp.com/",
-      "category": "有趣",
-      "tags": [
-        "开车",
-        "电台"
-      ],
-      "summary": "在模拟开车的同时收听当地实时电台广播。",
-      "note": "可以感受世界各大城市的街景和音乐。"
-    },
-    {
-      "title": "Sandspiel",
-      "url": "https://sandspi.el.st/",
-      "category": "有趣",
-      "tags": [
-        "沙盒",
-        "像素"
-      ],
-      "summary": "利用各种元素的物理和化学反应玩耍的像素沙盒。",
-      "note": "将火、水、植物、冰混合在一起观察反应。"
-    },
-    {
-      "title": "Any To Web",
-      "url": "https://www.anytoweb.com",
-      "category": "实用工具",
-      "tags": [
-        "代码转换",
-        "前端"
-      ],
-      "summary": "一个可以将代码、原稿快速转化为网页代码的工具。",
-      "note": "提升单页面开发效率的好帮手。"
-    },
-    {
-      "title": "USTC 测速",
-      "url": "https://test.ustc.edu.cn",
-      "category": "实用工具",
-      "tags": [
-        "测速",
-        "校园网"
-      ],
-      "summary": "中国科大提供的纯净无广告网速测试工具。",
-      "note": "国内首选轻量测速页，极速且无杂项。"
-    },
-    {
-      "title": "Regex101",
-      "url": "https://regex101.com/",
-      "category": "实用工具",
-      "tags": [
-        "正则表达式",
-        "测试"
-      ],
-      "summary": "最优秀的在线正则表达式调试工具。",
-      "note": "写正则必用，有高亮匹配和详细解释。"
-    },
-    {
-      "title": "TinyPNG",
-      "url": "https://tinypng.com/",
-      "category": "实用工具",
-      "tags": [
-        "图片压缩"
-      ],
-      "summary": "智能在线图片压缩工具，带有一只熊猫。",
-      "note": "画质损失极少的情况下大幅缩减体积。"
-    },
-    {
-      "title": "Carbon",
-      "url": "https://carbon.now.sh/",
-      "category": "实用工具",
-      "tags": [
-        "代码美化",
-        "截图"
-      ],
-      "summary": "为代码生成精美、可分享的语法高亮图片。",
-      "note": "社交媒体分享代码的最佳利器。"
-    },
-    {
-      "title": "JSON Crack",
-      "url": "https://jsoncrack.com/",
-      "category": "实用工具",
-      "tags": [
-        "JSON解析",
-        "可视化"
-      ],
-      "summary": "将 JSON 数据结构转换成树状架构图的在线利器。",
-      "note": "对于分析级联复杂、嵌套深的后端数据非常有帮助。"
-    },
-    {
-      "title": "CyberChef",
-      "url": "https://gchq.github.io/CyberChef/",
-      "category": "实用工具",
-      "tags": [
-        "瑞士军刀",
-        "加解密"
-      ],
-      "summary": "强大的用于网络和加解密操作的瑞士军刀。",
-      "note": "支持 Base64、AES、Hex 等几百种编解码。"
-    },
-    {
-      "title": "Squoosh",
-      "url": "https://squoosh.app/",
-      "category": "实用工具",
-      "tags": [
-        "图片压缩",
-        "格式转换"
-      ],
-      "summary": "谷歌出品的强大在线图片压缩工具，支持 WebP/AVIF。",
-      "note": "提供原图与压缩后的滑动对比。"
-    },
-    {
-      "title": "draw.io",
-      "url": "https://app.diagrams.net/",
-      "category": "实用工具",
-      "tags": [
-        "流程图",
-        "UML"
-      ],
-      "summary": "免费开源在线绘图工具，可画流程图、架构图等。",
-      "note": "支持同步到 GitHub、Google Drive。"
-    },
-    {
-      "title": "Excalidraw",
-      "url": "https://excalidraw.com/",
-      "category": "实用工具",
-      "tags": [
-        "手写风",
-        "白板"
-      ],
-      "summary": "手绘风格的虚拟在线白板和图表绘制平台。",
-      "note": "沟通思路或是做轻量架构设计的极佳体验。"
-    },
-    {
-      "title": "DevToys",
-      "url": "https://devtoys.app/",
-      "category": "实用工具",
-      "tags": [
-        "开发者工具",
-        "聚合"
-      ],
-      "summary": "开发者的瑞士军刀美誉的一体化本地桌面工具合集。",
-      "note": "包含了几乎所有日常所需的转换工具。"
-    },
-    {
-      "title": "在线随机密码生成器",
-      "url": "https://passwordsgenerator.net/",
-      "category": "实用工具",
-      "tags": [
-        "安全",
-        "密码工具"
-      ],
-      "summary": "生成极高强度的随机密码工具。",
-      "note": "注册一堆小网站防止被扫号的利器。"
-    },
-    {
-      "title": "Crontab.guru",
-      "url": "https://crontab.guru/",
-      "category": "实用工具",
-      "tags": [
-        "定时任务",
-        "Cron"
-      ],
-      "summary": "快速且易懂的 Cron 表达式在线编辑器和时间计算器。",
-      "note": "只要不知道怎么写表达式，就打开这个网站。"
-    },
-    {
-      "title": "DMIT",
-      "url": "https://www.dmit.io",
-      "category": "VPS / 云服务",
-      "summary": "高性能、低延迟的全球优质云服务器提供商"
-    },
-    {
-      "title": "GreenCloud",
-      "url": "https://greencloudvps.com",
-      "category": "VPS / 云服务",
-      "summary": "高性价比、配置丰富的绿色环保 VPS 主机"
-    },
-    {
-      "title": "丽萨主机",
-      "url": "https://lisahost.com",
-      "category": "VPS / 云服务",
-      "summary": "稳定可靠的高防 VPS 及ISP住宅IP服务商"
-    },
-    {
-      "title": "BandwagonHost",
-      "url": "https://bwh81.net",
-      "category": "VPS / 云服务",
-      "summary": "搬瓦工，极其稳定且速度极快的 CN2 GIA 线路提供商"
-    },
-    {
-      "title": "Vercel",
-      "url": "https://vercel.com",
-      "category": "域名 / DNS / 建站",
-      "summary": "开发者首选的前端应用和 Serverless 免费部署平台"
-    },
-    {
-      "title": "Netlify",
-      "url": "https://www.netlify.com",
-      "category": "域名 / DNS / 建站",
-      "summary": "现代化的自动化 Web 构建和快速静态站点部署平台"
-    },
-    {
-      "title": "Stack Overflow",
-      "url": "https://stackoverflow.com",
-      "category": "程序员常用网站",
-      "summary": "全球最大的程序员技术问答和交流社区"
-    },
-    {
-      "title": "Hugging Face",
-      "url": "https://huggingface.co",
-      "category": "程序员常用网站",
-      "summary": "非常活跃的机器学习和 AI 模型开源社区与托管平台"
-    },
-    {
-      "title": "V2EX",
-      "url": "https://v2ex.com",
-      "category": "程序员常用网站",
-      "summary": "极具氛围的创意工作者及开发者交流分享社区"
-    },
-    {
-      "title": "Bilibili",
-      "url": "https://www.bilibili.com",
-      "category": "娱乐",
-      "summary": "国内知名的视频弹幕网站与内容共创社区"
-    },
-    {
-      "title": "YouTube",
-      "url": "https://www.youtube.com",
-      "category": "娱乐",
-      "summary": "全球最大的视频搜索、分享和流媒体观看平台"
-    },
-    {
-      "title": "Netflix",
-      "url": "https://www.netflix.com",
-      "category": "娱乐",
-      "summary": "提供海量优质影视剧的海内外流媒体综合平台"
-    },
-    {
-      "title": "Spotify",
-      "url": "https://open.spotify.com",
-      "category": "娱乐",
-      "summary": "全球最受欢迎的音乐播客流媒体在线服务软件"
-    },
-    {
-      "title": "豆瓣",
-      "url": "https://www.douban.com",
-      "category": "娱乐",
-      "summary": "发现和评价好电影、好书、好音乐的文化社区"
-    },
-    {
-      "title": "LIBVIO",
-      "url": "https://www.libvio.cc/",
-      "category": "娱乐",
-      "summary": "提供海量热门高清影视剧集的优质视频网站"
-    },
-    {
-      "title": "樱花动漫",
-      "url": "https://www.yhdmp.cc/",
-      "category": "娱乐",
-      "summary": "二次元专注的日本番剧动画免费追番站点"
-    },
-    {
-      "title": "Gamer520",
-      "url": "https://www.gamer520.com/",
-      "category": "资源",
-      "summary": "非常丰富的热门优质PC单机游戏资源下载网站"
-    },
-    {
-      "title": "FLiNG Trainer",
-      "url": "https://flingtrainer.com/",
-      "category": "资源",
-      "summary": "风灵月影，最权威和更新最快的单机游戏修改器网"
-    },
-    {
-      "title": "资源帝电子书",
-      "url": "http://shu.ziyuandi.cn/",
-      "category": "资源",
-      "summary": "整合全网各类电子书搜索与下载导航的资源帝站点"
-    },
-    {
-      "title": "RARBG",
-      "url": "https://rarbgprx.org/torrents.php",
-      "category": "资源",
-      "summary": "经典的影视 BT 种子下载镜像站，资源更新速度快"
-    },
-    {
-      "title": "Steam",
-      "url": "https://store.steampowered.com/",
-      "category": "娱乐",
-      "summary": "全球最大的综合性数字发行平台，提供海量PC游戏下载与社区交流"
-    },
-    {
-      "title": "Epic Games",
-      "url": "https://store.epicgames.com/",
-      "category": "娱乐",
-      "summary": "知名的PC数字游戏平台，经常提供免费的高品质游戏领取福利"
-    },
-    {
-      "title": "游民星空",
-      "url": "https://www.gamersky.com/",
-      "category": "娱乐",
-      "summary": "国内知名的单机游戏与主机游戏资讯、下载及互动社区"
-    },
-    {
-      "title": "NGA玩家社区",
-      "url": "https://bbs.nga.cn/",
-      "category": "娱乐",
-      "summary": "国内最活跃的硬核游戏玩家与电竞泛娱乐综合论坛"
-    },
-    {
-      "title": "TapTap",
-      "url": "https://www.taptap.com/",
-      "category": "娱乐",
-      "summary": "发现好玩的手游并且分享游戏评价的高品质玩家社区"
-    },
-    {
-      "title": "AcFun",
-      "url": "https://www.acfun.cn/",
-      "category": "娱乐",
-      "summary": "国内老牌的硬核二次元弹幕视频网站"
-    },
-    {
-      "title": "4399小游戏",
-      "url": "https://www.4399.com/",
-      "category": "娱乐",
-      "summary": "经典的休闲小游戏大全网站，提供无数童年页游回忆"
-    },
-    {
-      "title": "Twitch",
-      "url": "https://www.twitch.tv/",
-      "category": "娱乐",
-      "summary": "全球领先的游戏直播和电子竞技流媒体交互平台"
-    },
-    {
-      "title": "SoundCloud",
-      "url": "https://soundcloud.com/",
-      "category": "娱乐",
-      "summary": "探索和分享全球独立音乐人创作声音的音频社区"
-    },
-    {
-      "title": "Vimeo",
-      "url": "https://vimeo.com/",
-      "category": "娱乐",
-      "summary": "纯净无广告的高质量视频流媒体分享平台，深受创作者喜爱"
-    },
-    {
-      "title": "Unsplash",
-      "url": "https://unsplash.com/",
-      "category": "资源",
-      "summary": "提供海量完全免费且可商用的极高质量摄影图片资源网站"
-    },
-    {
-      "title": "Pexels",
-      "url": "https://www.pexels.com/",
-      "category": "资源",
-      "summary": "无版权的高清图片与视频素材库，支持商业用途免费下载"
-    },
-    {
-      "title": "Pixabay",
-      "url": "https://pixabay.com/",
-      "category": "资源",
-      "summary": "汇聚众多免费正版高清图片、插画与视频的素材平台"
-    },
-    {
-      "title": "Iconfont",
-      "url": "https://www.iconfont.cn/",
-      "category": "资源",
-      "summary": "阿里巴巴出品的大型矢量图标管理与下载库，前端及设计必备"
-    },
-    {
-      "title": "鸠摩搜书",
-      "url": "https://www.jiumodiary.com/",
-      "category": "资源",
-      "summary": "非常好用的电子书搜索引擎，支持多种格式正版下载查找"
-    },
-    {
-      "title": "Yande.re",
-      "url": "https://yande.re/",
-      "category": "资源",
-      "summary": "超高品质的ACG动漫二次元高清插画及壁纸图库资源"
-    },
-    {
-      "title": "Wallhaven",
-      "url": "https://wallhaven.cc/",
-      "category": "资源",
-      "summary": "被很多网友誉为最佳的高清电脑壁纸下载网站，各种分辨率齐全"
-    },
-    {
-      "title": "Itch.io",
-      "url": "https://itch.io/",
-      "category": "资源",
-      "summary": "聚集了海量优秀的独立游戏资源的平台，支持自由下载和购买"
-    },
-    {
-      "title": "Gitee",
-      "url": "https://gitee.com/",
-      "category": "资源",
-      "summary": "国内老牌稳定的开源代码托管与项目管理平台资源库"
-    },
-    {
-      "title": "CGjoy",
-      "url": "https://www.cgjoy.com/",
-      "category": "资源",
-      "summary": "聚集大量游戏动画、特效、美术与3D模型素材分享资源的专业论坛"
-    },
-    {
-      "title": "LKs网页推荐站",
-      "url": "https://lkssite.vip/",
-      "category": "有趣",
-      "summary": "B站UP主整理分享的数百个神奇网站汇总，寻找灵感枯竭时的百宝箱"
-    },
-    {
-      "title": "Neal.fun",
-      "url": "https://neal.fun/",
-      "category": "有趣",
-      "summary": "集合了众多极其富有创意和杀时间的奇妙网页互动小游戏"
-    },
-    {
-      "title": "WindowSwap",
-      "url": "https://www.window-swap.com/",
-      "category": "有趣",
-      "summary": "在屏幕上打开一扇全新窗户，看看世界上另一个角落此刻的风景"
-    },
-    {
-      "title": "Drive & Listen",
-      "url": "https://driveandlisten.herokuapp.com/",
-      "category": "有趣",
-      "summary": "提供在世界各大城市街头飙车的视角，并伴随当地真实广播电台体验"
-    },
-    {
-      "title": "Pointer Pointer",
-      "url": "https://pointerpointer.com/",
-      "category": "有趣",
-      "summary": "极其无聊但在某个瞬间会逗笑你的网站：总有一根手指指向你的鼠标"
-    },
-    {
-      "title": "The Useless Web",
-      "url": "https://theuselessweb.com/",
-      "category": "有趣",
-      "summary": "带你随机跳转到一个奇奇怪怪然而却毫无生产力的废柴有趣网站"
-    },
-    {
-      "title": "A Soft Murmur",
-      "url": "https://asoftmurmur.com/",
-      "category": "有趣",
-      "summary": "定制多种底噪混音(如雨声、打雷、咖啡馆)，带你快速进入专注心流状态"
-    },
-    {
-      "title": "Radiooooo",
-      "url": "https://radiooooo.com/",
-      "category": "有趣",
-      "summary": "音乐时光机，只需在地图上选择年代与国家，就能收听那时的流行音乐"
-    },
-    {
-      "title": "地球3D",
-      "url": "https://earth3dmap.com/",
-      "category": "有趣",
-      "summary": "逼真三维视角的地球在线交互地图与街景漫游观光"
-    },
-    {
-      "title": "MuscleWiki",
-      "url": "https://musclewiki.com/",
-      "category": "有趣",
-      "summary": "简单直白地以身体肌肉交互图谱教你如何锻炼指定部位的实用平台"
-    },
-    {
-      "title": "TinyPNG",
-      "url": "https://tinypng.com/",
-      "category": "实用工具",
-      "summary": "熊猫压图，使用智能有损压缩技术将图片文件大小减至最小的利器"
-    },
-    {
-      "title": "ILovePDF",
-      "url": "https://www.ilovepdf.com/",
-      "category": "实用工具",
-      "summary": "几乎拥有一切PDF处理转换和合并功能的免费在线工具箱"
-    },
-    {
-      "title": "Remove.bg",
-      "url": "https://www.remove.bg/",
-      "category": "实用工具",
-      "summary": "依靠强大的AI智能算法，只需5秒就能实现精准全自动人像或商品抠图"
-    },
-    {
-      "title": "Canva可画",
-      "url": "https://www.canva.com/",
-      "category": "实用工具",
-      "summary": "极其简单易用、就算不懂PS也能快速做出高大上设计作品的平面神器"
-    },
-    {
-      "title": "Figma",
-      "url": "https://www.figma.com/",
-      "category": "实用工具",
-      "summary": "基于浏览器端，风靡全球的团队协作现代UI与UX界面原型设计工具"
-    },
-    {
-      "title": "Excalidraw",
-      "url": "https://excalidraw.com/",
-      "category": "实用工具",
-      "summary": "具有清爽手绘风格、无需注册打开即用的极其好用的在线白板原型工具"
-    },
-    {
-      "title": "Photopea",
-      "url": "https://www.photopea.com/",
-      "category": "实用工具",
-      "summary": "直接存在于网页里支持PSD的高级图片修图套件，堪称云端Photoshop"
-    },
-    {
-      "title": "JSON Crack",
-      "url": "https://jsoncrack.com/",
-      "category": "实用工具",
-      "summary": "将枯燥难以阅读的纯文本JSON对象转换成直观的嵌套树状图关系"
-    },
-    {
-      "title": "Regex101",
-      "url": "https://regex101.com/",
-      "category": "实用工具",
-      "summary": "程序开发人员必备的利器，最好用的正则表达式分享、学习与可视化调试工具"
-    },
-    {
-      "title": "在线文件转换",
-      "url": "https://convertio.co/zh/",
-      "category": "实用工具",
-      "summary": "支持将图像、文档乃至视音频任意转换的在线格式神兵利器"
-    },
-    {
-      "title": "ChatGPT",
-      "url": "https://chatgpt.com/",
-      "category": "AI",
-      "summary": "OpenAI开发的强大语言模型，引领AI行业的主流聊天机器人"
-    },
-    {
-      "title": "Claude",
-      "url": "https://claude.ai/",
-      "category": "AI",
-      "summary": "Anthropic开发的AI助手，以安全性、超长上下文和出色文本能力著称"
-    },
-    {
-      "title": "Google Gemini",
-      "url": "https://gemini.google.com/",
-      "category": "AI",
-      "summary": "谷歌推出的大型语言模型，支持多模态交互和长文本处理"
-    },
-    {
-      "title": "DeepSeek (深度求索)",
-      "url": "https://chat.deepseek.com/",
-      "category": "AI",
-      "summary": "国产开源之光，提供极其划算且强大的代码与语言大模型"
-    },
-    {
-      "title": "Kimi",
-      "url": "https://kimi.moonshot.cn/",
-      "category": "AI",
-      "summary": "月之暗面推出，支持超长文本网页文件解析和阅读的国产大模型"
-    },
-    {
-      "title": "豆包",
-      "url": "https://www.doubao.com/",
-      "category": "AI",
-      "summary": "字节跳动出品的免费强力AI对话和创作助手"
-    },
-    {
-      "title": "通义千问",
-      "url": "https://tongyi.aliyun.com/",
-      "category": "AI",
-      "summary": "阿里云推出的大语言模型，多模态能力拔尖，功能非常全面"
-    },
-    {
-      "title": "智谱清言",
-      "url": "https://chatglm.cn/",
-      "category": "AI",
-      "summary": "智谱AI推出的国产强力AI助手，数据分析和文档处理很实用"
-    },
-    {
-      "title": "Grok",
-      "url": "https://x.com/i/grok",
-      "category": "AI",
-      "summary": "马斯克旗下xAI公司推出的幽默且实时获取X平台信息的AI模型"
-    },
-    {
-      "title": "Copilot",
-      "url": "https://copilot.microsoft.com/",
-      "category": "AI",
-      "summary": "微软整合进Bing与Office生态的智能生产力AI"
-    },
-    {
-      "title": "Perplexity",
-      "url": "https://www.perplexity.ai/",
-      "category": "AI",
-      "summary": "革新式的AI搜索引擎，直接给你整理好附带来源答案的下一代搜索"
-    },
-    {
-      "title": "Suno",
-      "url": "https://suno.com/",
-      "category": "AI",
-      "summary": "让人人都能成为音乐人的极其强大的AI歌曲音乐生成平台"
-    },
-    {
-      "title": "Midjourney",
-      "url": "https://www.midjourney.com/",
-      "category": "AI",
-      "summary": "目前生成质量和艺术感最强的AI绘图与图像生成工具"
-    },
-    {
-      "title": "Poe",
-      "url": "https://poe.com/",
-      "category": "AI",
-      "summary": "Quora推出的AI聚合平台，可以一站式体验多种主流大语言模型"
-    },
-    {
-      "title": "HuggingChat",
-      "url": "https://huggingface.co/chat/",
-      "category": "AI",
-      "summary": "Hugging Face推出的开源AI聊天界面，支持体验各大最新开源模型"
-    },
-    {
-      "title": "LiveBench",
-      "url": "https://livebench.ai/",
-      "category": "AI",
-      "summary": "大型语言模型各种能力的实时基准测试排行榜"
-    },
-    {
-      "title": "OpenRouter",
-      "url": "https://openrouter.ai/",
-      "category": "AI",
-      "summary": "统一的大模型API接口平台，方便开发者调用各类热门AI并查看榜单"
-    },
-    {
-      "title": "Google AI Studio",
-      "url": "https://aistudio.google.com/",
-      "category": "AI",
-      "summary": "方便开发者测试和集成谷歌Gemini系列前沿API及多模态能力的控制台"
-    },
-    {
-      "title": "Manus",
-      "url": "https://manus.im/",
-      "category": "AI",
-      "summary": "新晋首个通用个人AI智能体黑马，能够自主操控浏览器并执行复杂任务"
-    },
-    {
-      "title": "Coze (扣子)",
-      "url": "https://www.coze.com/",
-      "category": "AI",
-      "summary": "字节跳动出品的零代码搭建个性化AI Agent和Bot的开发平台"
-    },
-    {
-      "title": "Stable Video",
-      "url": "https://www.stablevideo.com/",
-      "category": "AI",
-      "summary": "Stability AI推出的根据图片或文本快速生成短视频的模型工具"
-    },
-    {
-      "title": "Viggle AI",
-      "url": "https://viggle.ai/",
-      "category": "AI",
-      "summary": "让任何角色图片根据指定动作视频动起来的AI视频生成创意工具"
-    },
-    {
-      "title": "DeepSeek 开放平台",
-      "url": "https://platform.deepseek.com/",
-      "category": "AI",
-      "summary": "DeepSeek API 开发者控制台，调用极其低价且表现顶尖的国产模型"
-    },
-    {
-      "title": "txyz.ai",
-      "url": "https://www.txyz.ai/",
-      "category": "AI",
-      "summary": "面向科研工作者的文献阅读助手，极其强大的学术AI检索和集成工具"
-    },
-    {
-      "title": "LYi 林哥的大模型野榜",
-      "url": "https://lyihub.com/",
-      "category": "AI",
-      "summary": "客观且民间视角维护的大型语言模型性能横向测评排名站点"
-    },
-    {
-      "title": "Nano Banana",
-      "url": "https://nanobanana.ai/",
-      "category": "AI",
-      "summary": "轻量且便捷的基于AI智能驱动的图像编辑器与快速修改工具"
-    },
-    {
-      "title": "Wolfram|Alpha",
-      "url": "https://www.wolframalpha.com/",
-      "category": "AI",
-      "summary": "计算型智能引擎，最严谨理性的回答助手，极其擅长解答理科计算问题"
-    },
-    {
-      "title": "Artificial Analysis",
-      "url": "https://artificialanalysis.ai/",
-      "category": "AI",
-      "summary": "客观专业的大语言模型基准测评、速度以及API服务商价格分析对比"
-    },
-    {
-      "title": "DeepWiki",
-      "url": "https://deepwiki.org/",
-      "category": "AI",
-      "summary": "能够与所有开源项目代码及开发文档进行无缝对话和解读的智能文档AI"
-    },
-    {
-      "title": "OpenClaw",
-      "url": "https://openclaw.ai/",
-      "category": "AI",
-      "summary": "个人AI专属助理系统与人工智能客户端"
-    },
-    {
-      "title": "Best AI Gate",
-      "url": "https://bestaigate.top/",
-      "category": "AI",
-      "summary": "挖掘和聚合各种最新优质大模型和前沿AI应用的资源大门"
-    },
-    {
-      "title": "Zed",
-      "url": "https://zed.dev/",
-      "category": "AI",
-      "summary": "用Rust编写，运行极快、自带AI深入辅助协作功能的高级代码编辑器"
-    }
+      {
+        "title": "Hetzner",
+        "url": "https://www.hetzner.com/cloud",
+        "category": "VPS / 云服务",
+        "tags": [
+          "VPS",
+          "性价比",
+          "云主机"
+        ],
+        "summary": "欧洲高性价比云服务器提供商，适合个人项目。",
+        "note": "价格极度友好，适合自建服务和博客。"
+      },
+      {
+        "title": "DigitalOcean",
+        "url": "https://www.digitalocean.com/",
+        "category": "VPS / 云服务",
+        "tags": [
+          "VPS",
+          "新手友好",
+          "文档"
+        ],
+        "summary": "知名的海外云服务商，控制面板现代直观。",
+        "note": "社区文档极为丰富，非常适合第一次上云的个人开发者。"
+      },
+      {
+        "title": "Vultr",
+        "url": "https://www.vultr.com/",
+        "category": "VPS / 云服务",
+        "tags": [
+          "VPS",
+          "全球节点"
+        ],
+        "summary": "按小时计费的云服务商，全球数据中心多。",
+        "note": "可以随时开通或销毁实例，测试项目首选。"
+      },
+      {
+        "title": "Linode (Akamai)",
+        "url": "https://www.linode.com/",
+        "category": "VPS / 云服务",
+        "tags": [
+          "VPS",
+          "老牌"
+        ],
+        "summary": "老牌优质云服务器提供商，现已被Akamai收购。",
+        "note": "稳定且网络质量较高。"
+      },
+      {
+        "title": "AWS",
+        "url": "https://aws.amazon.com/",
+        "category": "VPS / 云服务",
+        "tags": [
+          "云平台",
+          "企业级"
+        ],
+        "summary": "全球市场份额最大的云计算平台。",
+        "note": "提供第一年免费套餐，适合学习企业级架构。"
+      },
+      {
+        "title": "Google Cloud (GCP)",
+        "url": "https://cloud.google.com/",
+        "category": "VPS / 云服务",
+        "tags": [
+          "云平台",
+          "骨干网"
+        ],
+        "summary": "依托谷歌强大的全球骨干网。",
+        "note": "网络质量极佳，新用户有免费赠金。"
+      },
+      {
+        "title": "Oracle Cloud",
+        "url": "https://www.oracle.com/cloud/",
+        "category": "VPS / 云服务",
+        "tags": [
+          "云平台",
+          "免费"
+        ],
+        "summary": "甲骨文云服务，以慷慨的免费套餐（Always Free）闻名。",
+        "note": "提供免费的ARM架构高配实例，极适合白嫖党，但注册难度较高。"
+      },
+      {
+        "title": "阿里云",
+        "url": "https://www.aliyun.com/",
+        "category": "VPS / 云服务",
+        "tags": [
+          "国内云",
+          "大厂"
+        ],
+        "summary": "国内市场份额最大的云服务商。",
+        "note": "适合部署需备案的国内项目。"
+      },
+      {
+        "title": "腾讯云",
+        "url": "https://cloud.tencent.com/",
+        "category": "VPS / 云服务",
+        "tags": [
+          "国内云",
+          "轻量应用服务器"
+        ],
+        "summary": "国内知名云服务商，轻量应用服务器性价比极高。",
+        "note": "经常有打折活动，适合学生和个人开发者。"
+      },
+      {
+        "title": "BandwagonHost (搬瓦工)",
+        "url": "https://bwh81.net/",
+        "category": "VPS / 云服务",
+        "tags": [
+          "VPS",
+          "CN2 GIA"
+        ],
+        "summary": "以中国大陆优化线路（CN2 GIA）闻名的老牌商家。",
+        "note": "网络极佳，但价格目前越来越贵。"
+      },
+      {
+        "title": "RackNerd",
+        "url": "https://www.racknerd.com/",
+        "category": "VPS / 云服务",
+        "tags": [
+          "VPS",
+          "低价"
+        ],
+        "summary": "主打低价年付机器的海外服务商。",
+        "note": "黑五等节日促销价格极低，适合做备用机或轻量任务。"
+      },
+      {
+        "title": "Cloudflare",
+        "url": "https://www.cloudflare.com/",
+        "category": "域名 / DNS / 建站",
+        "tags": [
+          "DNS",
+          "CDN",
+          "域名"
+        ],
+        "summary": "全球最强大的免费CDN和DNS解析服务商。",
+        "note": "做个人网站必不可少的基础设施。"
+      },
+      {
+        "title": "Namecheap",
+        "url": "https://www.namecheap.com/",
+        "category": "域名 / DNS / 建站",
+        "tags": [
+          "域名",
+          "注册商"
+        ],
+        "summary": "常见的海外域名注册商，主打高性价比。",
+        "note": "买偏门后缀很便宜，包含免费隐私保护。"
+      },
+      {
+        "title": "Namesilo",
+        "url": "https://www.namesilo.com/",
+        "category": "域名 / DNS / 建站",
+        "tags": [
+          "域名",
+          "续费便宜"
+        ],
+        "summary": "以低廉的注册和续费价格闻名。",
+        "note": "界面虽然老旧，但价格透明且便宜。"
+      },
+      {
+        "title": "Porkbun",
+        "url": "https://porkbun.com/",
+        "category": "域名 / DNS / 建站",
+        "tags": [
+          "域名",
+          "良心商家"
+        ],
+        "summary": "口碑极好的新晋域名注册商，界面可爱。",
+        "note": "经常会赠送首年域名，续费也非常实在。"
+      },
+      {
+        "title": "Vercel",
+        "url": "https://vercel.com/",
+        "category": "域名 / DNS / 建站",
+        "tags": [
+          "前端托管",
+          "Serverless"
+        ],
+        "summary": "强大的前端项目托管平台，Next.js 的母公司。",
+        "note": "GitHub一键部署，免费且自动化极高。"
+      },
+      {
+        "title": "Netlify",
+        "url": "https://www.netlify.com/",
+        "category": "域名 / DNS / 建站",
+        "tags": [
+          "前端托管",
+          "自动化构建"
+        ],
+        "summary": "另一个顶级静态站点和前端应用托管平台。",
+        "note": "非常适合部署 React/Vue 单页应用。"
+      },
+      {
+        "title": "Zeabur",
+        "url": "https://zeabur.com/",
+        "category": "域名 / DNS / 建站",
+        "tags": [
+          "PaaS",
+          "全栈部署"
+        ],
+        "summary": "国人开发的 PaaS 平台，支持一键部署各种框架和数据库。",
+        "note": "对开发者非常友好，无需关注底层运维。"
+      },
+      {
+        "title": "Render",
+        "url": "https://render.com/",
+        "category": "域名 / DNS / 建站",
+        "tags": [
+          "PaaS",
+          "全栈部署"
+        ],
+        "summary": "被认为是 Heroku 最佳替代品的云托管服务。",
+        "note": "支持 Docker 容器、Web 服务和数据库的托管。"
+      },
+      {
+        "title": "Railway",
+        "url": "https://railway.app/",
+        "category": "域名 / DNS / 建站",
+        "tags": [
+          "PaaS",
+          "全栈部署"
+        ],
+        "summary": "现代化的一键式应用部署平台，体验极佳。",
+        "note": "目前已取消每月免费额度，但总体性价比仍高。"
+      },
+      {
+        "title": "Spaceship",
+        "url": "https://www.spaceship.com/",
+        "category": "域名 / DNS / 建站",
+        "tags": [
+          "域名",
+          "新兴"
+        ],
+        "summary": "Namecheap 旗下的新一代域名商，界面极具科技感。",
+        "note": "首年注册极其便宜，解析生效极快。"
+      },
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/",
+        "category": "学术资源",
+        "tags": [
+          "论文",
+          "预印本"
+        ],
+        "summary": "物理、数学、计算机科学等领域的开放预印本平台。",
+        "note": "AI 和计算机最新论文第一时间首发站。"
+      },
+      {
+        "title": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/",
+        "category": "学术资源",
+        "tags": [
+          "论文搜索",
+          "AI赋能"
+        ],
+        "summary": "由艾伦人工智能研究所打造的免费学术搜索引擎。",
+        "note": "能自动提取核心引用和总结，检索体验出色。"
+      },
+      {
+        "title": "Google Scholar",
+        "url": "https://scholar.google.com/",
+        "category": "学术资源",
+        "tags": [
+          "文献检索"
+        ],
+        "summary": "全球最大、最全的免费学术搜索工具。",
+        "note": "查被引次数和找 PDF 的首选工具，需科学上网。"
+      },
+      {
+        "title": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/",
+        "category": "学术资源",
+        "tags": [
+          "生物医学",
+          "生命科学"
+        ],
+        "summary": "免费的生物医学和生命科学文献搜索引擎。",
+        "note": "医学和自然科学领域的核心数据库。"
+      },
+      {
+        "title": "ResearchGate",
+        "url": "https://www.researchgate.net/",
+        "category": "学术资源",
+        "tags": [
+          "学术社交"
+        ],
+        "summary": "面向科研人员和科学家的社交网络和协作平台。",
+        "note": "可以直接向论文作者索要完整版 PDF 论文。"
+      },
+      {
+        "title": "DBLP",
+        "url": "https://dblp.org/",
+        "category": "学术资源",
+        "tags": [
+          "计算机科学",
+          "文献索引"
+        ],
+        "summary": "专注于计算机科学领域的英文文献库。",
+        "note": "查找某个作者的所有计算机方向文章极快。"
+      },
+      {
+        "title": "中国知网 (CNKI)",
+        "url": "https://www.cnki.net/",
+        "category": "学术资源",
+        "tags": [
+          "中文文献",
+          "大而全"
+        ],
+        "summary": "中国最权威的学术文献、论文数据库。",
+        "note": "查阅中文期刊和硕博毕业论文必备。"
+      },
+      {
+        "title": "Web of Science",
+        "url": "https://www.webofscience.com/",
+        "category": "学术资源",
+        "tags": [
+          "SCI",
+          "期刊数据"
+        ],
+        "summary": "全球最权威的引文索引数据库之一。",
+        "note": "多通过机构邮箱访问，用于查期刊等级和影响因子。"
+      },
+      {
+        "title": "Zotero",
+        "url": "https://www.zotero.org/",
+        "category": "学术资源",
+        "tags": [
+          "文献管理",
+          "免费开源"
+        ],
+        "summary": "免费且强大的多平台文献管理工具。",
+        "note": "科研小白救星，配合插件可一键下载网页文献。"
+      },
+      {
+        "title": "MDN Web Docs",
+        "url": "https://developer.mozilla.org/",
+        "category": "程序员常用网站",
+        "tags": [
+          "前端",
+          "文档"
+        ],
+        "summary": "由 Mozilla 维护的 Web 开发基础文档。",
+        "note": "前端开发者的圣经，查阅 JS/HTML/CSS API 首选。"
+      },
+      {
+        "title": "DevDocs",
+        "url": "https://devdocs.io/",
+        "category": "程序员常用网站",
+        "tags": [
+          "API字典",
+          "离线文档"
+        ],
+        "summary": "整合了多个语言和框架的 API 文档。",
+        "note": "支持下载离线查看，写代码时当字典查非常方便。"
+      },
+      {
+        "title": "GitHub",
+        "url": "https://github.com/",
+        "category": "程序员常用网站",
+        "tags": [
+          "代码托管",
+          "开源社区"
+        ],
+        "summary": "全球最大开源软件代码托管平台和开发者社区。",
+        "note": "寻找轮子和维护项目的集中地。"
+      },
+      {
+        "title": "Stack Overflow",
+        "url": "https://stackoverflow.com/",
+        "category": "程序员常用网站",
+        "tags": [
+          "问答",
+          "报错检索"
+        ],
+        "summary": "全球最活跃的程序员技术问答网站。",
+        "note": "遇到报错搜一下，99% 的问题已被解答过。"
+      },
+      {
+        "title": "V2EX",
+        "url": "https://www.v2ex.com/",
+        "category": "程序员常用网站",
+        "tags": [
+          "技术论坛",
+          "摸鱼"
+        ],
+        "summary": "国内活跃的技术交流与极客生活探讨社区。",
+        "note": "不仅有技术讨论，还有大量的数码、求职话题。"
+      },
+      {
+        "title": "LeetCode",
+        "url": "https://leetcode.com/",
+        "category": "程序员常用网站",
+        "tags": [
+          "刷题",
+          "算法"
+        ],
+        "summary": "知名的在线编程刷题平台，侧重算法和数据结构。",
+        "note": "准备互联网大厂面试必经之路。"
+      },
+      {
+        "title": "Hacker News",
+        "url": "https://news.ycombinator.com/",
+        "category": "程序员常用网站",
+        "tags": [
+          "极客新闻",
+          "视野"
+        ],
+        "summary": "Y Combinator 旗下的高质量科技新闻与讨论区。",
+        "note": "获取最新技术趋势和高质量讨论。"
+      },
+      {
+        "title": "稀土掘金",
+        "url": "https://juejin.cn/",
+        "category": "程序员常用网站",
+        "tags": [
+          "技术博客",
+          "国内社区"
+        ],
+        "summary": "国内优质的面向开发者的技术内容分享平台。",
+        "note": "大前端文章质量较高，经常有干货总结。"
+      },
+      {
+        "title": "roadmap.sh",
+        "url": "https://roadmap.sh/",
+        "category": "程序员常用网站",
+        "tags": [
+          "学习路线",
+          "图谱"
+        ],
+        "summary": "社区共建的各领域开发者学习路线图。",
+        "note": "当你不知道学什么的时候，看看它的路线图。"
+      },
+      {
+        "title": "Can I use",
+        "url": "https://caniuse.com/",
+        "category": "程序员常用网站",
+        "tags": [
+          "兼容性",
+          "前端"
+        ],
+        "summary": "提供前端 Web 技术浏览器支持情况查询表。",
+        "note": "前端适配必备，想用新特性前必查。"
+      },
+      {
+        "title": "老乡鸡开源菜谱",
+        "url": "https://cooklikehoc.soilzhu.su",
+        "category": "有趣",
+        "tags": [
+          "做菜",
+          "开源"
+        ],
+        "summary": "详尽的老乡鸡官方菜品做法指南。",
+        "note": "程序员也要好好吃饭，按文档写代码一样做菜。"
+      },
+      {
+        "title": "小霸王其乐无穷",
+        "url": "https://www.yikm.net/",
+        "category": "有趣",
+        "tags": [
+          "游戏",
+          "怀旧",
+          "FC"
+        ],
+        "summary": "在线网页版 FC 小霸王红白机游戏聚合站。",
+        "note": "上班摸鱼神器，找回童年的记忆。"
+      },
+      {
+        "title": "Neal.fun",
+        "url": "https://neal.fun/",
+        "category": "有趣",
+        "tags": [
+          "小游戏",
+          "脑洞"
+        ],
+        "summary": "一系列极具创意、脑洞大开的趣味可视化工具。",
+        "note": "强烈推荐 Asteroid Crash 等应用。"
+      },
+      {
+        "title": "The Useless Web",
+        "url": "https://theuselessweb.com/",
+        "category": "有趣",
+        "tags": [
+          "无聊",
+          "盲盒"
+        ],
+        "summary": "带你去那些极其无聊又带点意思的随机网站。",
+        "note": "当你觉得无聊时，能杀掉一下午的时间。"
+      },
+      {
+        "title": "Pointer Pointer",
+        "url": "https://pointerpointer.com/",
+        "category": "有趣",
+        "tags": [
+          "无聊",
+          "图片"
+        ],
+        "summary": "鼠标悬停在哪里，就会随机出现图中的人指着你的鼠标。",
+        "note": "不可思议的数据集搜集能力，十分魔性。"
+      },
+      {
+        "title": "Window Swap",
+        "url": "https://www.window-swap.com/",
+        "category": "有趣",
+        "tags": [
+          "风景",
+          "白噪音"
+        ],
+        "summary": "随机打开世界上某个角落的真实窗外风景视频。",
+        "note": "工作疲惫时，看看别人窗外的雨，非常治愈。"
+      },
+      {
+        "title": "My 90s TV",
+        "url": "https://www.my90stv.com/",
+        "category": "有趣",
+        "tags": [
+          "复古",
+          "电视"
+        ],
+        "summary": "模拟了90年代的电视机，播放那个年代的节目。",
+        "note": "极具沉浸感，可以换台、看广告或打游戏片段。"
+      },
+      {
+        "title": "A Soft Murmur",
+        "url": "https://asoftmurmur.com/",
+        "category": "有趣",
+        "tags": [
+          "白噪音",
+          "专注"
+        ],
+        "summary": "自定义混合各种环境白噪音的网站。",
+        "note": "适合带上耳机沉浸式写代码或看书。"
+      },
+      {
+        "title": "Earth 3D",
+        "url": "https://earth.nullschool.net/",
+        "category": "有趣",
+        "tags": [
+          "3D地球",
+          "可视化"
+        ],
+        "summary": "实时查看全球风向、气温、洋流等数据的地球仪。",
+        "note": "数据可视化做得极为惊艳。"
+      },
+      {
+        "title": "Drive & Listen",
+        "url": "https://driveandlisten.herokuapp.com/",
+        "category": "有趣",
+        "tags": [
+          "开车",
+          "电台"
+        ],
+        "summary": "在模拟开车的同时收听当地实时电台广播。",
+        "note": "可以感受世界各大城市的街景和音乐。"
+      },
+      {
+        "title": "Sandspiel",
+        "url": "https://sandspi.el.st/",
+        "category": "有趣",
+        "tags": [
+          "沙盒",
+          "像素"
+        ],
+        "summary": "利用各种元素的物理和化学反应玩耍的像素沙盒。",
+        "note": "将火、水、植物、冰混合在一起观察反应。"
+      },
+      {
+        "title": "Any To Web",
+        "url": "https://www.anytoweb.com",
+        "category": "实用工具",
+        "tags": [
+          "代码转换",
+          "前端"
+        ],
+        "summary": "一个可以将代码、原稿快速转化为网页代码的工具。",
+        "note": "提升单页面开发效率的好帮手。"
+      },
+      {
+        "title": "USTC 测速",
+        "url": "https://test.ustc.edu.cn",
+        "category": "实用工具",
+        "tags": [
+          "测速",
+          "校园网"
+        ],
+        "summary": "中国科大提供的纯净无广告网速测试工具。",
+        "note": "国内首选轻量测速页，极速且无杂项。"
+      },
+      {
+        "title": "Regex101",
+        "url": "https://regex101.com/",
+        "category": "实用工具",
+        "tags": [
+          "正则表达式",
+          "测试"
+        ],
+        "summary": "最优秀的在线正则表达式调试工具。",
+        "note": "写正则必用，有高亮匹配和详细解释。"
+      },
+      {
+        "title": "TinyPNG",
+        "url": "https://tinypng.com/",
+        "category": "实用工具",
+        "tags": [
+          "图片压缩"
+        ],
+        "summary": "智能在线图片压缩工具，带有一只熊猫。",
+        "note": "画质损失极少的情况下大幅缩减体积。"
+      },
+      {
+        "title": "Carbon",
+        "url": "https://carbon.now.sh/",
+        "category": "实用工具",
+        "tags": [
+          "代码美化",
+          "截图"
+        ],
+        "summary": "为代码生成精美、可分享的语法高亮图片。",
+        "note": "社交媒体分享代码的最佳利器。"
+      },
+      {
+        "title": "JSON Crack",
+        "url": "https://jsoncrack.com/",
+        "category": "实用工具",
+        "tags": [
+          "JSON解析",
+          "可视化"
+        ],
+        "summary": "将 JSON 数据结构转换成树状架构图的在线利器。",
+        "note": "对于分析级联复杂、嵌套深的后端数据非常有帮助。"
+      },
+      {
+        "title": "CyberChef",
+        "url": "https://gchq.github.io/CyberChef/",
+        "category": "实用工具",
+        "tags": [
+          "瑞士军刀",
+          "加解密"
+        ],
+        "summary": "强大的用于网络和加解密操作的瑞士军刀。",
+        "note": "支持 Base64、AES、Hex 等几百种编解码。"
+      },
+      {
+        "title": "Squoosh",
+        "url": "https://squoosh.app/",
+        "category": "实用工具",
+        "tags": [
+          "图片压缩",
+          "格式转换"
+        ],
+        "summary": "谷歌出品的强大在线图片压缩工具，支持 WebP/AVIF。",
+        "note": "提供原图与压缩后的滑动对比。"
+      },
+      {
+        "title": "draw.io",
+        "url": "https://app.diagrams.net/",
+        "category": "实用工具",
+        "tags": [
+          "流程图",
+          "UML"
+        ],
+        "summary": "免费开源在线绘图工具，可画流程图、架构图等。",
+        "note": "支持同步到 GitHub、Google Drive。"
+      },
+      {
+        "title": "Excalidraw",
+        "url": "https://excalidraw.com/",
+        "category": "实用工具",
+        "tags": [
+          "手写风",
+          "白板"
+        ],
+        "summary": "手绘风格的虚拟在线白板和图表绘制平台。",
+        "note": "沟通思路或是做轻量架构设计的极佳体验。"
+      },
+      {
+        "title": "DevToys",
+        "url": "https://devtoys.app/",
+        "category": "实用工具",
+        "tags": [
+          "开发者工具",
+          "聚合"
+        ],
+        "summary": "开发者的瑞士军刀美誉的一体化本地桌面工具合集。",
+        "note": "包含了几乎所有日常所需的转换工具。"
+      },
+      {
+        "title": "在线随机密码生成器",
+        "url": "https://passwordsgenerator.net/",
+        "category": "实用工具",
+        "tags": [
+          "安全",
+          "密码工具"
+        ],
+        "summary": "生成极高强度的随机密码工具。",
+        "note": "注册一堆小网站防止被扫号的利器。"
+      },
+      {
+        "title": "Crontab.guru",
+        "url": "https://crontab.guru/",
+        "category": "实用工具",
+        "tags": [
+          "定时任务",
+          "Cron"
+        ],
+        "summary": "快速且易懂的 Cron 表达式在线编辑器和时间计算器。",
+        "note": "只要不知道怎么写表达式，就打开这个网站。"
+      },
+      {
+        "title": "DMIT",
+        "url": "https://www.dmit.io",
+        "category": "VPS / 云服务",
+        "summary": "高性能、低延迟的全球优质云服务器提供商"
+      },
+      {
+        "title": "GreenCloud",
+        "url": "https://greencloudvps.com",
+        "category": "VPS / 云服务",
+        "summary": "高性价比、配置丰富的绿色环保 VPS 主机"
+      },
+      {
+        "title": "丽萨主机",
+        "url": "https://lisahost.com",
+        "category": "VPS / 云服务",
+        "summary": "稳定可靠的高防 VPS 及ISP住宅IP服务商"
+      },
+      {
+        "title": "Hugging Face",
+        "url": "https://huggingface.co",
+        "category": "程序员常用网站",
+        "summary": "非常活跃的机器学习和 AI 模型开源社区与托管平台"
+      },
+      {
+        "title": "Bilibili",
+        "url": "https://www.bilibili.com",
+        "category": "娱乐",
+        "summary": "国内知名的视频弹幕网站与内容共创社区"
+      },
+      {
+        "title": "YouTube",
+        "url": "https://www.youtube.com",
+        "category": "娱乐",
+        "summary": "全球最大的视频搜索、分享和流媒体观看平台"
+      },
+      {
+        "title": "Netflix",
+        "url": "https://www.netflix.com",
+        "category": "娱乐",
+        "summary": "提供海量优质影视剧的海内外流媒体综合平台"
+      },
+      {
+        "title": "Spotify",
+        "url": "https://open.spotify.com",
+        "category": "娱乐",
+        "summary": "全球最受欢迎的音乐播客流媒体在线服务软件"
+      },
+      {
+        "title": "豆瓣",
+        "url": "https://www.douban.com",
+        "category": "娱乐",
+        "summary": "发现和评价好电影、好书、好音乐的文化社区"
+      },
+      {
+        "title": "LIBVIO",
+        "url": "https://www.libvio.cc/",
+        "category": "娱乐",
+        "summary": "提供海量热门高清影视剧集的优质视频网站"
+      },
+      {
+        "title": "樱花动漫",
+        "url": "https://www.yhdmp.cc/",
+        "category": "娱乐",
+        "summary": "二次元专注的日本番剧动画免费追番站点"
+      },
+      {
+        "title": "Gamer520",
+        "url": "https://www.gamer520.com/",
+        "category": "资源",
+        "summary": "非常丰富的热门优质PC单机游戏资源下载网站"
+      },
+      {
+        "title": "FLiNG Trainer",
+        "url": "https://flingtrainer.com/",
+        "category": "资源",
+        "summary": "风灵月影，最权威和更新最快的单机游戏修改器网"
+      },
+      {
+        "title": "资源帝电子书",
+        "url": "http://shu.ziyuandi.cn/",
+        "category": "资源",
+        "summary": "整合全网各类电子书搜索与下载导航的资源帝站点"
+      },
+      {
+        "title": "RARBG",
+        "url": "https://rarbgprx.org/torrents.php",
+        "category": "资源",
+        "summary": "经典的影视 BT 种子下载镜像站，资源更新速度快"
+      },
+      {
+        "title": "Steam",
+        "url": "https://store.steampowered.com/",
+        "category": "娱乐",
+        "summary": "全球最大的综合性数字发行平台，提供海量PC游戏下载与社区交流"
+      },
+      {
+        "title": "Epic Games",
+        "url": "https://store.epicgames.com/",
+        "category": "娱乐",
+        "summary": "知名的PC数字游戏平台，经常提供免费的高品质游戏领取福利"
+      },
+      {
+        "title": "游民星空",
+        "url": "https://www.gamersky.com/",
+        "category": "娱乐",
+        "summary": "国内知名的单机游戏与主机游戏资讯、下载及互动社区"
+      },
+      {
+        "title": "NGA玩家社区",
+        "url": "https://bbs.nga.cn/",
+        "category": "娱乐",
+        "summary": "国内最活跃的硬核游戏玩家与电竞泛娱乐综合论坛"
+      },
+      {
+        "title": "TapTap",
+        "url": "https://www.taptap.com/",
+        "category": "娱乐",
+        "summary": "发现好玩的手游并且分享游戏评价的高品质玩家社区"
+      },
+      {
+        "title": "AcFun",
+        "url": "https://www.acfun.cn/",
+        "category": "娱乐",
+        "summary": "国内老牌的硬核二次元弹幕视频网站"
+      },
+      {
+        "title": "4399小游戏",
+        "url": "https://www.4399.com/",
+        "category": "娱乐",
+        "summary": "经典的休闲小游戏大全网站，提供无数童年页游回忆"
+      },
+      {
+        "title": "Twitch",
+        "url": "https://www.twitch.tv/",
+        "category": "娱乐",
+        "summary": "全球领先的游戏直播和电子竞技流媒体交互平台"
+      },
+      {
+        "title": "SoundCloud",
+        "url": "https://soundcloud.com/",
+        "category": "娱乐",
+        "summary": "探索和分享全球独立音乐人创作声音的音频社区"
+      },
+      {
+        "title": "Vimeo",
+        "url": "https://vimeo.com/",
+        "category": "娱乐",
+        "summary": "纯净无广告的高质量视频流媒体分享平台，深受创作者喜爱"
+      },
+      {
+        "title": "Unsplash",
+        "url": "https://unsplash.com/",
+        "category": "资源",
+        "summary": "提供海量完全免费且可商用的极高质量摄影图片资源网站"
+      },
+      {
+        "title": "Pexels",
+        "url": "https://www.pexels.com/",
+        "category": "资源",
+        "summary": "无版权的高清图片与视频素材库，支持商业用途免费下载"
+      },
+      {
+        "title": "Pixabay",
+        "url": "https://pixabay.com/",
+        "category": "资源",
+        "summary": "汇聚众多免费正版高清图片、插画与视频的素材平台"
+      },
+      {
+        "title": "Iconfont",
+        "url": "https://www.iconfont.cn/",
+        "category": "资源",
+        "summary": "阿里巴巴出品的大型矢量图标管理与下载库，前端及设计必备"
+      },
+      {
+        "title": "鸠摩搜书",
+        "url": "https://www.jiumodiary.com/",
+        "category": "资源",
+        "summary": "非常好用的电子书搜索引擎，支持多种格式正版下载查找"
+      },
+      {
+        "title": "Yande.re",
+        "url": "https://yande.re/",
+        "category": "资源",
+        "summary": "超高品质的ACG动漫二次元高清插画及壁纸图库资源"
+      },
+      {
+        "title": "Wallhaven",
+        "url": "https://wallhaven.cc/",
+        "category": "资源",
+        "summary": "被很多网友誉为最佳的高清电脑壁纸下载网站，各种分辨率齐全"
+      },
+      {
+        "title": "Itch.io",
+        "url": "https://itch.io/",
+        "category": "资源",
+        "summary": "聚集了海量优秀的独立游戏资源的平台，支持自由下载和购买"
+      },
+      {
+        "title": "Gitee",
+        "url": "https://gitee.com/",
+        "category": "资源",
+        "summary": "国内老牌稳定的开源代码托管与项目管理平台资源库"
+      },
+      {
+        "title": "CGjoy",
+        "url": "https://www.cgjoy.com/",
+        "category": "资源",
+        "summary": "聚集大量游戏动画、特效、美术与3D模型素材分享资源的专业论坛"
+      },
+      {
+        "title": "LKs网页推荐站",
+        "url": "https://lkssite.vip/",
+        "category": "有趣",
+        "summary": "B站UP主整理分享的数百个神奇网站汇总，寻找灵感枯竭时的百宝箱"
+      },
+      {
+        "title": "Radiooooo",
+        "url": "https://radiooooo.com/",
+        "category": "有趣",
+        "summary": "音乐时光机，只需在地图上选择年代与国家，就能收听那时的流行音乐"
+      },
+      {
+        "title": "地球3D",
+        "url": "https://earth3dmap.com/",
+        "category": "有趣",
+        "summary": "逼真三维视角的地球在线交互地图与街景漫游观光"
+      },
+      {
+        "title": "MuscleWiki",
+        "url": "https://musclewiki.com/",
+        "category": "有趣",
+        "summary": "简单直白地以身体肌肉交互图谱教你如何锻炼指定部位的实用平台"
+      },
+      {
+        "title": "ILovePDF",
+        "url": "https://www.ilovepdf.com/",
+        "category": "实用工具",
+        "summary": "几乎拥有一切PDF处理转换和合并功能的免费在线工具箱"
+      },
+      {
+        "title": "Remove.bg",
+        "url": "https://www.remove.bg/",
+        "category": "实用工具",
+        "summary": "依靠强大的AI智能算法，只需5秒就能实现精准全自动人像或商品抠图"
+      },
+      {
+        "title": "Canva可画",
+        "url": "https://www.canva.com/",
+        "category": "实用工具",
+        "summary": "极其简单易用、就算不懂PS也能快速做出高大上设计作品的平面神器"
+      },
+      {
+        "title": "Figma",
+        "url": "https://www.figma.com/",
+        "category": "实用工具",
+        "summary": "基于浏览器端，风靡全球的团队协作现代UI与UX界面原型设计工具"
+      },
+      {
+        "title": "Photopea",
+        "url": "https://www.photopea.com/",
+        "category": "实用工具",
+        "summary": "直接存在于网页里支持PSD的高级图片修图套件，堪称云端Photoshop"
+      },
+      {
+        "title": "在线文件转换",
+        "url": "https://convertio.co/zh/",
+        "category": "实用工具",
+        "summary": "支持将图像、文档乃至视音频任意转换的在线格式神兵利器"
+      },
+      {
+        "title": "ChatGPT",
+        "url": "https://chatgpt.com/",
+        "category": "AI",
+        "summary": "OpenAI开发的强大语言模型，引领AI行业的主流聊天机器人"
+      },
+      {
+        "title": "Claude",
+        "url": "https://claude.ai/",
+        "category": "AI",
+        "summary": "Anthropic开发的AI助手，以安全性、超长上下文和出色文本能力著称"
+      },
+      {
+        "title": "Google Gemini",
+        "url": "https://gemini.google.com/",
+        "category": "AI",
+        "summary": "谷歌推出的大型语言模型，支持多模态交互和长文本处理"
+      },
+      {
+        "title": "DeepSeek (深度求索)",
+        "url": "https://chat.deepseek.com/",
+        "category": "AI",
+        "summary": "国产开源之光，提供极其划算且强大的代码与语言大模型"
+      },
+      {
+        "title": "Kimi",
+        "url": "https://kimi.moonshot.cn/",
+        "category": "AI",
+        "summary": "月之暗面推出，支持超长文本网页文件解析和阅读的国产大模型"
+      },
+      {
+        "title": "豆包",
+        "url": "https://www.doubao.com/",
+        "category": "AI",
+        "summary": "字节跳动出品的免费强力AI对话和创作助手"
+      },
+      {
+        "title": "通义千问",
+        "url": "https://tongyi.aliyun.com/",
+        "category": "AI",
+        "summary": "阿里云推出的大语言模型，多模态能力拔尖，功能非常全面"
+      },
+      {
+        "title": "智谱清言",
+        "url": "https://chatglm.cn/",
+        "category": "AI",
+        "summary": "智谱AI推出的国产强力AI助手，数据分析和文档处理很实用"
+      },
+      {
+        "title": "Grok",
+        "url": "https://x.com/i/grok",
+        "category": "AI",
+        "summary": "马斯克旗下xAI公司推出的幽默且实时获取X平台信息的AI模型"
+      },
+      {
+        "title": "Copilot",
+        "url": "https://copilot.microsoft.com/",
+        "category": "AI",
+        "summary": "微软整合进Bing与Office生态的智能生产力AI"
+      },
+      {
+        "title": "Perplexity",
+        "url": "https://www.perplexity.ai/",
+        "category": "AI",
+        "summary": "革新式的AI搜索引擎，直接给你整理好附带来源答案的下一代搜索"
+      },
+      {
+        "title": "Suno",
+        "url": "https://suno.com/",
+        "category": "AI",
+        "summary": "让人人都能成为音乐人的极其强大的AI歌曲音乐生成平台"
+      },
+      {
+        "title": "Midjourney",
+        "url": "https://www.midjourney.com/",
+        "category": "AI",
+        "summary": "目前生成质量和艺术感最强的AI绘图与图像生成工具"
+      },
+      {
+        "title": "Poe",
+        "url": "https://poe.com/",
+        "category": "AI",
+        "summary": "Quora推出的AI聚合平台，可以一站式体验多种主流大语言模型"
+      },
+      {
+        "title": "HuggingChat",
+        "url": "https://huggingface.co/chat/",
+        "category": "AI",
+        "summary": "Hugging Face推出的开源AI聊天界面，支持体验各大最新开源模型"
+      },
+      {
+        "title": "LiveBench",
+        "url": "https://livebench.ai/",
+        "category": "AI",
+        "summary": "大型语言模型各种能力的实时基准测试排行榜"
+      },
+      {
+        "title": "OpenRouter",
+        "url": "https://openrouter.ai/",
+        "category": "AI",
+        "summary": "统一的大模型API接口平台，方便开发者调用各类热门AI并查看榜单"
+      },
+      {
+        "title": "Google AI Studio",
+        "url": "https://aistudio.google.com/",
+        "category": "AI",
+        "summary": "方便开发者测试和集成谷歌Gemini系列前沿API及多模态能力的控制台"
+      },
+      {
+        "title": "Manus",
+        "url": "https://manus.im/",
+        "category": "AI",
+        "summary": "新晋首个通用个人AI智能体黑马，能够自主操控浏览器并执行复杂任务"
+      },
+      {
+        "title": "Coze (扣子)",
+        "url": "https://www.coze.com/",
+        "category": "AI",
+        "summary": "字节跳动出品的零代码搭建个性化AI Agent和Bot的开发平台"
+      },
+      {
+        "title": "Stable Video",
+        "url": "https://www.stablevideo.com/",
+        "category": "AI",
+        "summary": "Stability AI推出的根据图片或文本快速生成短视频的模型工具"
+      },
+      {
+        "title": "Viggle AI",
+        "url": "https://viggle.ai/",
+        "category": "AI",
+        "summary": "让任何角色图片根据指定动作视频动起来的AI视频生成创意工具"
+      },
+      {
+        "title": "DeepSeek 开放平台",
+        "url": "https://platform.deepseek.com/",
+        "category": "AI",
+        "summary": "DeepSeek API 开发者控制台，调用极其低价且表现顶尖的国产模型"
+      },
+      {
+        "title": "txyz.ai",
+        "url": "https://www.txyz.ai/",
+        "category": "AI",
+        "summary": "面向科研工作者的文献阅读助手，极其强大的学术AI检索和集成工具"
+      },
+      {
+        "title": "LYi 林哥的大模型野榜",
+        "url": "https://lyihub.com/",
+        "category": "AI",
+        "summary": "客观且民间视角维护的大型语言模型性能横向测评排名站点"
+      },
+      {
+        "title": "Nano Banana",
+        "url": "https://nanobanana.ai/",
+        "category": "AI",
+        "summary": "轻量且便捷的基于AI智能驱动的图像编辑器与快速修改工具"
+      },
+      {
+        "title": "Wolfram|Alpha",
+        "url": "https://www.wolframalpha.com/",
+        "category": "AI",
+        "summary": "计算型智能引擎，最严谨理性的回答助手，极其擅长解答理科计算问题"
+      },
+      {
+        "title": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/",
+        "category": "AI",
+        "summary": "客观专业的大语言模型基准测评、速度以及API服务商价格分析对比"
+      },
+      {
+        "title": "DeepWiki",
+        "url": "https://deepwiki.org/",
+        "category": "AI",
+        "summary": "能够与所有开源项目代码及开发文档进行无缝对话和解读的智能文档AI"
+      },
+      {
+        "title": "OpenClaw",
+        "url": "https://openclaw.ai/",
+        "category": "AI",
+        "summary": "个人AI专属助理系统与人工智能客户端"
+      },
+      {
+        "title": "Best AI Gate",
+        "url": "https://bestaigate.top/",
+        "category": "AI",
+        "summary": "挖掘和聚合各种最新优质大模型和前沿AI应用的资源大门"
+      },
+      {
+        "title": "Zed",
+        "url": "https://zed.dev/",
+        "category": "AI",
+        "summary": "用Rust编写，运行极快、自带AI深入辅助协作功能的高级代码编辑器"
+      }
     ]
   }
 }

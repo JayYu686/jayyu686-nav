@@ -209,6 +209,7 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
 
       .filter-btn {
         padding: 8px 16px;
+        min-height: 36px;
         border-radius: 999px;
         border: 1px solid var(--line);
         background: var(--panel);
@@ -258,6 +259,7 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         border: 1px solid transparent;
         border-radius: 10px;
         padding: 8px 10px;
+        min-height: 36px;
         font-size: 14px;
         transition: all 0.2s ease;
       }
@@ -315,12 +317,63 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
       }
 
       @media (max-width: 900px) {
-        .content-layout { grid-template-columns: 1fr; }
+        .wrap { padding: 52px 18px 72px; }
+        .hero { margin-bottom: 30px; }
+        h1 { font-size: 38px; margin-bottom: 12px; }
+        .sub { font-size: 16px; max-width: 540px; }
+
+        .toolbar {
+          margin: 30px 0;
+          gap: 16px;
+          align-items: stretch;
+        }
+
+        .search {
+          max-width: none;
+          font-size: 15px;
+          padding: 14px 18px;
+        }
+
+        .filters {
+          flex-wrap: nowrap;
+          justify-content: flex-start;
+          overflow-x: auto;
+          padding-bottom: 6px;
+          scroll-snap-type: x proximity;
+          touch-action: pan-x;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: thin;
+        }
+
+        .filter-btn {
+          white-space: nowrap;
+          flex: 0 0 auto;
+          min-height: 40px;
+          scroll-snap-align: start;
+        }
+
+        .lang-btn,
+        .theme-btn {
+          top: 14px;
+          width: 40px;
+          height: 40px;
+        }
+
+        .lang-btn {
+          right: 62px;
+          font-size: 12px;
+        }
+
+        .theme-btn { right: 14px; }
+
+        .content-layout { grid-template-columns: 1fr; gap: 16px; }
 
         .elevator {
           position: sticky;
           top: 12px;
           z-index: 50;
+          padding: 10px;
+          border-radius: 14px;
         }
 
         .elevator-title { display: none; }
@@ -330,9 +383,93 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
           max-height: none;
           overflow: auto hidden;
           padding-bottom: 2px;
+          gap: 6px;
+          scroll-snap-type: x proximity;
+          touch-action: pan-x;
         }
 
-        .elevator-link { white-space: nowrap; }
+        .elevator-link {
+          white-space: nowrap;
+          padding: 7px 9px;
+          min-height: 40px;
+          scroll-snap-align: start;
+          font-size: 13px;
+        }
+
+        .back-top {
+          right: 16px;
+          bottom: 20px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .wrap { padding: 44px 14px 64px; }
+
+        .orb {
+          filter: blur(86px);
+          opacity: 0.4;
+        }
+
+        .orb-4 { display: none; }
+
+        .lang-btn,
+        .theme-btn {
+          top: calc(10px + env(safe-area-inset-top));
+          width: 40px;
+          height: 40px;
+        }
+
+        .lang-btn {
+          right: 56px;
+          font-size: 11px;
+        }
+
+        .theme-btn { right: 12px; }
+
+        h1 {
+          font-size: 30px;
+          letter-spacing: -0.2px;
+        }
+
+        .sub {
+          font-size: 14px;
+          line-height: 1.5;
+        }
+
+        .toolbar {
+          margin: 24px 0;
+          gap: 12px;
+        }
+
+        .search {
+          font-size: 16px;
+          padding: 12px 16px;
+        }
+
+        .filters { gap: 8px; }
+
+        .filter-btn {
+          font-size: 13px;
+          padding: 7px 12px;
+          min-height: 40px;
+        }
+
+        .elevator { top: 8px; }
+
+        .elevator-list { gap: 4px; }
+
+        .elevator-link {
+          font-size: 12px;
+          padding: 6px 8px;
+          min-height: 36px;
+        }
+
+        .back-top {
+          width: 40px;
+          height: 40px;
+          right: 12px;
+          bottom: calc(14px + env(safe-area-inset-bottom));
+        }
       }
 
       @media (prefers-reduced-motion: reduce) {
