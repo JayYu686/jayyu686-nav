@@ -58,37 +58,94 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
       }
 
       :root {
-        --panel: rgba(18, 26, 43, 0.55);
-        --panel-active: rgba(255, 255, 255, 0.12);
-        --text: #f0f6fc;
-        --text-sub: #c9d1d9;
-        --muted: #8b949e;
-        --line: rgba(255, 255, 255, 0.08);
-        --accent: #58a6ff;
-        --accent-hover: #79c0ff;
-        --gradient: linear-gradient(135deg, #a855f7 0%, #3b82f6 50%, #10b981 100%);
-        --bg-color: #0b1020;
-        --card-bg: rgba(22, 27, 34, 0.5);
-        --card-border: rgba(255, 255, 255, 0.05);
-        --shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        --shadow-hover: 0 12px 32px rgba(88, 166, 255, 0.15);
+        --ref-space-1: 4px;
+        --ref-space-2: 8px;
+        --ref-space-3: 12px;
+        --ref-space-4: 16px;
+        --ref-space-5: 20px;
+        --ref-space-6: 24px;
+        --ref-space-7: 32px;
+        --ref-space-8: 40px;
+        --ref-space-9: 56px;
+
+        --ref-radius-sm: 8px;
+        --ref-radius-md: 12px;
+        --ref-radius-lg: 16px;
+        --ref-radius-xl: 20px;
+        --ref-radius-pill: 999px;
+
+        --ref-shadow-1: 0 2px 8px rgba(5, 10, 24, 0.18);
+        --ref-shadow-2: 0 8px 24px rgba(5, 10, 24, 0.24);
+        --ref-shadow-3: 0 14px 34px rgba(26, 110, 255, 0.2);
+
+        --ref-icon-shell: 44px;
+        --ref-icon-shell-sm: 38px;
+        --ref-icon-size: 18px;
+        --ref-icon-size-sm: 16px;
+
+        --sys-surface-bg: #0b1020;
+        --sys-surface-panel: rgba(18, 26, 43, 0.58);
+        --sys-surface-panel-active: rgba(255, 255, 255, 0.12);
+        --sys-surface-card: rgba(22, 27, 34, 0.56);
+        --sys-outline: rgba(255, 255, 255, 0.08);
+        --sys-outline-soft: rgba(255, 255, 255, 0.05);
+        --sys-text: #f0f6fc;
+        --sys-text-sub: #c9d1d9;
+        --sys-text-muted: #8b949e;
+        --sys-accent: #58a6ff;
+        --sys-accent-hover: #79c0ff;
+        --sys-gradient-title: linear-gradient(135deg, #a855f7 0%, #3b82f6 50%, #10b981 100%);
+
+        --comp-card-radius: var(--ref-radius-xl);
+        --comp-card-padding: var(--ref-space-6);
+        --comp-card-gap: var(--ref-space-4);
+        --comp-card-bg: var(--sys-surface-card);
+        --comp-card-border: var(--sys-outline-soft);
+        --comp-card-shadow: var(--ref-shadow-1);
+        --comp-card-shadow-hover: var(--ref-shadow-3);
+
+        --comp-recent-chip-size: 34px;
+        --comp-recent-core-size: 18px;
+        --comp-recent-icon-size: 12px;
+        --comp-recent-radius: var(--ref-radius-md);
+        --comp-recent-core-radius: 7px;
+
+        --motion-fast: 160ms;
+        --motion-mid: 220ms;
+
+        --panel: var(--sys-surface-panel);
+        --panel-active: var(--sys-surface-panel-active);
+        --text: var(--sys-text);
+        --text-sub: var(--sys-text-sub);
+        --muted: var(--sys-text-muted);
+        --line: var(--sys-outline);
+        --accent: var(--sys-accent);
+        --accent-hover: var(--sys-accent-hover);
+        --gradient: var(--sys-gradient-title);
+        --bg-color: var(--sys-surface-bg);
+        --card-bg: var(--comp-card-bg);
+        --card-border: var(--comp-card-border);
+        --shadow: var(--comp-card-shadow);
+        --shadow-hover: var(--comp-card-shadow-hover);
       }
 
       :root[data-theme='light'] {
-        --panel: rgba(245, 245, 247, 0.75);
-        --panel-active: rgba(255, 255, 255, 0.9);
-        --text: #1d1d1f;
-        --text-sub: #424245;
-        --muted: #86868b;
-        --line: rgba(0, 0, 0, 0.08);
-        --accent: #0066cc;
-        --accent-hover: #0077ed;
-        --gradient: linear-gradient(135deg, #4f46e5 0%, #db2777 50%, #f59e0b 100%);
-        --bg-color: #fbfbfd;
-        --card-bg: rgba(255, 255, 255, 0.6);
-        --card-border: rgba(0, 0, 0, 0.05);
-        --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        --shadow-hover: 0 12px 32px rgba(0, 102, 204, 0.2);
+        --sys-surface-bg: #fbfbfd;
+        --sys-surface-panel: rgba(245, 245, 247, 0.78);
+        --sys-surface-panel-active: rgba(255, 255, 255, 0.92);
+        --sys-surface-card: rgba(255, 255, 255, 0.72);
+        --sys-outline: rgba(0, 0, 0, 0.08);
+        --sys-outline-soft: rgba(0, 0, 0, 0.05);
+        --sys-text: #1d1d1f;
+        --sys-text-sub: #424245;
+        --sys-text-muted: #86868b;
+        --sys-accent: #0066cc;
+        --sys-accent-hover: #0077ed;
+        --sys-gradient-title: linear-gradient(135deg, #4f46e5 0%, #db2777 50%, #f59e0b 100%);
+
+        --ref-shadow-1: 0 2px 8px rgba(0, 0, 0, 0.07);
+        --ref-shadow-2: 0 8px 24px rgba(0, 0, 0, 0.1);
+        --ref-shadow-3: 0 12px 30px rgba(0, 102, 204, 0.22);
       }
 
       * { box-sizing: border-box; }
@@ -193,35 +250,35 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         max-width: 1320px;
         width: 100%;
         margin: 0 auto;
-        padding: 60px 24px 80px;
+        padding: var(--ref-space-9) var(--ref-space-6) 76px;
       }
-      .hero { margin-bottom: 40px; text-align: center; }
+      .hero { margin-bottom: var(--ref-space-8); text-align: center; }
 
       h1 {
         font-size: 48px;
         font-weight: 800;
-        margin: 0 0 16px;
+        margin: 0 0 var(--ref-space-4);
         background: var(--gradient);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         letter-spacing: -0.5px;
       }
 
-      .sub { color: var(--muted); font-size: 18px; line-height: 1.6; max-width: 600px; margin: 0 auto; }
+      .sub { color: var(--muted); font-size: 18px; line-height: 1.58; max-width: 660px; margin: 0 auto; }
       .toolbar {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 20px;
-        margin: 40px 0;
+        gap: var(--ref-space-5);
+        margin: var(--ref-space-8) 0;
         min-width: 0;
       }
 
       .recent-wrap {
         width: 100%;
-        max-width: 760px;
+        max-width: 720px;
         display: grid;
-        gap: 10px;
+        gap: var(--ref-space-2);
       }
 
       .recent-title {
@@ -235,26 +292,26 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
       .recent-list {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: var(--ref-space-2);
         align-items: center;
       }
 
       :global(.recent-link) {
-        width: 36px;
-        height: 36px;
+        width: var(--comp-recent-chip-size);
+        height: var(--comp-recent-chip-size);
         text-decoration: none;
         color: var(--text);
         font-size: 0;
-        border-radius: 999px;
+        border-radius: var(--comp-recent-radius);
         border: 1px solid var(--line);
         background: linear-gradient(160deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.04));
         padding: 0;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+        box-shadow: var(--ref-shadow-1), inset 0 1px 0 rgba(255, 255, 255, 0.18);
         overflow: hidden;
-        transition: transform 0.18s ease, box-shadow 0.22s ease, border-color 0.22s ease, background 0.22s ease;
+        transition: transform var(--motion-fast) ease, box-shadow var(--motion-mid) ease, border-color var(--motion-mid) ease, background var(--motion-mid) ease;
       }
 
       :global(.recent-link:hover),
@@ -262,7 +319,7 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         color: var(--text);
         background: linear-gradient(160deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.08));
         border-color: rgba(255, 255, 255, 0.35);
-        box-shadow: 0 10px 24px rgba(88, 166, 255, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+        box-shadow: var(--ref-shadow-3), inset 0 1px 0 rgba(255, 255, 255, 0.25);
         transform: translateY(-1px);
         outline: none;
       }
@@ -272,9 +329,9 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
       }
 
       :global(.recent-icon-wrap) {
-        width: 20px;
-        height: 20px;
-        border-radius: 999px;
+        width: var(--comp-recent-core-size);
+        height: var(--comp-recent-core-size);
+        border-radius: var(--comp-recent-core-radius);
         background: rgba(255, 255, 255, 0.96);
         display: inline-flex;
         align-items: center;
@@ -291,10 +348,10 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
       }
 
       :global(.recent-icon) {
-        width: 12px;
-        height: 12px;
-        border-radius: 999px;
-        flex: 0 0 12px;
+        width: var(--comp-recent-icon-size);
+        height: var(--comp-recent-icon-size);
+        border-radius: 4px;
+        flex: 0 0 var(--comp-recent-icon-size);
         object-fit: cover;
         image-rendering: auto;
       }
@@ -302,8 +359,8 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
       .search {
         width: 100%;
         max-width: 600px;
-        padding: 16px 24px;
-        border-radius: 999px;
+        padding: var(--ref-space-4) var(--ref-space-6);
+        border-radius: var(--ref-radius-pill);
         border: 1px solid var(--line);
         background: var(--panel);
         backdrop-filter: blur(16px);
@@ -320,15 +377,15 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
       .filters {
         display: flex;
         flex-wrap: wrap;
-        gap: 12px;
+        gap: var(--ref-space-3);
         justify-content: center;
         min-width: 0;
       }
 
       .filter-btn {
-        padding: 8px 16px;
+        padding: 8px 14px;
         min-height: 36px;
-        border-radius: 999px;
+        border-radius: var(--ref-radius-pill);
         border: 1px solid var(--line);
         background: var(--panel);
         color: var(--muted);
@@ -344,7 +401,7 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
       .content-layout {
         display: grid;
         grid-template-columns: 220px minmax(0, 1fr);
-        gap: 24px;
+        gap: var(--ref-space-6);
         align-items: start;
         min-width: 0;
       }
@@ -353,11 +410,11 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         position: sticky;
         top: 24px;
         border: 1px solid var(--line);
-        border-radius: 16px;
+        border-radius: var(--ref-radius-lg);
         background: var(--panel);
         backdrop-filter: blur(14px);
         -webkit-backdrop-filter: blur(14px);
-        padding: 14px;
+        padding: var(--ref-space-3);
         box-shadow: var(--shadow);
         min-width: 0;
       }
@@ -383,7 +440,7 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         text-decoration: none;
         color: var(--text-sub);
         border: 1px solid transparent;
-        border-radius: 10px;
+        border-radius: var(--ref-radius-md);
         padding: 8px 10px;
         min-height: 36px;
         font-size: 14px;
@@ -446,14 +503,14 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
       }
 
       @media (max-width: 900px) {
-        .wrap { padding: 52px 18px 72px; }
-        .hero { margin-bottom: 30px; }
+        .wrap { padding: 50px 18px 68px; }
+        .hero { margin-bottom: 28px; }
         h1 { font-size: 38px; margin-bottom: 12px; }
         .sub { font-size: 16px; max-width: 540px; }
 
         .toolbar {
-          margin: 30px 0;
-          gap: 16px;
+          margin: 28px 0;
+          gap: 14px;
           align-items: stretch;
         }
 
@@ -507,7 +564,7 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
           width: 40px;
         }
 
-        .content-layout { grid-template-columns: 1fr; gap: 16px; }
+        .content-layout { grid-template-columns: 1fr; gap: 14px; }
 
         .elevator {
           position: sticky;
@@ -544,7 +601,14 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
       }
 
       @media (max-width: 640px) {
-        .wrap { padding: 44px 12px 64px; }
+        .wrap {
+          padding: 42px 12px 62px;
+          --comp-recent-chip-size: 30px;
+          --comp-recent-core-size: 16px;
+          --comp-recent-icon-size: 10px;
+          --comp-recent-radius: 10px;
+          --comp-recent-core-radius: 6px;
+        }
 
         .orb {
           filter: blur(86px);
@@ -590,7 +654,7 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
 
         .toolbar {
           margin: 24px 0;
-          gap: 12px;
+          gap: 10px;
           width: 100%;
         }
 
@@ -604,23 +668,6 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         .recent-wrap { gap: 8px; }
 
         .recent-title { font-size: 12px; }
-
-        :global(.recent-link) {
-          width: 32px;
-          height: 32px;
-          border-radius: 999px;
-        }
-
-        :global(.recent-icon-wrap) {
-          width: 18px;
-          height: 18px;
-        }
-
-        :global(.recent-icon) {
-          width: 11px;
-          height: 11px;
-          flex-basis: 11px;
-        }
 
         .content-layout { gap: 12px; }
 

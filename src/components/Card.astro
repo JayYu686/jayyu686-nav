@@ -33,7 +33,13 @@ const getDomain = (url: string) => {
 >
   <div class="card-top">
     <div class="icon-box">
-      <img src={`https://www.google.com/s2/favicons?domain=${getDomain(item.url)}&sz=128`} alt={item.title} loading="lazy" />
+      <img
+        src={`https://icon.horse/icon/${getDomain(item.url)}`}
+        alt={item.title}
+        loading="lazy"
+        decoding="async"
+        onerror={`this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=${getDomain(item.url)}&sz=64';`}
+      />
     </div>
     <div class="info">
       <h3 class="title">{item.title}</h3>
@@ -48,18 +54,18 @@ const getDomain = (url: string) => {
     position: relative;
     overflow: hidden;
     -webkit-tap-highlight-color: transparent;
-    padding: 24px;
-    border-radius: 20px;
+    padding: var(--comp-card-padding, 22px);
+    border-radius: var(--comp-card-radius, 20px);
     border: 1px solid var(--card-border);
     background: var(--card-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     text-decoration: none;
     color: var(--text);
-    transition: all 0.3s ease;
+    transition: transform var(--motion-fast, 180ms) ease, box-shadow var(--motion-mid, 220ms) ease, border-color var(--motion-mid, 220ms) ease, background var(--motion-mid, 220ms) ease;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: var(--comp-card-gap, 14px);
     box-shadow: var(--shadow);
   }
 
@@ -77,7 +83,7 @@ const getDomain = (url: string) => {
   }
 
   .card:hover {
-    transform: translateY(-4px) scale(1.01);
+    transform: translateY(-3px);
     border-color: var(--line);
     box-shadow: var(--shadow-hover);
     background: var(--panel-active);
@@ -100,13 +106,13 @@ const getDomain = (url: string) => {
   .card-top {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
   }
 
   .icon-box {
-    width: 44px;
-    height: 44px;
-    border-radius: 12px;
+    width: var(--ref-icon-shell, 44px);
+    height: var(--ref-icon-shell, 44px);
+    border-radius: var(--ref-radius-md, 12px);
     background: var(--panel);
     border: 1px solid var(--line);
     display: flex;
@@ -114,12 +120,13 @@ const getDomain = (url: string) => {
     justify-content: center;
     overflow: hidden;
     flex-shrink: 0;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.24);
   }
 
   .icon-box img {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
+    width: var(--ref-icon-size, 18px);
+    height: var(--ref-icon-size, 18px);
+    object-fit: cover;
     border-radius: 4px;
   }
 
@@ -141,7 +148,7 @@ const getDomain = (url: string) => {
   .badge {
     display: inline-block;
     padding: 2px 8px;
-    border-radius: 6px;
+    border-radius: var(--ref-radius-sm, 8px);
     background: rgba(88, 166, 255, 0.1);
     color: var(--accent);
     font-size: 12px;
@@ -170,19 +177,9 @@ const getDomain = (url: string) => {
 
   @media (max-width: 900px) {
     .card {
-      padding: 20px;
+      padding: 18px;
       border-radius: 18px;
-      gap: 14px;
-    }
-
-    .icon-box {
-      width: 40px;
-      height: 40px;
-    }
-
-    .icon-box img {
-      width: 22px;
-      height: 22px;
+      gap: 12px;
     }
 
     .title { font-size: 15px; }
@@ -195,22 +192,22 @@ const getDomain = (url: string) => {
 
   @media (max-width: 640px) {
     .card {
-      padding: 16px;
+      padding: 14px;
       border-radius: 16px;
-      gap: 12px;
+      gap: 10px;
     }
 
     .card-top { gap: 10px; }
 
     .icon-box {
-      width: 36px;
-      height: 36px;
+      width: var(--ref-icon-shell-sm, 38px);
+      height: var(--ref-icon-shell-sm, 38px);
       border-radius: 10px;
     }
 
     .icon-box img {
-      width: 20px;
-      height: 20px;
+      width: var(--ref-icon-size-sm, 16px);
+      height: var(--ref-icon-size-sm, 16px);
     }
 
     .title {

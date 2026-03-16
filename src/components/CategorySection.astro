@@ -33,21 +33,21 @@ const { id, category, categoryLabel, countLabel, items } = Astro.props;
 <style>
   .category-section {
     scroll-margin-top: 90px;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
   }
 
   .category-head {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    gap: 12px;
-    margin-bottom: 12px;
+    gap: 10px;
+    margin-bottom: 10px;
   }
 
   .category-title {
     margin: 0;
-    font-size: 24px;
-    letter-spacing: -0.2px;
+    font-size: 23px;
+    letter-spacing: -0.18px;
   }
 
   .category-count {
@@ -57,38 +57,38 @@ const { id, category, categoryLabel, countLabel, items } = Astro.props;
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 18px;
     min-width: 0;
   }
 
   @media (max-width: 900px) {
     .category-section {
       scroll-margin-top: 78px;
-      margin-bottom: 22px;
+      margin-bottom: 18px;
     }
 
-    .category-title { font-size: 22px; }
+    .category-title { font-size: 21px; }
 
     .grid {
       grid-template-columns: minmax(0, 1fr);
-      gap: 18px;
+        gap: 14px;
     }
   }
 
   @media (max-width: 640px) {
     .category-section {
       scroll-margin-top: 66px;
-      margin-bottom: 18px;
+      margin-bottom: 14px;
     }
 
     .category-head {
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       flex-wrap: wrap;
-      row-gap: 6px;
+      row-gap: 4px;
     }
 
-    .category-title { font-size: 20px; }
+    .category-title { font-size: 19px; }
 
     .category-count {
       font-size: 12px;
@@ -97,7 +97,7 @@ const { id, category, categoryLabel, countLabel, items } = Astro.props;
 
     .grid {
       grid-template-columns: 1fr;
-      gap: 12px;
+      gap: 10px;
     }
   }
 </style>
