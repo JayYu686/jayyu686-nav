@@ -59,6 +59,7 @@ const { id, category, categoryLabel, countLabel, items } = Astro.props;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 24px;
+    min-width: 0;
   }
 
   @media (max-width: 900px) {
@@ -69,7 +70,10 @@ const { id, category, categoryLabel, countLabel, items } = Astro.props;
 
     .category-title { font-size: 22px; }
 
-    .grid { gap: 18px; }
+    .grid {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 18px;
+    }
   }
 
   @media (max-width: 640px) {
