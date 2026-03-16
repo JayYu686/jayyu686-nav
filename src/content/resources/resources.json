@@ -1167,6 +1167,414 @@
         "url": "https://zed.dev/",
         "category": "AI",
         "summary": "用Rust编写，运行极快、自带AI深入辅助协作功能的高级代码编辑器"
+      },
+      {
+        "title": "Chinese Oddities Iceberg",
+        "url": "https://icebergcharts.com/i/Chinese_Oddities",
+        "category": "有趣",
+        "summary": "A fun iceberg chart collection around Chinese oddities and folklore."
+      },
+      {
+        "title": "Lost Media CN Wiki",
+        "url": "https://lostmedia.wikidot.com/",
+        "category": "有趣",
+        "summary": "A wiki archive focused on lost media records and discussions."
+      },
+      {
+        "title": "UI Style Prompt",
+        "url": "https://www.uiprompt.site/zh/styles",
+        "category": "有趣",
+        "summary": "A style prompt library for AI-driven interface inspirations."
+      },
+      {
+        "title": "S.H.I.T Journal",
+        "url": "https://shitjournal.org/",
+        "category": "有趣",
+        "summary": "An experimental interdisciplinary online journal."
+      },
+      {
+        "title": "Rubbish Journal",
+        "url": "https://rubbish-journal.org/zh",
+        "category": "有趣",
+        "summary": "An interdisciplinary publication with unusual topics and perspectives."
+      },
+      {
+        "title": "Web of Nothing",
+        "url": "https://webofnothing.top/",
+        "category": "有趣",
+        "summary": "A playful index of weird and interesting websites."
+      },
+      {
+        "title": "Xiaoce",
+        "url": "https://xiaoce.fun/",
+        "category": "有趣",
+        "summary": "A lightweight Chinese site with fun web entries."
+      },
+      {
+        "title": "iQIYI",
+        "url": "https://www.iqiyi.com/",
+        "category": "娱乐",
+        "summary": "Major Chinese streaming platform for shows and films."
+      },
+      {
+        "title": "Youku",
+        "url": "https://www.youku.com/",
+        "category": "娱乐",
+        "summary": "Mainstream Chinese online video and streaming platform."
+      },
+      {
+        "title": "Tencent Video",
+        "url": "https://v.qq.com/",
+        "category": "娱乐",
+        "summary": "Tencent streaming service for movies, series, and variety shows."
+      },
+      {
+        "title": "Aidi TV",
+        "url": "https://aidi.tv/",
+        "category": "娱乐",
+        "summary": "Video indexing and streaming entry website."
+      },
+      {
+        "title": "MaliMali",
+        "url": "https://www.malimali5.com/",
+        "category": "娱乐",
+        "summary": "Anime-oriented streaming entry website."
+      },
+      {
+        "title": "Neflyingshi",
+        "url": "https://www.nfyinghsi.com/",
+        "category": "娱乐",
+        "summary": "A movie and TV aggregation website."
+      },
+      {
+        "title": "Vidhub Link",
+        "url": "https://vidhub.link/",
+        "category": "娱乐",
+        "summary": "Vidhub publishing and navigation page."
+      },
+      {
+        "title": "Wangfei TV",
+        "url": "https://www.wangfei.tv/",
+        "category": "娱乐",
+        "summary": "A film and series streaming aggregation site."
+      },
+      {
+        "title": "BTNULL",
+        "url": "https://www.btnull.in/",
+        "category": "娱乐",
+        "summary": "An online video index and gateway site."
+      },
+      {
+        "title": "Vidhub",
+        "url": "https://vidhub.me/",
+        "category": "娱乐",
+        "summary": "Vidhub media index website."
+      },
+      {
+        "title": "TikTok",
+        "url": "https://www.tiktok.com/",
+        "category": "娱乐",
+        "summary": "Global short-video social platform."
+      },
+      {
+        "title": "52pojie",
+        "url": "https://www.52pojie.cn/",
+        "category": "程序员常用网站",
+        "summary": "A long-running Chinese technical forum community."
+      },
+      {
+        "title": "Baidu Tieba",
+        "url": "https://tieba.baidu.com/",
+        "category": "程序员常用网站",
+        "summary": "Large Chinese forum community with diverse topics."
+      },
+      {
+        "title": "Metacritic",
+        "url": "https://www.metacritic.com/",
+        "category": "程序员常用网站",
+        "summary": "Aggregated ratings for games, movies, and TV."
+      },
+      {
+        "title": "Reddit",
+        "url": "https://www.reddit.com/",
+        "category": "程序员常用网站",
+        "summary": "Global social discussion and content community."
+      },
+      {
+        "title": "4chan",
+        "url": "https://www.4chan.org/",
+        "category": "程序员常用网站",
+        "summary": "Anonymous imageboard-style discussion community."
+      },
+      {
+        "title": "Wangdao Forum",
+        "url": "http://www.cskaoyan.com/forum.php",
+        "category": "程序员常用网站",
+        "summary": "Computer science exam and study discussion forum."
+      },
+      {
+        "title": "Weibo",
+        "url": "https://weibo.com/",
+        "category": "程序员常用网站",
+        "summary": "Chinese social media and trend platform."
+      },
+      {
+        "title": "3DMGAME Forum",
+        "url": "https://bbs.3dmgame.com/forum.php",
+        "category": "程序员常用网站",
+        "summary": "Game discussion and strategy sharing forum."
+      },
+      {
+        "title": "Xiaoheihe",
+        "url": "https://xiaoheihe.cn/app/bbs/home",
+        "category": "程序员常用网站",
+        "summary": "Gaming discussion, reviews, and social community."
+      },
+      {
+        "title": "Xiaohongshu",
+        "url": "https://www.xiaohongshu.com/explore",
+        "category": "程序员常用网站",
+        "summary": "Lifestyle and recommendation social community."
+      },
+      {
+        "title": "DeepFlood",
+        "url": "https://www.deepflood.com/",
+        "category": "程序员常用网站",
+        "summary": "Community discussions around AI and modern tech topics."
+      },
+      {
+        "title": "Naixi Forum",
+        "url": "https://forum.naixi.net/",
+        "category": "程序员常用网站",
+        "summary": "A Chinese forum for general tech and resource discussions."
+      },
+      {
+        "title": "CSDN",
+        "url": "https://www.csdn.net/",
+        "category": "资源",
+        "summary": "Chinese developer community and technical content site."
+      },
+      {
+        "title": "Zhutix",
+        "url": "https://zhutix.com/",
+        "category": "资源",
+        "summary": "Theme, wallpaper, and desktop customization resources."
+      },
+      {
+        "title": "Xiaolin Coding",
+        "url": "https://xiaolincoding.com/",
+        "category": "资源",
+        "summary": "Systematic backend and CS learning resources."
+      },
+      {
+        "title": "Luogu",
+        "url": "https://www.luogu.com.cn/",
+        "category": "资源",
+        "summary": "Programming contest and algorithm training platform."
+      },
+      {
+        "title": "WebHD",
+        "url": "https://webhd.top/",
+        "category": "资源",
+        "summary": "A navigation portal for media resources."
+      },
+      {
+        "title": "SimilarSites",
+        "url": "https://www.similarsites.com/",
+        "category": "资源",
+        "summary": "Find websites similar to any domain."
+      },
+      {
+        "title": "Nexus Mods",
+        "url": "https://www.nexusmods.com/",
+        "category": "资源",
+        "summary": "Large mod sharing platform for games."
+      },
+      {
+        "title": "QuarkZY",
+        "url": "https://quarkzy.com/",
+        "category": "资源",
+        "summary": "A site that indexes Quark cloud resources."
+      },
+      {
+        "title": "XBGame",
+        "url": "https://www.xbgame.net/",
+        "category": "资源",
+        "summary": "A game resource index for PC and console content."
+      },
+      {
+        "title": "Workflowy Game List",
+        "url": "https://workflowy.com/s/pc/ydPl2wnXlf6Ut5KJ#/802c48a4f83b",
+        "category": "资源",
+        "summary": "A curated public game resource list in Workflowy."
+      },
+      {
+        "title": "Switch618",
+        "url": "https://www.switch618.com/",
+        "category": "资源",
+        "summary": "Switch game resources and aggregation portal."
+      },
+      {
+        "title": "QKYunso",
+        "url": "https://qkyunso.com/index",
+        "category": "资源",
+        "summary": "Search engine for Quark cloud shared resources."
+      },
+      {
+        "title": "Baidu Scholar",
+        "url": "https://xueshu.baidu.com/",
+        "category": "学术资源",
+        "summary": "Academic literature search service by Baidu."
+      },
+      {
+        "title": "Wanfang Data",
+        "url": "https://www.wanfangdata.com.cn/",
+        "category": "学术资源",
+        "summary": "Chinese academic journal and thesis database."
+      },
+      {
+        "title": "Bing Academic",
+        "url": "https://www.bing.com/academic",
+        "category": "学术资源",
+        "summary": "Academic search entry provided by Bing."
+      },
+      {
+        "title": "DeepL Translator",
+        "url": "https://www.deepl.com/translator",
+        "category": "学术资源",
+        "summary": "High-quality translation for reading academic material."
+      },
+      {
+        "title": "IEEE Xplore",
+        "url": "https://ieeexplore.ieee.org/",
+        "category": "学术资源",
+        "summary": "IEEE digital library for papers and conference publications."
+      },
+      {
+        "title": "PaperYY",
+        "url": "https://www.paperyy.com/",
+        "category": "学术资源",
+        "summary": "Paper checking and writing assistance platform."
+      },
+      {
+        "title": "Google Translate",
+        "url": "https://translate.google.com/",
+        "category": "学术资源",
+        "summary": "General-purpose translation tool useful for paper reading."
+      },
+      {
+        "title": "Mathpix",
+        "url": "https://snip.mathpix.com/home",
+        "category": "学术资源",
+        "summary": "OCR and formula extraction to LaTeX."
+      },
+      {
+        "title": "SimpleTex",
+        "url": "https://simpletex.cn/ai/latex_ocr",
+        "category": "学术资源",
+        "summary": "Formula recognition and LaTeX conversion tool."
+      },
+      {
+        "title": "SOTAPapers",
+        "url": "https://sotapapers.com/papers",
+        "category": "学术资源",
+        "summary": "Paper discovery and SOTA research tracking."
+      },
+      {
+        "title": "HF Mirror",
+        "url": "https://hf-mirror.com/",
+        "category": "学术资源",
+        "summary": "Mirror service for Hugging Face model assets."
+      },
+      {
+        "title": "ModelScope",
+        "url": "https://www.modelscope.cn/models",
+        "category": "学术资源",
+        "summary": "Model hub by ModelScope community."
+      },
+      {
+        "title": "CCF Deadlines",
+        "url": "https://ccfddl.com/",
+        "category": "学术资源",
+        "summary": "CS/AI conference deadlines tracker."
+      },
+      {
+        "title": "Overleaf",
+        "url": "https://www.overleaf.com/project",
+        "category": "学术资源",
+        "summary": "Online collaborative LaTeX writing platform."
+      },
+      {
+        "title": "Link Privacy Check",
+        "url": "https://uid.ejfkdev.com/",
+        "category": "实用工具",
+        "summary": "Checks whether a shared URL leaks private identifiers."
+      },
+      {
+        "title": "WonderCV",
+        "url": "https://www.wondercv.com/cvs/7RIlxDV8/editor",
+        "category": "实用工具",
+        "summary": "Online resume editor and template platform."
+      },
+      {
+        "title": "BraveDown",
+        "url": "https://bravedown.com/vk-video-downloader",
+        "category": "实用工具",
+        "summary": "A web utility page for online video extraction."
+      },
+      {
+        "title": "cobalt.tools",
+        "url": "https://cobalt.tools/",
+        "category": "实用工具",
+        "summary": "Media download and conversion helper for multiple platforms."
+      },
+      {
+        "title": "FacaiTool",
+        "url": "https://facaitool.my/",
+        "category": "实用工具",
+        "summary": "Tool to transform HTML into deployable web pages quickly."
+      },
+      {
+        "title": "Heitu Notebook",
+        "url": "https://ddgksf2013.top/",
+        "category": "实用工具",
+        "summary": "Curated entry page for practical online resources."
+      },
+      {
+        "title": "CSDN Unlock Tool",
+        "url": "https://csdn.zeroai.chat/?ref=ddgksf2013.top",
+        "category": "实用工具",
+        "summary": "Third-party helper page for reading CSDN articles."
+      },
+      {
+        "title": "GoMusic",
+        "url": "https://music.unmeta.cn/?ref=ddgksf2013.top",
+        "category": "实用工具",
+        "summary": "Music transfer and related utility service."
+      },
+      {
+        "title": "TuneMyMusic",
+        "url": "https://www.tunemymusic.com/zh-CN/transfer",
+        "category": "实用工具",
+        "summary": "Transfer playlists between different music providers."
+      },
+      {
+        "title": "Image to LaTeX",
+        "url": "https://web.baimiaoapp.com/image-to-latex",
+        "category": "实用工具",
+        "summary": "Convert formula images to LaTeX expressions."
+      },
+      {
+        "title": "tmux Guide",
+        "url": "https://lug.ustc.edu.cn/planet/2025/07/how-to-use-tmux/",
+        "category": "实用工具",
+        "summary": "A practical tmux usage guide from LUG USTC."
+      },
+      {
+        "title": "NodeImage",
+        "url": "https://www.nodeimage.com/",
+        "category": "实用工具",
+        "summary": "Image-related online utility and resource site."
       }
     ]
   }
