@@ -24,6 +24,7 @@ export const enMessages: Messages = {
     'VPS / 云服务': 'VPS / Cloud Services',
     '域名 / DNS / 建站': 'Domains / DNS / Web Hosting',
     '学术资源': 'Academic Resources',
+    '论坛 / 社区': 'Forums / Communities',
     '程序员常用网站': 'Developer Sites',
     '有趣': 'Fun',
     '实用工具': 'Utilities',
