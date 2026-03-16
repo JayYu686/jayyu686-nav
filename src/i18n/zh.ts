@@ -6,6 +6,7 @@ export interface Messages {
     heroTitle: string;
     heroSubtitle: string;
     searchPlaceholder: string;
+    recentVisits: string;
     allCategory: string;
     quickJump: string;
     emptyText: string;
@@ -21,14 +22,15 @@ export interface Messages {
 
 export const zhMessages: Messages = {
   lang: 'zh-CN',
-  pageTitle: 'JayYu 资源导航',
+  pageTitle: 'JayYuの资源导航站',
   pageDescription:
     '精选优质的高效工具、云平台基础设施、前沿学术资源及开发者必备站点，持续沉淀实用心得与避坑指南。',
   ui: {
-    heroTitle: 'JayYu Nav',
+    heroTitle: 'JayYuの资源导航站',
     heroSubtitle:
       '精选优质的高效工具、云平台基础设施、前沿学术资源及开发者必备站点，持续沉淀实用心得与避坑指南。',
     searchPlaceholder: '输入名称或拼音全拼搜索...',
+    recentVisits: '最近访问',
     allCategory: '全部',
     quickJump: '快速跳转',
     emptyText: '没有找到匹配的资源',

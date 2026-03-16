@@ -10,6 +10,7 @@ export const enMessages: Messages = {
     heroSubtitle:
       'A curated navigation of efficient tools, cloud infrastructure, research resources, and essential developer websites.',
     searchPlaceholder: 'Search by name or keyword...',
+    recentVisits: 'Recent Visits',
     allCategory: 'All',
     quickJump: 'Quick Jump',
     emptyText: 'No matching resources found',
