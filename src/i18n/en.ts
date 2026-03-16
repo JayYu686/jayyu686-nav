@@ -11,6 +11,7 @@ export const enMessages: Messages = {
       'A curated navigation of efficient tools, cloud infrastructure, research resources, and essential developer websites.',
     searchPlaceholder: 'Search by name or keyword...',
     recentVisits: 'Recent Visits',
+    clearRecentVisits: 'Clear Recent',
     allCategory: 'All',
     quickJump: 'Quick Jump',
     emptyText: 'No matching resources found',

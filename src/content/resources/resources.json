@@ -1827,6 +1827,118 @@
         "summary": "开源项目发布与下载平台。",
         "summary_en": "Open-source software hosting and download platform.",
         "category": "资源"
+      },
+      {
+        "title": "DOAJ",
+        "title_en": "DOAJ",
+        "url": "https://doaj.org/",
+        "summary": "开放获取期刊目录，适合检索高质量 OA 期刊与论文。",
+        "summary_en": "Directory of Open Access Journals for high-quality OA publications.",
+        "category": "学术资源"
+      },
+      {
+        "title": "OpenAlex",
+        "title_en": "OpenAlex",
+        "url": "https://openalex.org/",
+        "summary": "开放学术图谱与文献元数据平台，可按作者、机构与主题检索。",
+        "summary_en": "Open scholarly graph and metadata platform for papers, authors, and institutions.",
+        "category": "学术资源"
+      },
+      {
+        "title": "Crossref Search",
+        "title_en": "Crossref Search",
+        "url": "https://search.crossref.org/",
+        "summary": "基于 DOI 的学术文献检索入口，适合快速定位正式出版物。",
+        "summary_en": "DOI-based search portal for quickly locating published research.",
+        "category": "学术资源"
+      },
+      {
+        "title": "SpringerLink",
+        "title_en": "SpringerLink",
+        "url": "https://link.springer.com/",
+        "summary": "Springer 旗下学术图书与期刊论文检索平台。",
+        "summary_en": "Academic books and journals discovery platform from Springer.",
+        "category": "学术资源"
+      },
+      {
+        "title": "ScienceDirect",
+        "title_en": "ScienceDirect",
+        "url": "https://www.sciencedirect.com/",
+        "summary": "Elsevier 科技与医学论文数据库，覆盖多学科研究内容。",
+        "summary_en": "Elsevier database covering science, technology, and medical research.",
+        "category": "学术资源"
+      },
+      {
+        "title": "JSTOR",
+        "title_en": "JSTOR",
+        "url": "https://www.jstor.org/",
+        "summary": "人文社科与跨学科经典文献数字图书馆。",
+        "summary_en": "Digital library for humanities, social sciences, and interdisciplinary archives.",
+        "category": "学术资源"
+      },
+      {
+        "title": "SSRN",
+        "title_en": "SSRN",
+        "url": "https://www.ssrn.com/",
+        "summary": "社会科学与法学等领域工作论文与预印本平台。",
+        "summary_en": "Preprint and working paper repository for social sciences, law, and related fields.",
+        "category": "学术资源"
+      },
+      {
+        "title": "CORE",
+        "title_en": "CORE",
+        "url": "https://core.ac.uk/",
+        "summary": "聚合全球开放获取论文的学术搜索平台。",
+        "summary_en": "Academic search platform aggregating global open access research papers.",
+        "category": "学术资源"
+      },
+      {
+        "title": "bioRxiv",
+        "title_en": "bioRxiv",
+        "url": "https://www.biorxiv.org/",
+        "summary": "生物学领域预印本平台，适合追踪前沿研究进展。",
+        "summary_en": "Biology preprint server for tracking cutting-edge research.",
+        "category": "学术资源"
+      },
+      {
+        "title": "medRxiv",
+        "title_en": "medRxiv",
+        "url": "https://www.medrxiv.org/",
+        "summary": "医学与健康科学预印本平台。",
+        "summary_en": "Preprint server for health sciences and clinical research.",
+        "category": "学术资源"
+      },
+      {
+        "title": "ACL Anthology",
+        "title_en": "ACL Anthology",
+        "url": "https://aclanthology.org/",
+        "summary": "自然语言处理领域权威会议与期刊论文全集。",
+        "summary_en": "Comprehensive archive of NLP conference and journal papers.",
+        "category": "学术资源"
+      },
+      {
+        "title": "OpenReview",
+        "title_en": "OpenReview",
+        "url": "https://openreview.net/",
+        "summary": "机器学习会议论文提交、评审与讨论平台。",
+        "summary_en": "Open peer-review platform for machine learning conferences.",
+        "category": "学术资源"
+      },
+      {
+        "title": "ORCID",
+        "title_en": "ORCID",
+        "url": "https://orcid.org/",
+        "summary": "科研人员唯一身份标识注册与成果关联平台。",
+        "summary_en": "Researcher identifier system for linking scholarly outputs.",
+        "category": "学术资源"
+      },
+      {
+        "title": "Unpaywall",
+        "title_en": "Unpaywall",
+        "url": "https://unpaywall.org/",
+        "summary": "帮助发现论文开放获取版本的学术工具。",
+        "summary_en": "Tool for discovering legally available open access versions of papers.",
+        "category": "学术资源"
       }
     ]
   }

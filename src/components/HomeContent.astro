@@ -91,7 +91,7 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         --sys-outline-soft: rgba(255, 255, 255, 0.05);
         --sys-text: #f0f6fc;
         --sys-text-sub: #c9d1d9;
-        --sys-text-muted: #8b949e;
+        --sys-text-muted: #a5b0be;
         --sys-accent: #58a6ff;
         --sys-accent-hover: #79c0ff;
         --sys-gradient-title: linear-gradient(135deg, #a855f7 0%, #3b82f6 50%, #10b981 100%);
@@ -110,8 +110,14 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         --comp-recent-radius: var(--ref-radius-md);
         --comp-recent-core-radius: 7px;
 
-        --motion-fast: 160ms;
-        --motion-mid: 220ms;
+        --motion-fast: 130ms;
+        --motion-mid: 240ms;
+        --motion-slow: 380ms;
+        --ease-fast: cubic-bezier(0.4, 0, 0.2, 1);
+        --ease-mid: cubic-bezier(0.22, 1, 0.36, 1);
+        --ease-slow: cubic-bezier(0.2, 0.8, 0.2, 1);
+        --focus-ring: rgba(121, 192, 255, 0.9);
+        --focus-ring-shadow: 0 0 0 3px rgba(121, 192, 255, 0.32);
 
         --panel: var(--sys-surface-panel);
         --panel-active: var(--sys-surface-panel-active);
@@ -138,10 +144,12 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         --sys-outline-soft: rgba(0, 0, 0, 0.05);
         --sys-text: #1d1d1f;
         --sys-text-sub: #424245;
-        --sys-text-muted: #86868b;
+        --sys-text-muted: #5f6368;
         --sys-accent: #0066cc;
         --sys-accent-hover: #0077ed;
         --sys-gradient-title: linear-gradient(135deg, #4f46e5 0%, #db2777 50%, #f59e0b 100%);
+        --focus-ring: rgba(0, 102, 204, 0.9);
+        --focus-ring-shadow: 0 0 0 3px rgba(0, 102, 204, 0.24);
 
         --ref-shadow-1: 0 2px 8px rgba(0, 0, 0, 0.07);
         --ref-shadow-2: 0 8px 24px rgba(0, 0, 0, 0.1);
@@ -158,7 +166,7 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         color: var(--text);
         min-height: 100vh;
         overflow-x: hidden;
-        transition: background-color 0.4s ease, color 0.4s ease;
+        transition: background-color var(--motion-slow) var(--ease-slow), color var(--motion-slow) var(--ease-slow);
       }
 
       .aurora-bg {
@@ -170,7 +178,7 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         z-index: -1;
         overflow: hidden;
         background: var(--bg-color);
-        transition: background-color 0.4s ease;
+        transition: background-color var(--motion-slow) var(--ease-slow);
       }
 
       .orb {
@@ -215,7 +223,7 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         cursor: pointer;
         z-index: 100;
         color: var(--text);
-        transition: all 0.3s ease;
+        transition: transform var(--motion-fast) var(--ease-fast), background var(--motion-fast) var(--ease-fast), border-color var(--motion-fast) var(--ease-fast), box-shadow var(--motion-fast) var(--ease-fast);
         text-decoration: none;
       }
 
@@ -241,6 +249,14 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
       .github-btn:hover,
       .lang-btn:hover,
       .theme-btn:hover { background: var(--panel-active); transform: scale(1.05); }
+
+      .github-btn:focus-visible,
+      .lang-btn:focus-visible,
+      .theme-btn:focus-visible {
+        outline: 2px solid var(--focus-ring);
+        outline-offset: 2px;
+        box-shadow: var(--focus-ring-shadow);
+      }
 
       .theme-btn svg { width: 20px; height: 20px; fill: currentColor; }
       :root[data-theme='light'] .sun-icon { display: none; }
@@ -289,6 +305,45 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         text-transform: uppercase;
       }
 
+      .recent-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--ref-space-3);
+      }
+
+      .recent-clear {
+        border: 1px solid var(--line);
+        background: transparent;
+        color: var(--text-sub);
+        border-radius: var(--ref-radius-pill);
+        font-size: 12px;
+        min-height: 30px;
+        padding: 0 10px;
+        cursor: pointer;
+        transition: background var(--motion-fast) var(--ease-fast), color var(--motion-fast) var(--ease-fast), border-color var(--motion-fast) var(--ease-fast), transform var(--motion-fast) var(--ease-fast);
+      }
+
+      .recent-clear:hover {
+        background: var(--panel-active);
+        color: var(--text);
+      }
+
+      .recent-clear:active {
+        transform: translateY(1px);
+      }
+
+      .recent-clear:focus-visible {
+        outline: 2px solid var(--focus-ring);
+        outline-offset: 2px;
+      }
+
+      .recent-clear:disabled {
+        opacity: 0.55;
+        cursor: not-allowed;
+        transform: none;
+      }
+
       .recent-list {
         display: flex;
         flex-wrap: wrap;
@@ -311,7 +366,7 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         justify-content: center;
         box-shadow: var(--ref-shadow-1), inset 0 1px 0 rgba(255, 255, 255, 0.18);
         overflow: hidden;
-        transition: transform var(--motion-fast) ease, box-shadow var(--motion-mid) ease, border-color var(--motion-mid) ease, background var(--motion-mid) ease;
+        transition: transform var(--motion-fast) var(--ease-fast), box-shadow var(--motion-mid) var(--ease-mid), border-color var(--motion-mid) var(--ease-mid), background var(--motion-mid) var(--ease-mid);
       }
 
       :global(.recent-link:hover),
@@ -321,7 +376,8 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         border-color: rgba(255, 255, 255, 0.35);
         box-shadow: var(--ref-shadow-3), inset 0 1px 0 rgba(255, 255, 255, 0.25);
         transform: translateY(-1px);
-        outline: none;
+        outline: 2px solid var(--focus-ring);
+        outline-offset: 2px;
       }
 
       :global(.recent-link:active) {
@@ -367,11 +423,17 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         -webkit-backdrop-filter: blur(16px);
         color: var(--text);
         font-size: 16px;
-        transition: all 0.3s ease;
+        transition: border-color var(--motion-mid) var(--ease-mid), box-shadow var(--motion-mid) var(--ease-mid), background var(--motion-mid) var(--ease-mid);
         box-shadow: var(--shadow);
       }
 
-      .search:focus { outline: none; border-color: var(--accent); box-shadow: var(--shadow-hover); background: var(--panel-active); }
+      .search:focus-visible {
+        outline: 2px solid var(--focus-ring);
+        outline-offset: 2px;
+        border-color: var(--accent);
+        box-shadow: var(--shadow-hover);
+        background: var(--panel-active);
+      }
       .search::placeholder { color: var(--muted); }
 
       .filters {
@@ -391,12 +453,16 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         color: var(--muted);
         font-size: 14px;
         cursor: pointer;
-        transition: all 0.2s ease;
+        transition: background var(--motion-fast) var(--ease-fast), color var(--motion-fast) var(--ease-fast), border-color var(--motion-fast) var(--ease-fast), transform var(--motion-fast) var(--ease-fast);
         backdrop-filter: blur(8px);
       }
 
       .filter-btn:hover { background: var(--panel-active); color: var(--text); }
       .filter-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+      .filter-btn:focus-visible {
+        outline: 2px solid var(--focus-ring);
+        outline-offset: 2px;
+      }
 
       .content-layout {
         display: grid;
@@ -444,16 +510,23 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         padding: 8px 10px;
         min-height: 36px;
         font-size: 14px;
-        transition: all 0.2s ease;
+        transition: background var(--motion-fast) var(--ease-fast), color var(--motion-fast) var(--ease-fast), border-color var(--motion-fast) var(--ease-fast);
+        -webkit-tap-highlight-color: transparent;
       }
 
       .elevator-link:hover,
-      .elevator-link:focus-visible,
       .elevator-link.active {
         color: var(--text);
         background: var(--panel-active);
         border-color: var(--line);
+      }
+
+      .elevator-link:focus-visible {
+        color: var(--text);
+        background: var(--panel-active);
+        border-color: var(--accent);
         outline: none;
+        box-shadow: inset 0 0 0 1px var(--accent), var(--focus-ring-shadow);
       }
 
       .content-main {
@@ -487,7 +560,7 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         opacity: 0;
         visibility: hidden;
         transform: translateY(10px);
-        transition: all 0.25s ease;
+        transition: opacity var(--motion-mid) var(--ease-mid), visibility var(--motion-mid) var(--ease-mid), transform var(--motion-mid) var(--ease-mid), background var(--motion-fast) var(--ease-fast), border-color var(--motion-fast) var(--ease-fast);
       }
 
       .back-top.show {
@@ -499,7 +572,8 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
       .back-top:hover,
       .back-top:focus-visible {
         background: var(--panel-active);
-        outline: none;
+        outline: 2px solid var(--focus-ring);
+        outline-offset: 2px;
       }
 
       @media (max-width: 900px) {
@@ -737,7 +811,7 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
       </svg>
     </button>
 
-    <main class="wrap" data-all-category={messages.ui.allCategory}>
+    <main class="wrap" data-all-category={messages.ui.allCategory} data-recent-limit="10">
       <section class="hero">
         <h1>{messages.ui.heroTitle}</h1>
         <p class="sub">{messages.ui.heroSubtitle}</p>
@@ -752,7 +826,10 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
             ))}
           </div>
           <div class="recent-wrap" id="recent-wrap" hidden>
-            <p class="recent-title">{messages.ui.recentVisits}</p>
+            <div class="recent-head">
+              <p class="recent-title">{messages.ui.recentVisits}</p>
+              <button type="button" class="recent-clear" id="recent-clear">{messages.ui.clearRecentVisits}</button>
+            </div>
             <div class="recent-list" id="recent-list"></div>
           </div>
         </div>
@@ -799,8 +876,11 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
       const empty = document.querySelector('.empty');
       const recentWrap = document.getElementById('recent-wrap');
       const recentList = document.getElementById('recent-list');
+      const recentClearBtn = document.getElementById('recent-clear');
       const RECENT_KEY = 'jayyu-recent-visits-v1';
-      const RECENT_LIMIT = 8;
+      const RECENT_LIMIT_DEFAULT = 10;
+      const recentLimitFromData = Number.parseInt(rootWrap?.dataset.recentLimit || '', 10);
+      const RECENT_LIMIT = Number.isFinite(recentLimitFromData) && recentLimitFromData > 0 ? recentLimitFromData : RECENT_LIMIT_DEFAULT;
       let currentCat = allCategory;
 
       function loadRecentVisits() {
@@ -829,10 +909,16 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
 
         if (!list.length) {
           recentWrap.hidden = true;
+          if (recentClearBtn) {
+            recentClearBtn.setAttribute('disabled', 'true');
+          }
           return;
         }
 
         recentWrap.hidden = false;
+        if (recentClearBtn) {
+          recentClearBtn.removeAttribute('disabled');
+        }
 
         list.forEach((item) => {
           if (!item || !item.url || !item.title) {
@@ -878,6 +964,13 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         const next = loadRecentVisits().filter((item) => item && item.url !== url);
         next.unshift({ url, title, ts: Date.now() });
         saveRecentVisits(next);
+        renderRecentVisits();
+      }
+
+      function clearRecentVisits() {
+        try {
+          localStorage.removeItem(RECENT_KEY);
+        } catch (error) {}
         renderRecentVisits();
       }
 
@@ -939,6 +1032,10 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
 
       if (input) {
         input.addEventListener('input', applyFilters);
+      }
+
+      if (recentClearBtn) {
+        recentClearBtn.addEventListener('click', clearRecentVisits);
       }
 
       cards.forEach((card) => {
