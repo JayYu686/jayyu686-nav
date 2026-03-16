@@ -34,7 +34,26 @@ const localizedItems = rawItems.map((item) => ({
   searchableName: [item.title_en, item.title, item.summary_en, item.summary].filter(Boolean).join(' '),
 }));
 
-const categoryKeys: string[] = [...new Set(localizedItems.map((item) => item.category))];
+const categoryOrder = [
+  '实用工具',
+  '程序员常用网站',
+  '论坛 / 社区',
+  '学术资源',
+  'AI',
+  '资源',
+  '娱乐',
+  '有趣',
+  'VPS / 云服务',
+  '域名 / DNS / 建站',
+];
+
+const categoryKeys: string[] = [...new Set(localizedItems.map((item) => item.category))].sort((a, b) => {
+  const ai = categoryOrder.indexOf(a);
+  const bi = categoryOrder.indexOf(b);
+  const ax = ai === -1 ? Number.MAX_SAFE_INTEGER : ai;
+  const bx = bi === -1 ? Number.MAX_SAFE_INTEGER : bi;
+  return ax - bx;
+});
 const categories: FilterCategory[] = [
   { value: enMessages.ui.allCategory, label: enMessages.ui.allCategory },
   ...categoryKeys.map((key) => ({ value: key, label: enMessages.categoryNames[key] ?? key })),

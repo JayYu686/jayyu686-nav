@@ -1169,19 +1169,19 @@
         "summary": "用Rust编写，运行极快、自带AI深入辅助协作功能的高级代码编辑器"
       },
       {
-        "title": "Chinese Oddities Iceberg",
+        "title": "Chinese Oddities 冰山图谱",
         "url": "https://icebergcharts.com/i/Chinese_Oddities",
         "category": "有趣",
         "summary": "围绕中文都市传说与冷知识构建的冰山图谱站点。"
       },
       {
-        "title": "Lost Media CN Wiki",
+        "title": "失传媒中文维基",
         "url": "https://lostmedia.wikidot.com/",
         "category": "有趣",
         "summary": "记录失传媒体与冷门影像资料的维基社区。"
       },
       {
-        "title": "UI Style Prompt",
+        "title": "UI 风格提示词库",
         "url": "https://www.uiprompt.site/zh/styles",
         "category": "有趣",
         "summary": "AI 设计风格提示词与界面风格示例库。"
@@ -1193,7 +1193,7 @@
         "summary": "以实验性内容为主的跨学科在线期刊。"
       },
       {
-        "title": "Rubbish Journal",
+        "title": "Rubbish 跨学科期刊",
         "url": "https://rubbish-journal.org/zh",
         "category": "有趣",
         "summary": "聚焦非常规议题与观点的跨学科内容站。"
@@ -1205,67 +1205,67 @@
         "summary": "收录奇怪但有趣网站的索引集合。"
       },
       {
-        "title": "Xiaoce",
+        "title": "小测",
         "url": "https://xiaoce.fun/",
         "category": "有趣",
         "summary": "中文趣味站点导航与轻量内容入口。"
       },
       {
-        "title": "iQIYI",
+        "title": "爱奇艺",
         "url": "https://www.iqiyi.com/",
         "category": "娱乐",
         "summary": "国内主流长视频平台，覆盖电影、剧集与综艺。"
       },
       {
-        "title": "Youku",
+        "title": "优酷",
         "url": "https://www.youku.com/",
         "category": "娱乐",
         "summary": "国内综合视频平台，提供影视与综艺内容。"
       },
       {
-        "title": "Tencent Video",
+        "title": "腾讯视频",
         "url": "https://v.qq.com/",
         "category": "娱乐",
         "summary": "腾讯旗下视频平台，提供电影、电视剧与动漫内容。"
       },
       {
-        "title": "Aidi TV",
+        "title": "爱迪影视",
         "url": "https://aidi.tv/",
         "category": "娱乐",
         "summary": "影视内容聚合与播放入口站点。"
       },
       {
-        "title": "MaliMali",
+        "title": "MaliMali 动漫",
         "url": "https://www.malimali5.com/",
         "category": "娱乐",
         "summary": "以动漫内容为主的聚合播放入口。"
       },
       {
-        "title": "Neflyingshi",
+        "title": "奈菲影视",
         "url": "https://www.nfyinghsi.com/",
         "category": "娱乐",
         "summary": "电影与剧集资源聚合站点。"
       },
       {
-        "title": "Vidhub Link",
+        "title": "Vidhub 发布页",
         "url": "https://vidhub.link/",
         "category": "娱乐",
         "summary": "Vidhub 视频地址发布与导航页面。"
       },
       {
-        "title": "Wangfei TV",
+        "title": "网飞TV",
         "url": "https://www.wangfei.tv/",
         "category": "娱乐",
         "summary": "影视剧聚合播放站点。"
       },
       {
-        "title": "BTNULL",
+        "title": "BTNULL 无名小站",
         "url": "https://www.btnull.in/",
         "category": "娱乐",
         "summary": "在线视频索引与导航入口。"
       },
       {
-        "title": "Vidhub",
+        "title": "Vidhub 视频库",
         "url": "https://vidhub.me/",
         "category": "娱乐",
         "summary": "Vidhub 影视资源索引站点。"
@@ -1283,13 +1283,13 @@
         "summary": "以图片与短视频为核心的全球社交媒体平台。"
       },
       {
-        "title": "52pojie",
+        "title": "吾爱论坛",
         "url": "https://www.52pojie.cn/",
         "category": "论坛 / 社区",
         "summary": "国内活跃的技术交流论坛社区。"
       },
       {
-        "title": "Baidu Tieba",
+        "title": "百度贴吧",
         "url": "https://tieba.baidu.com/",
         "category": "论坛 / 社区",
         "summary": "大型中文话题社区与论坛平台。"
@@ -1313,31 +1313,31 @@
         "summary": "匿名图像版讨论社区。"
       },
       {
-        "title": "Wangdao Forum",
+        "title": "王道论坛",
         "url": "http://www.cskaoyan.com/forum.php",
         "category": "论坛 / 社区",
         "summary": "计算机考研与学习交流论坛。"
       },
       {
-        "title": "Weibo",
+        "title": "微博",
         "url": "https://weibo.com/",
         "category": "论坛 / 社区",
         "summary": "中文热点话题与社交讨论平台。"
       },
       {
-        "title": "3DMGAME Forum",
+        "title": "3DMGAME论坛",
         "url": "https://bbs.3dmgame.com/forum.php",
         "category": "论坛 / 社区",
         "summary": "游戏讨论、攻略与资源交流论坛。"
       },
       {
-        "title": "Xiaoheihe",
+        "title": "小黑盒",
         "url": "https://xiaoheihe.cn/app/bbs/home",
         "category": "论坛 / 社区",
         "summary": "游戏资讯、评测与讨论社区。"
       },
       {
-        "title": "Xiaohongshu",
+        "title": "小红书",
         "url": "https://www.xiaohongshu.com/explore",
         "category": "论坛 / 社区",
         "summary": "生活方式内容分享与互动社区。"
@@ -1349,13 +1349,13 @@
         "summary": "围绕 AI 与科技主题的讨论社区。"
       },
       {
-        "title": "Naixi Forum",
+        "title": "奶昔论坛",
         "url": "https://forum.naixi.net/",
         "category": "论坛 / 社区",
         "summary": "综合技术与资源交流论坛。"
       },
       {
-        "title": "NodeSeek",
+        "title": "NodeSeek 社区",
         "url": "https://www.nodeseek.com/",
         "category": "论坛 / 社区",
         "summary": "关注开发与云服务话题的中文社区论坛。"
@@ -1373,25 +1373,25 @@
         "summary": "中文开发者社区与技术内容平台。"
       },
       {
-        "title": "Zhutix",
+        "title": "致美化",
         "url": "https://zhutix.com/",
         "category": "资源",
         "summary": "桌面主题、壁纸与美化资源分享站。"
       },
       {
-        "title": "Xiaolin Coding",
+        "title": "小林coding",
         "url": "https://xiaolincoding.com/",
         "category": "资源",
         "summary": "系统化后端与计算机基础学习资料站。"
       },
       {
-        "title": "Luogu",
+        "title": "洛谷",
         "url": "https://www.luogu.com.cn/",
         "category": "资源",
         "summary": "算法竞赛与编程训练平台。"
       },
       {
-        "title": "WebHD",
+        "title": "WebHD.top",
         "url": "https://webhd.top/",
         "category": "资源",
         "summary": "影视与下载类资源导航入口。"
@@ -1409,7 +1409,7 @@
         "summary": "大型游戏 Mod 下载与社区平台。"
       },
       {
-        "title": "QuarkZY",
+        "title": "夸克资源网",
         "url": "https://quarkzy.com/",
         "category": "资源",
         "summary": "夸克网盘资源聚合与导航站点。"
@@ -1421,7 +1421,7 @@
         "summary": "单机与掌机游戏资源索引站点。"
       },
       {
-        "title": "Workflowy Game List",
+        "title": "Workflowy 游戏清单",
         "url": "https://workflowy.com/s/pc/ydPl2wnXlf6Ut5KJ#/802c48a4f83b",
         "category": "资源",
         "summary": "以 Workflowy 整理的公开游戏资源清单。"
@@ -1433,31 +1433,31 @@
         "summary": "Switch 游戏资源与下载导航站点。"
       },
       {
-        "title": "QKYunso",
+        "title": "夸克云搜",
         "url": "https://qkyunso.com/index",
         "category": "资源",
         "summary": "夸克网盘分享资源搜索工具。"
       },
       {
-        "title": "Baidu Scholar",
+        "title": "百度学术",
         "url": "https://xueshu.baidu.com/",
         "category": "学术资源",
         "summary": "百度提供的学术文献检索服务。"
       },
       {
-        "title": "Wanfang Data",
+        "title": "万方数据",
         "url": "https://www.wanfangdata.com.cn/",
         "category": "学术资源",
         "summary": "中文期刊、论文与学位文献数据库。"
       },
       {
-        "title": "Bing Academic",
+        "title": "必应学术",
         "url": "https://www.bing.com/academic",
         "category": "学术资源",
         "summary": "Bing 提供的学术检索入口。"
       },
       {
-        "title": "DeepL Translator",
+        "title": "DeepL 翻译",
         "url": "https://www.deepl.com/translator",
         "category": "学术资源",
         "summary": "高质量翻译工具，适合论文阅读与润色。"
@@ -1469,13 +1469,13 @@
         "summary": "IEEE 论文与会议文献数据库。"
       },
       {
-        "title": "PaperYY",
+        "title": "PaperYY 论文检测",
         "url": "https://www.paperyy.com/",
         "category": "学术资源",
         "summary": "论文查重与写作辅助平台。"
       },
       {
-        "title": "Google Translate",
+        "title": "Google 翻译",
         "url": "https://translate.google.com/",
         "category": "学术资源",
         "summary": "通用翻译工具，常用于论文初读与术语校对。"
@@ -1487,31 +1487,31 @@
         "summary": "公式 OCR 与 LaTeX 转写工具。"
       },
       {
-        "title": "SimpleTex",
+        "title": "公式识别",
         "url": "https://simpletex.cn/ai/latex_ocr",
         "category": "学术资源",
         "summary": "公式识别与 LaTeX 转换工具。"
       },
       {
-        "title": "SOTAPapers",
+        "title": "Research Papers",
         "url": "https://sotapapers.com/papers",
         "category": "学术资源",
         "summary": "论文发现与 SOTA 研究追踪入口。"
       },
       {
-        "title": "HF Mirror",
+        "title": "HF-Mirror",
         "url": "https://hf-mirror.com/",
         "category": "学术资源",
         "summary": "Hugging Face 模型与资源镜像服务。"
       },
       {
-        "title": "ModelScope",
+        "title": "模型库首页·魔搭社区",
         "url": "https://www.modelscope.cn/models",
         "category": "学术资源",
         "summary": "魔搭社区的模型仓库与检索入口。"
       },
       {
-        "title": "CCF Deadlines",
+        "title": "ccf-deadlines",
         "url": "https://ccfddl.com/",
         "category": "学术资源",
         "summary": "CS/AI 会议截稿时间汇总与追踪站。"
@@ -1523,19 +1523,19 @@
         "summary": "在线协作 LaTeX 写作与排版平台。"
       },
       {
-        "title": "Link Privacy Check",
+        "title": "你分享的链接泄露隐私了吗？",
         "url": "https://uid.ejfkdev.com/",
         "category": "实用工具",
         "summary": "检测分享链接是否暴露隐私参数。"
       },
       {
-        "title": "WonderCV",
+        "title": "超级简历 WonderCV",
         "url": "https://www.wondercv.com/cvs/7RIlxDV8/editor",
         "category": "实用工具",
         "summary": "在线简历编辑与模板制作平台。"
       },
       {
-        "title": "BraveDown",
+        "title": "Download VK Videos",
         "url": "https://bravedown.com/vk-video-downloader",
         "category": "实用工具",
         "summary": "在线视频下载与提取辅助工具页面。"
@@ -1547,25 +1547,25 @@
         "summary": "多平台媒体下载与格式转换工具。"
       },
       {
-        "title": "FacaiTool",
+        "title": "HTML转网页工具",
         "url": "https://facaitool.my/",
         "category": "实用工具",
         "summary": "将 HTML 快速转换并部署为网页的工具。"
       },
       {
-        "title": "Heitu Notebook",
+        "title": "黑兔手记",
         "url": "https://ddgksf2013.top/",
         "category": "实用工具",
         "summary": "实用网站与资源入口整理页。"
       },
       {
-        "title": "CSDN Unlock Tool",
+        "title": "CSDN文章解锁工具",
         "url": "https://csdn.zeroai.chat/?ref=ddgksf2013.top",
         "category": "实用工具",
         "summary": "用于辅助阅读 CSDN 内容的第三方工具页。"
       },
       {
-        "title": "GoMusic",
+        "title": "音乐迁移-GoMusic",
         "url": "https://music.unmeta.cn/?ref=ddgksf2013.top",
         "category": "实用工具",
         "summary": "音乐迁移与播放相关的在线工具服务。"
@@ -1577,13 +1577,13 @@
         "summary": "在不同音乐平台之间迁移歌单。"
       },
       {
-        "title": "Image to LaTeX",
+        "title": "图片转LaTeX公式",
         "url": "https://web.baimiaoapp.com/image-to-latex",
         "category": "实用工具",
         "summary": "将公式图片转换为 LaTeX 表达式。"
       },
       {
-        "title": "tmux Guide",
+        "title": "提升命令行体验—tmux",
         "url": "https://lug.ustc.edu.cn/planet/2025/07/how-to-use-tmux/",
         "category": "实用工具",
         "summary": "LUG USTC 发布的 tmux 实战使用指南。"
