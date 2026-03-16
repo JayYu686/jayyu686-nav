@@ -1698,7 +1698,7 @@
         "url": "https://paperswithcode.com/",
         "summary": "论文、代码与基准排行对照平台。",
         "summary_en": "Research papers linked with code and benchmark leaderboards.",
-        "category": "????"
+        "category": "学术资源"
       },
       {
         "title": "Internet Archive",
@@ -1706,7 +1706,7 @@
         "url": "https://archive.org/",
         "summary": "大规模数字档案与历史资源库。",
         "summary_en": "Large digital archive for books, media, and web history.",
-        "category": "??"
+        "category": "资源"
       },
       {
         "title": "OpenStreetMap",
@@ -1714,7 +1714,7 @@
         "url": "https://www.openstreetmap.org/",
         "summary": "开源地图与地理数据社区。",
         "summary_en": "Open-source map and geodata community.",
-        "category": "????"
+        "category": "实用工具"
       },
       {
         "title": "n8n",
@@ -1722,7 +1722,7 @@
         "url": "https://n8n.io/",
         "summary": "可视化工作流自动化平台。",
         "summary_en": "Visual workflow automation platform.",
-        "category": "????"
+        "category": "实用工具"
       },
       {
         "title": "Zapier",
@@ -1730,7 +1730,7 @@
         "url": "https://zapier.com/",
         "summary": "连接各类应用并自动化日常任务。",
         "summary_en": "Connect apps and automate routine tasks.",
-        "category": "????"
+        "category": "实用工具"
       },
       {
         "title": "Raycast",
@@ -1738,7 +1738,7 @@
         "url": "https://www.raycast.com/",
         "summary": "效率启动器与开发者工作流工具。",
         "summary_en": "Productivity launcher for developer workflows.",
-        "category": "????"
+        "category": "实用工具"
       },
       {
         "title": "Linear",
@@ -1746,7 +1746,7 @@
         "url": "https://linear.app/",
         "summary": "现代团队项目管理与问题跟踪平台。",
         "summary_en": "Modern project management and issue tracking.",
-        "category": "????"
+        "category": "实用工具"
       },
       {
         "title": "Read the Docs",
@@ -1754,7 +1754,7 @@
         "url": "https://readthedocs.org/",
         "summary": "开源项目文档托管与发布平台。",
         "summary_en": "Documentation hosting and publishing for open-source projects.",
-        "category": "???????"
+        "category": "程序员常用网站"
       },
       {
         "title": "StackBlitz",
@@ -1762,7 +1762,7 @@
         "url": "https://stackblitz.com/",
         "summary": "浏览器内在线 IDE 与即时预览环境。",
         "summary_en": "In-browser IDE with instant preview.",
-        "category": "???????"
+        "category": "程序员常用网站"
       },
       {
         "title": "CodePen",
@@ -1770,7 +1770,7 @@
         "url": "https://codepen.io/",
         "summary": "前端代码实验与演示社区。",
         "summary_en": "Frontend code playground and showcase community.",
-        "category": "???????"
+        "category": "程序员常用网站"
       },
       {
         "title": "JSFiddle",
@@ -1778,7 +1778,7 @@
         "url": "https://jsfiddle.net/",
         "summary": "在线 HTML/CSS/JS 调试与测试工具。",
         "summary_en": "Online HTML/CSS/JS editor and debugger.",
-        "category": "???????"
+        "category": "程序员常用网站"
       },
       {
         "title": "Mermaid Live Editor",
@@ -1786,7 +1786,7 @@
         "url": "https://mermaid.live/",
         "summary": "在线编辑与预览 Mermaid 图表。",
         "summary_en": "Edit and preview Mermaid diagrams online.",
-        "category": "????"
+        "category": "实用工具"
       },
       {
         "title": "Lobsters",
@@ -1794,7 +1794,7 @@
         "url": "https://lobste.rs/",
         "summary": "聚焦编程与技术话题的社区。",
         "summary_en": "Community focused on programming discussions.",
-        "category": "?? / ??"
+        "category": "论坛 / 社区"
       },
       {
         "title": "Product Hunt",
@@ -1802,7 +1802,7 @@
         "url": "https://www.producthunt.com/",
         "summary": "发现最新产品与工具的发布平台。",
         "summary_en": "Discover newly launched products and tools.",
-        "category": "?? / ??"
+        "category": "论坛 / 社区"
       },
       {
         "title": "AlternativeTo",
@@ -1810,7 +1810,7 @@
         "url": "https://alternativeto.net/",
         "summary": "按场景查找软件替代方案。",
         "summary_en": "Find software alternatives by use case.",
-        "category": "??"
+        "category": "资源"
       },
       {
         "title": "G2",
@@ -1818,7 +1818,7 @@
         "url": "https://www.g2.com/",
         "summary": "软件产品评测与对比平台。",
         "summary_en": "Software reviews and comparison platform.",
-        "category": "??"
+        "category": "资源"
       },
       {
         "title": "SourceForge",
@@ -1826,7 +1826,7 @@
         "url": "https://sourceforge.net/",
         "summary": "开源项目发布与下载平台。",
         "summary_en": "Open-source software hosting and download platform.",
-        "category": "??"
+        "category": "资源"
       }
     ]
   }
