@@ -89,7 +89,8 @@
           "大厂"
         ],
         "summary": "国内市场份额最大的云服务商。",
-        "note": "适合部署需备案的国内项目。"
+        "note": "适合部署需备案的国内项目。",
+        "title_en": "Aliyun"
       },
       {
         "title": "腾讯云",
@@ -100,7 +101,8 @@
           "轻量应用服务器"
         ],
         "summary": "国内知名云服务商，轻量应用服务器性价比极高。",
-        "note": "经常有打折活动，适合学生和个人开发者。"
+        "note": "经常有打折活动，适合学生和个人开发者。",
+        "title_en": "Tencent Cloud"
       },
       {
         "title": "BandwagonHost (搬瓦工)",
@@ -111,7 +113,8 @@
           "CN2 GIA"
         ],
         "summary": "以中国大陆优化线路（CN2 GIA）闻名的老牌商家。",
-        "note": "网络极佳，但价格目前越来越贵。"
+        "note": "网络极佳，但价格目前越来越贵。",
+        "title_en": "BandwagonHost"
       },
       {
         "title": "RackNerd",
@@ -308,7 +311,8 @@
           "大而全"
         ],
         "summary": "中国最权威的学术文献、论文数据库。",
-        "note": "查阅中文期刊和硕博毕业论文必备。"
+        "note": "查阅中文期刊和硕博毕业论文必备。",
+        "title_en": "China National Knowledge Infrastructure"
       },
       {
         "title": "Web of Science",
@@ -418,7 +422,8 @@
           "国内社区"
         ],
         "summary": "国内优质的面向开发者的技术内容分享平台。",
-        "note": "大前端文章质量较高，经常有干货总结。"
+        "note": "大前端文章质量较高，经常有干货总结。",
+        "title_en": "Juejin"
       },
       {
         "title": "roadmap.sh",
@@ -451,7 +456,8 @@
           "开源"
         ],
         "summary": "详尽的老乡鸡官方菜品做法指南。",
-        "note": "程序员也要好好吃饭，按文档写代码一样做菜。"
+        "note": "程序员也要好好吃饭，按文档写代码一样做菜。",
+        "title_en": "LXJ Open Recipes"
       },
       {
         "title": "小霸王其乐无穷",
@@ -463,7 +469,8 @@
           "FC"
         ],
         "summary": "在线网页版 FC 小霸王红白机游戏聚合站。",
-        "note": "上班摸鱼神器，找回童年的记忆。"
+        "note": "上班摸鱼神器，找回童年的记忆。",
+        "title_en": "XiaoBaWang Games"
       },
       {
         "title": "Neal.fun",
@@ -584,7 +591,8 @@
           "校园网"
         ],
         "summary": "中国科大提供的纯净无广告网速测试工具。",
-        "note": "国内首选轻量测速页，极速且无杂项。"
+        "note": "国内首选轻量测速页，极速且无杂项。",
+        "title_en": "USTC Speed Test"
       },
       {
         "title": "Regex101",
@@ -693,7 +701,8 @@
           "密码工具"
         ],
         "summary": "生成极高强度的随机密码工具。",
-        "note": "注册一堆小网站防止被扫号的利器。"
+        "note": "注册一堆小网站防止被扫号的利器。",
+        "title_en": "Online Password Generator"
       },
       {
         "title": "Crontab.guru",
@@ -722,7 +731,8 @@
         "title": "丽萨主机",
         "url": "https://lisahost.com",
         "category": "VPS / 云服务",
-        "summary": "稳定可靠的高防 VPS 及ISP住宅IP服务商"
+        "summary": "稳定可靠的高防 VPS 及ISP住宅IP服务商",
+        "title_en": "LisaHost"
       },
       {
         "title": "Hugging Face",
@@ -758,7 +768,8 @@
         "title": "豆瓣",
         "url": "https://www.douban.com",
         "category": "娱乐",
-        "summary": "发现和评价好电影、好书、好音乐的文化社区"
+        "summary": "发现和评价好电影、好书、好音乐的文化社区",
+        "title_en": "Douban"
       },
       {
         "title": "LIBVIO",
@@ -770,7 +781,8 @@
         "title": "樱花动漫",
         "url": "https://www.yhdmp.cc/",
         "category": "娱乐",
-        "summary": "二次元专注的日本番剧动画免费追番站点"
+        "summary": "二次元专注的日本番剧动画免费追番站点",
+        "title_en": "Sakura Anime"
       },
       {
         "title": "Gamer520",
@@ -788,7 +800,8 @@
         "title": "资源帝电子书",
         "url": "http://shu.ziyuandi.cn/",
         "category": "资源",
-        "summary": "整合全网各类电子书搜索与下载导航的资源帝站点"
+        "summary": "整合全网各类电子书搜索与下载导航的资源帝站点",
+        "title_en": "Ziyuandi Ebooks"
       },
       {
         "title": "RARBG",
@@ -812,13 +825,15 @@
         "title": "游民星空",
         "url": "https://www.gamersky.com/",
         "category": "娱乐",
-        "summary": "国内知名的单机游戏与主机游戏资讯、下载及互动社区"
+        "summary": "国内知名的单机游戏与主机游戏资讯、下载及互动社区",
+        "title_en": "Gamersky"
       },
       {
         "title": "NGA玩家社区",
         "url": "https://bbs.nga.cn/",
         "category": "论坛 / 社区",
-        "summary": "国内最活跃的硬核游戏玩家与电竞泛娱乐综合论坛"
+        "summary": "国内最活跃的硬核游戏玩家与电竞泛娱乐综合论坛",
+        "title_en": "NGA Community"
       },
       {
         "title": "TapTap",
@@ -836,7 +851,8 @@
         "title": "4399小游戏",
         "url": "https://www.4399.com/",
         "category": "娱乐",
-        "summary": "经典的休闲小游戏大全网站，提供无数童年页游回忆"
+        "summary": "经典的休闲小游戏大全网站，提供无数童年页游回忆",
+        "title_en": "4399 Games"
       },
       {
         "title": "Twitch",
@@ -884,7 +900,8 @@
         "title": "鸠摩搜书",
         "url": "https://www.jiumodiary.com/",
         "category": "资源",
-        "summary": "非常好用的电子书搜索引擎，支持多种格式正版下载查找"
+        "summary": "非常好用的电子书搜索引擎，支持多种格式正版下载查找",
+        "title_en": "Jiumo Search"
       },
       {
         "title": "Yande.re",
@@ -920,7 +937,8 @@
         "title": "LKs网页推荐站",
         "url": "https://lkssite.vip/",
         "category": "有趣",
-        "summary": "B站UP主整理分享的数百个神奇网站汇总，寻找灵感枯竭时的百宝箱"
+        "summary": "B站UP主整理分享的数百个神奇网站汇总，寻找灵感枯竭时的百宝箱",
+        "title_en": "LKs Web Recommendations"
       },
       {
         "title": "Radiooooo",
@@ -932,7 +950,8 @@
         "title": "地球3D",
         "url": "https://earth3dmap.com/",
         "category": "有趣",
-        "summary": "逼真三维视角的地球在线交互地图与街景漫游观光"
+        "summary": "逼真三维视角的地球在线交互地图与街景漫游观光",
+        "title_en": "Earth 3D Map"
       },
       {
         "title": "MuscleWiki",
@@ -956,7 +975,8 @@
         "title": "Canva可画",
         "url": "https://www.canva.com/",
         "category": "实用工具",
-        "summary": "极其简单易用、就算不懂PS也能快速做出高大上设计作品的平面神器"
+        "summary": "极其简单易用、就算不懂PS也能快速做出高大上设计作品的平面神器",
+        "title_en": "Canva"
       },
       {
         "title": "Figma",
@@ -974,7 +994,8 @@
         "title": "在线文件转换",
         "url": "https://convertio.co/zh/",
         "category": "实用工具",
-        "summary": "支持将图像、文档乃至视音频任意转换的在线格式神兵利器"
+        "summary": "支持将图像、文档乃至视音频任意转换的在线格式神兵利器",
+        "title_en": "Convertio File Converter"
       },
       {
         "title": "ChatGPT",
@@ -998,7 +1019,8 @@
         "title": "DeepSeek (深度求索)",
         "url": "https://chat.deepseek.com/",
         "category": "AI",
-        "summary": "国产开源之光，提供极其划算且强大的代码与语言大模型"
+        "summary": "国产开源之光，提供极其划算且强大的代码与语言大模型",
+        "title_en": "DeepSeek"
       },
       {
         "title": "Kimi",
@@ -1010,19 +1032,22 @@
         "title": "豆包",
         "url": "https://www.doubao.com/",
         "category": "AI",
-        "summary": "字节跳动出品的免费强力AI对话和创作助手"
+        "summary": "字节跳动出品的免费强力AI对话和创作助手",
+        "title_en": "Doubao"
       },
       {
         "title": "通义千问",
         "url": "https://tongyi.aliyun.com/",
         "category": "AI",
-        "summary": "阿里云推出的大语言模型，多模态能力拔尖，功能非常全面"
+        "summary": "阿里云推出的大语言模型，多模态能力拔尖，功能非常全面",
+        "title_en": "Tongyi Qianwen"
       },
       {
         "title": "智谱清言",
         "url": "https://chatglm.cn/",
         "category": "AI",
-        "summary": "智谱AI推出的国产强力AI助手，数据分析和文档处理很实用"
+        "summary": "智谱AI推出的国产强力AI助手，数据分析和文档处理很实用",
+        "title_en": "Zhipu Qingyan"
       },
       {
         "title": "Grok",
@@ -1094,7 +1119,8 @@
         "title": "Coze (扣子)",
         "url": "https://www.coze.com/",
         "category": "AI",
-        "summary": "字节跳动出品的零代码搭建个性化AI Agent和Bot的开发平台"
+        "summary": "字节跳动出品的零代码搭建个性化AI Agent和Bot的开发平台",
+        "title_en": "Coze"
       },
       {
         "title": "Stable Video",
@@ -1112,7 +1138,8 @@
         "title": "DeepSeek 开放平台",
         "url": "https://platform.deepseek.com/",
         "category": "AI",
-        "summary": "DeepSeek API 开发者控制台，调用极其低价且表现顶尖的国产模型"
+        "summary": "DeepSeek API 开发者控制台，调用极其低价且表现顶尖的国产模型",
+        "title_en": "DeepSeek API Platform"
       },
       {
         "title": "txyz.ai",
@@ -1124,7 +1151,8 @@
         "title": "LYi 林哥的大模型野榜",
         "url": "https://lyihub.com/",
         "category": "AI",
-        "summary": "客观且民间视角维护的大型语言模型性能横向测评排名站点"
+        "summary": "客观且民间视角维护的大型语言模型性能横向测评排名站点",
+        "title_en": "LYi LLM Leaderboard"
       },
       {
         "title": "Nano Banana",
@@ -1172,19 +1200,22 @@
         "title": "Chinese Oddities 冰山图谱",
         "url": "https://icebergcharts.com/i/Chinese_Oddities",
         "category": "有趣",
-        "summary": "围绕中文都市传说与冷知识构建的冰山图谱站点。"
+        "summary": "围绕中文都市传说与冷知识构建的冰山图谱站点。",
+        "title_en": "Chinese Oddities Iceberg"
       },
       {
         "title": "失传媒中文维基",
         "url": "https://lostmedia.wikidot.com/",
         "category": "有趣",
-        "summary": "记录失传媒体与冷门影像资料的维基社区。"
+        "summary": "记录失传媒体与冷门影像资料的维基社区。",
+        "title_en": "Lost Media CN Wiki"
       },
       {
         "title": "UI 风格提示词库",
         "url": "https://www.uiprompt.site/zh/styles",
         "category": "有趣",
-        "summary": "AI 设计风格提示词与界面风格示例库。"
+        "summary": "AI 设计风格提示词与界面风格示例库。",
+        "title_en": "UI Style Prompt Library"
       },
       {
         "title": "S.H.I.T Journal",
@@ -1196,7 +1227,8 @@
         "title": "Rubbish 跨学科期刊",
         "url": "https://rubbish-journal.org/zh",
         "category": "有趣",
-        "summary": "聚焦非常规议题与观点的跨学科内容站。"
+        "summary": "聚焦非常规议题与观点的跨学科内容站。",
+        "title_en": "Rubbish Interdisciplinary Journal"
       },
       {
         "title": "Web of Nothing",
@@ -1208,67 +1240,78 @@
         "title": "小测",
         "url": "https://xiaoce.fun/",
         "category": "有趣",
-        "summary": "中文趣味站点导航与轻量内容入口。"
+        "summary": "中文趣味站点导航与轻量内容入口。",
+        "title_en": "Xiaoce"
       },
       {
         "title": "爱奇艺",
         "url": "https://www.iqiyi.com/",
         "category": "娱乐",
-        "summary": "国内主流长视频平台，覆盖电影、剧集与综艺。"
+        "summary": "国内主流长视频平台，覆盖电影、剧集与综艺。",
+        "title_en": "iQIYI"
       },
       {
         "title": "优酷",
         "url": "https://www.youku.com/",
         "category": "娱乐",
-        "summary": "国内综合视频平台，提供影视与综艺内容。"
+        "summary": "国内综合视频平台，提供影视与综艺内容。",
+        "title_en": "Youku"
       },
       {
         "title": "腾讯视频",
         "url": "https://v.qq.com/",
         "category": "娱乐",
-        "summary": "腾讯旗下视频平台，提供电影、电视剧与动漫内容。"
+        "summary": "腾讯旗下视频平台，提供电影、电视剧与动漫内容。",
+        "title_en": "Tencent Video"
       },
       {
         "title": "爱迪影视",
         "url": "https://aidi.tv/",
         "category": "娱乐",
-        "summary": "影视内容聚合与播放入口站点。"
+        "summary": "影视内容聚合与播放入口站点。",
+        "title_en": "Aidi TV"
       },
       {
         "title": "MaliMali 动漫",
         "url": "https://www.malimali5.com/",
         "category": "娱乐",
-        "summary": "以动漫内容为主的聚合播放入口。"
+        "summary": "以动漫内容为主的聚合播放入口。",
+        "title_en": "MaliMali Anime"
       },
       {
         "title": "奈菲影视",
         "url": "https://www.nfyinghsi.com/",
         "category": "娱乐",
-        "summary": "电影与剧集资源聚合站点。"
+        "summary": "电影与剧集资源聚合站点。",
+        "title_en": "Naifei TV"
       },
       {
         "title": "Vidhub 发布页",
         "url": "https://vidhub.link/",
         "category": "娱乐",
-        "summary": "Vidhub 视频地址发布与导航页面。"
+        "summary": "Vidhub 视频地址发布与导航页面。",
+        "title_en": "Vidhub Releases"
       },
       {
         "title": "网飞TV",
         "url": "https://www.wangfei.tv/",
         "category": "娱乐",
-        "summary": "影视剧聚合播放站点。"
+        "summary": "影视剧聚合播放站点。",
+        "title_en": "Wangfei TV"
       },
       {
         "title": "BTNULL 无名小站",
         "url": "https://www.btnull.in/",
         "category": "娱乐",
-        "summary": "在线视频索引与导航入口。"
+        "summary": "在线视频索引与导航入口。",
+        "title_en": "BTNULL"
       },
       {
         "title": "Vidhub 视频库",
         "url": "https://vidhub.me/",
         "category": "娱乐",
-        "summary": "Vidhub 影视资源索引站点。"
+        "summary": "Vidhub 影视资源索引站点。",
+        "title_en": "Vidhub Library"
       },
       {
         "title": "TikTok",
@@ -1286,13 +1329,15 @@
         "title": "吾爱论坛",
         "url": "https://www.52pojie.cn/",
         "category": "论坛 / 社区",
-        "summary": "国内活跃的技术交流论坛社区。"
+        "summary": "国内活跃的技术交流论坛社区。",
+        "title_en": "52pojie Forum"
       },
       {
         "title": "百度贴吧",
         "url": "https://tieba.baidu.com/",
         "category": "论坛 / 社区",
-        "summary": "大型中文话题社区与论坛平台。"
+        "summary": "大型中文话题社区与论坛平台。",
+        "title_en": "Baidu Tieba"
       },
       {
         "title": "Metacritic",
@@ -1316,31 +1361,36 @@
         "title": "王道论坛",
         "url": "http://www.cskaoyan.com/forum.php",
         "category": "论坛 / 社区",
-        "summary": "计算机考研与学习交流论坛。"
+        "summary": "计算机考研与学习交流论坛。",
+        "title_en": "Wangdao Forum"
       },
       {
         "title": "微博",
         "url": "https://weibo.com/",
         "category": "论坛 / 社区",
-        "summary": "中文热点话题与社交讨论平台。"
+        "summary": "中文热点话题与社交讨论平台。",
+        "title_en": "Weibo"
       },
       {
         "title": "3DMGAME论坛",
         "url": "https://bbs.3dmgame.com/forum.php",
         "category": "论坛 / 社区",
-        "summary": "游戏讨论、攻略与资源交流论坛。"
+        "summary": "游戏讨论、攻略与资源交流论坛。",
+        "title_en": "3DMGAME Forum"
       },
       {
         "title": "小黑盒",
         "url": "https://xiaoheihe.cn/app/bbs/home",
         "category": "论坛 / 社区",
-        "summary": "游戏资讯、评测与讨论社区。"
+        "summary": "游戏资讯、评测与讨论社区。",
+        "title_en": "Heybox"
       },
       {
         "title": "小红书",
         "url": "https://www.xiaohongshu.com/explore",
         "category": "论坛 / 社区",
-        "summary": "生活方式内容分享与互动社区。"
+        "summary": "生活方式内容分享与互动社区。",
+        "title_en": "Xiaohongshu"
       },
       {
         "title": "DeepFlood",
@@ -1352,13 +1402,15 @@
         "title": "奶昔论坛",
         "url": "https://forum.naixi.net/",
         "category": "论坛 / 社区",
-        "summary": "综合技术与资源交流论坛。"
+        "summary": "综合技术与资源交流论坛。",
+        "title_en": "Naixi Forum"
       },
       {
         "title": "NodeSeek 社区",
         "url": "https://www.nodeseek.com/",
         "category": "论坛 / 社区",
-        "summary": "关注开发与云服务话题的中文社区论坛。"
+        "summary": "关注开发与云服务话题的中文社区论坛。",
+        "title_en": "NodeSeek Community"
       },
       {
         "title": "LINUX DO",
@@ -1376,19 +1428,22 @@
         "title": "致美化",
         "url": "https://zhutix.com/",
         "category": "资源",
-        "summary": "桌面主题、壁纸与美化资源分享站。"
+        "summary": "桌面主题、壁纸与美化资源分享站。",
+        "title_en": "Zhutix"
       },
       {
         "title": "小林coding",
         "url": "https://xiaolincoding.com/",
         "category": "资源",
-        "summary": "系统化后端与计算机基础学习资料站。"
+        "summary": "系统化后端与计算机基础学习资料站。",
+        "title_en": "Xiaolin Coding"
       },
       {
         "title": "洛谷",
         "url": "https://www.luogu.com.cn/",
         "category": "资源",
-        "summary": "算法竞赛与编程训练平台。"
+        "summary": "算法竞赛与编程训练平台。",
+        "title_en": "Luogu"
       },
       {
         "title": "WebHD.top",
@@ -1412,7 +1467,8 @@
         "title": "夸克资源网",
         "url": "https://quarkzy.com/",
         "category": "资源",
-        "summary": "夸克网盘资源聚合与导航站点。"
+        "summary": "夸克网盘资源聚合与导航站点。",
+        "title_en": "Quark Resources"
       },
       {
         "title": "XBGame",
@@ -1424,7 +1480,8 @@
         "title": "Workflowy 游戏清单",
         "url": "https://workflowy.com/s/pc/ydPl2wnXlf6Ut5KJ#/802c48a4f83b",
         "category": "资源",
-        "summary": "以 Workflowy 整理的公开游戏资源清单。"
+        "summary": "以 Workflowy 整理的公开游戏资源清单。",
+        "title_en": "Workflowy Game List"
       },
       {
         "title": "Switch618",
@@ -1436,31 +1493,36 @@
         "title": "夸克云搜",
         "url": "https://qkyunso.com/index",
         "category": "资源",
-        "summary": "夸克网盘分享资源搜索工具。"
+        "summary": "夸克网盘分享资源搜索工具。",
+        "title_en": "Quark Cloud Search"
       },
       {
         "title": "百度学术",
         "url": "https://xueshu.baidu.com/",
         "category": "学术资源",
-        "summary": "百度提供的学术文献检索服务。"
+        "summary": "百度提供的学术文献检索服务。",
+        "title_en": "Baidu Scholar"
       },
       {
         "title": "万方数据",
         "url": "https://www.wanfangdata.com.cn/",
         "category": "学术资源",
-        "summary": "中文期刊、论文与学位文献数据库。"
+        "summary": "中文期刊、论文与学位文献数据库。",
+        "title_en": "Wanfang Data"
       },
       {
         "title": "必应学术",
         "url": "https://www.bing.com/academic",
         "category": "学术资源",
-        "summary": "Bing 提供的学术检索入口。"
+        "summary": "Bing 提供的学术检索入口。",
+        "title_en": "Bing Academic"
       },
       {
         "title": "DeepL 翻译",
         "url": "https://www.deepl.com/translator",
         "category": "学术资源",
-        "summary": "高质量翻译工具，适合论文阅读与润色。"
+        "summary": "高质量翻译工具，适合论文阅读与润色。",
+        "title_en": "DeepL Translator"
       },
       {
         "title": "IEEE Xplore",
@@ -1472,13 +1534,15 @@
         "title": "PaperYY 论文检测",
         "url": "https://www.paperyy.com/",
         "category": "学术资源",
-        "summary": "论文查重与写作辅助平台。"
+        "summary": "论文查重与写作辅助平台。",
+        "title_en": "PaperYY Plagiarism Check"
       },
       {
         "title": "Google 翻译",
         "url": "https://translate.google.com/",
         "category": "学术资源",
-        "summary": "通用翻译工具，常用于论文初读与术语校对。"
+        "summary": "通用翻译工具，常用于论文初读与术语校对。",
+        "title_en": "Google Translate"
       },
       {
         "title": "Mathpix",
@@ -1490,7 +1554,8 @@
         "title": "公式识别",
         "url": "https://simpletex.cn/ai/latex_ocr",
         "category": "学术资源",
-        "summary": "公式识别与 LaTeX 转换工具。"
+        "summary": "公式识别与 LaTeX 转换工具。",
+        "title_en": "Formula OCR"
       },
       {
         "title": "Research Papers",
@@ -1508,7 +1573,8 @@
         "title": "模型库首页·魔搭社区",
         "url": "https://www.modelscope.cn/models",
         "category": "学术资源",
-        "summary": "魔搭社区的模型仓库与检索入口。"
+        "summary": "魔搭社区的模型仓库与检索入口。",
+        "title_en": "ModelScope Models"
       },
       {
         "title": "ccf-deadlines",
@@ -1526,13 +1592,15 @@
         "title": "你分享的链接泄露隐私了吗？",
         "url": "https://uid.ejfkdev.com/",
         "category": "实用工具",
-        "summary": "检测分享链接是否暴露隐私参数。"
+        "summary": "检测分享链接是否暴露隐私参数。",
+        "title_en": "Link Privacy Leak Checker"
       },
       {
         "title": "超级简历 WonderCV",
         "url": "https://www.wondercv.com/cvs/7RIlxDV8/editor",
         "category": "实用工具",
-        "summary": "在线简历编辑与模板制作平台。"
+        "summary": "在线简历编辑与模板制作平台。",
+        "title_en": "WonderCV Resume Builder"
       },
       {
         "title": "Download VK Videos",
@@ -1550,25 +1618,29 @@
         "title": "HTML转网页工具",
         "url": "https://facaitool.my/",
         "category": "实用工具",
-        "summary": "将 HTML 快速转换并部署为网页的工具。"
+        "summary": "将 HTML 快速转换并部署为网页的工具。",
+        "title_en": "HTML to Webpage Tool"
       },
       {
         "title": "黑兔手记",
         "url": "https://ddgksf2013.top/",
         "category": "实用工具",
-        "summary": "实用网站与资源入口整理页。"
+        "summary": "实用网站与资源入口整理页。",
+        "title_en": "Black Rabbit Notes"
       },
       {
         "title": "CSDN文章解锁工具",
         "url": "https://csdn.zeroai.chat/?ref=ddgksf2013.top",
         "category": "实用工具",
-        "summary": "用于辅助阅读 CSDN 内容的第三方工具页。"
+        "summary": "用于辅助阅读 CSDN 内容的第三方工具页。",
+        "title_en": "CSDN Unlock Tool"
       },
       {
         "title": "音乐迁移-GoMusic",
         "url": "https://music.unmeta.cn/?ref=ddgksf2013.top",
         "category": "实用工具",
-        "summary": "音乐迁移与播放相关的在线工具服务。"
+        "summary": "音乐迁移与播放相关的在线工具服务。",
+        "title_en": "GoMusic Transfer"
       },
       {
         "title": "TuneMyMusic",
@@ -1580,19 +1652,181 @@
         "title": "图片转LaTeX公式",
         "url": "https://web.baimiaoapp.com/image-to-latex",
         "category": "实用工具",
-        "summary": "将公式图片转换为 LaTeX 表达式。"
+        "summary": "将公式图片转换为 LaTeX 表达式。",
+        "title_en": "Image to LaTeX"
       },
       {
         "title": "提升命令行体验—tmux",
         "url": "https://lug.ustc.edu.cn/planet/2025/07/how-to-use-tmux/",
         "category": "实用工具",
-        "summary": "LUG USTC 发布的 tmux 实战使用指南。"
+        "summary": "LUG USTC 发布的 tmux 实战使用指南。",
+        "title_en": "Tmux Guide"
       },
       {
         "title": "NodeImage",
         "url": "https://www.nodeimage.com/",
         "category": "实用工具",
         "summary": "图像处理与相关在线工具资源站。"
+      },
+      {
+        "title": "HTTPie AI",
+        "title_en": "HTTPie AI",
+        "url": "https://httpie.io/ai",
+        "summary": "使用自然语言生成与调试 API 请求。",
+        "summary_en": "Generate and debug API requests with natural language.",
+        "category": "AI"
+      },
+      {
+        "title": "Kaggle",
+        "title_en": "Kaggle",
+        "url": "https://www.kaggle.com/",
+        "summary": "数据科学竞赛与数据集平台。",
+        "summary_en": "Data science competitions and datasets.",
+        "category": "AI"
+      },
+      {
+        "title": "Replicate",
+        "title_en": "Replicate",
+        "url": "https://replicate.com/",
+        "summary": "在线运行和部署开源 AI 模型。",
+        "summary_en": "Run and deploy open-source AI models online.",
+        "category": "AI"
+      },
+      {
+        "title": "Papers with Code",
+        "title_en": "Papers with Code",
+        "url": "https://paperswithcode.com/",
+        "summary": "论文、代码与基准排行对照平台。",
+        "summary_en": "Research papers linked with code and benchmark leaderboards.",
+        "category": "????"
+      },
+      {
+        "title": "Internet Archive",
+        "title_en": "Internet Archive",
+        "url": "https://archive.org/",
+        "summary": "大规模数字档案与历史资源库。",
+        "summary_en": "Large digital archive for books, media, and web history.",
+        "category": "??"
+      },
+      {
+        "title": "OpenStreetMap",
+        "title_en": "OpenStreetMap",
+        "url": "https://www.openstreetmap.org/",
+        "summary": "开源地图与地理数据社区。",
+        "summary_en": "Open-source map and geodata community.",
+        "category": "????"
+      },
+      {
+        "title": "n8n",
+        "title_en": "n8n",
+        "url": "https://n8n.io/",
+        "summary": "可视化工作流自动化平台。",
+        "summary_en": "Visual workflow automation platform.",
+        "category": "????"
+      },
+      {
+        "title": "Zapier",
+        "title_en": "Zapier",
+        "url": "https://zapier.com/",
+        "summary": "连接各类应用并自动化日常任务。",
+        "summary_en": "Connect apps and automate routine tasks.",
+        "category": "????"
+      },
+      {
+        "title": "Raycast",
+        "title_en": "Raycast",
+        "url": "https://www.raycast.com/",
+        "summary": "效率启动器与开发者工作流工具。",
+        "summary_en": "Productivity launcher for developer workflows.",
+        "category": "????"
+      },
+      {
+        "title": "Linear",
+        "title_en": "Linear",
+        "url": "https://linear.app/",
+        "summary": "现代团队项目管理与问题跟踪平台。",
+        "summary_en": "Modern project management and issue tracking.",
+        "category": "????"
+      },
+      {
+        "title": "Read the Docs",
+        "title_en": "Read the Docs",
+        "url": "https://readthedocs.org/",
+        "summary": "开源项目文档托管与发布平台。",
+        "summary_en": "Documentation hosting and publishing for open-source projects.",
+        "category": "???????"
+      },
+      {
+        "title": "StackBlitz",
+        "title_en": "StackBlitz",
+        "url": "https://stackblitz.com/",
+        "summary": "浏览器内在线 IDE 与即时预览环境。",
+        "summary_en": "In-browser IDE with instant preview.",
+        "category": "???????"
+      },
+      {
+        "title": "CodePen",
+        "title_en": "CodePen",
+        "url": "https://codepen.io/",
+        "summary": "前端代码实验与演示社区。",
+        "summary_en": "Frontend code playground and showcase community.",
+        "category": "???????"
+      },
+      {
+        "title": "JSFiddle",
+        "title_en": "JSFiddle",
+        "url": "https://jsfiddle.net/",
+        "summary": "在线 HTML/CSS/JS 调试与测试工具。",
+        "summary_en": "Online HTML/CSS/JS editor and debugger.",
+        "category": "???????"
+      },
+      {
+        "title": "Mermaid Live Editor",
+        "title_en": "Mermaid Live Editor",
+        "url": "https://mermaid.live/",
+        "summary": "在线编辑与预览 Mermaid 图表。",
+        "summary_en": "Edit and preview Mermaid diagrams online.",
+        "category": "????"
+      },
+      {
+        "title": "Lobsters",
+        "title_en": "Lobsters",
+        "url": "https://lobste.rs/",
+        "summary": "聚焦编程与技术话题的社区。",
+        "summary_en": "Community focused on programming discussions.",
+        "category": "?? / ??"
+      },
+      {
+        "title": "Product Hunt",
+        "title_en": "Product Hunt",
+        "url": "https://www.producthunt.com/",
+        "summary": "发现最新产品与工具的发布平台。",
+        "summary_en": "Discover newly launched products and tools.",
+        "category": "?? / ??"
+      },
+      {
+        "title": "AlternativeTo",
+        "title_en": "AlternativeTo",
+        "url": "https://alternativeto.net/",
+        "summary": "按场景查找软件替代方案。",
+        "summary_en": "Find software alternatives by use case.",
+        "category": "??"
+      },
+      {
+        "title": "G2",
+        "title_en": "G2",
+        "url": "https://www.g2.com/",
+        "summary": "软件产品评测与对比平台。",
+        "summary_en": "Software reviews and comparison platform.",
+        "category": "??"
+      },
+      {
+        "title": "SourceForge",
+        "title_en": "SourceForge",
+        "url": "https://sourceforge.net/",
+        "summary": "开源项目发布与下载平台。",
+        "summary_en": "Open-source software hosting and download platform.",
+        "category": "??"
       }
     ]
   }
