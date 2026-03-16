@@ -1,0 +1,169 @@
+---
+interface ResourceItem {
+  title: string;
+  summary: string;
+  url: string;
+  category: string;
+  searchableName?: string;
+}
+
+interface Props {
+  item: ResourceItem;
+  categoryLabel: string;
+}
+
+const { item, categoryLabel } = Astro.props;
+
+const getDomain = (url: string) => {
+  try {
+    return new URL(url).hostname;
+  } catch {
+    return '';
+  }
+};
+---
+
+<a
+  href={item.url}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="card"
+  data-cat={item.category}
+  data-name={(item.searchableName || item.title || '').toLowerCase()}
+>
+  <div class="card-top">
+    <div class="icon-box">
+      <img src={`https://www.google.com/s2/favicons?domain=${getDomain(item.url)}&sz=128`} alt={item.title} loading="lazy" />
+    </div>
+    <div class="info">
+      <h3 class="title">{item.title}</h3>
+      <span class="badge">{categoryLabel}</span>
+    </div>
+  </div>
+  <p class="desc">{item.summary}</p>
+</a>
+
+<style>
+  .card {
+    position: relative;
+    overflow: hidden;
+    padding: 24px;
+    border-radius: 20px;
+    border: 1px solid var(--card-border);
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    text-decoration: none;
+    color: var(--text);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: var(--shadow);
+  }
+
+  .card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -120%;
+    width: 60%;
+    pointer-events: none;
+    transform: skewX(-18deg);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.45s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-4px) scale(1.01);
+    border-color: var(--line);
+    box-shadow: var(--shadow-hover);
+    background: var(--panel-active);
+  }
+
+  .card:hover::after,
+  .card:focus-visible::after {
+    left: 150%;
+  }
+
+  .card:active {
+    transform: translateY(-1px) scale(0.992);
+  }
+
+  .card:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .card-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .icon-box {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .icon-box img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    border-radius: 4px;
+  }
+
+  .info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--text);
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 6px;
+    background: rgba(88, 166, 255, 0.1);
+    color: var(--accent);
+    font-size: 12px;
+    margin-top: 4px;
+  }
+
+  .desc {
+    margin: 0;
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.5;
+    flex: 1;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    max-height: 3em;
+    transition: max-height 0.3s ease;
+  }
+
+  .card:hover .desc,
+  .card:focus-visible .desc {
+    -webkit-line-clamp: unset;
+    max-height: 10.5em;
+  }
+</style>

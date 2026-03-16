@@ -1,8 +1,8 @@
-﻿---
+---
 import { getCollection } from 'astro:content';
-import HomeContent from '../components/HomeContent.astro';
-import { zhMessages } from '../i18n/zh';
-import resourcesJson from '../content/resources/resources.json';
+import HomeContent from '../../components/HomeContent.astro';
+import { enMessages } from '../../i18n/en';
+import resourcesJson from '../../content/resources/resources.json';
 
 interface ResourceRecord {
   title: string;
@@ -29,15 +29,15 @@ const rawItems: ResourceRecord[] = entries.length > 0
 
 const localizedItems = rawItems.map((item) => ({
   ...item,
-  title: item.title,
-  summary: item.summary,
-  searchableName: [item.title, item.title_en, item.summary, item.summary_en].filter(Boolean).join(' '),
+  title: item.title_en || item.title,
+  summary: item.summary_en || item.summary,
+  searchableName: [item.title_en, item.title, item.summary_en, item.summary].filter(Boolean).join(' '),
 }));
 
 const categoryKeys: string[] = [...new Set(localizedItems.map((item) => item.category))];
 const categories: FilterCategory[] = [
-  { value: zhMessages.ui.allCategory, label: zhMessages.ui.allCategory },
-  ...categoryKeys.map((key) => ({ value: key, label: zhMessages.categoryNames[key] ?? key })),
+  { value: enMessages.ui.allCategory, label: enMessages.ui.allCategory },
+  ...categoryKeys.map((key) => ({ value: key, label: enMessages.categoryNames[key] ?? key })),
 ];
 
 const resourcesByCategory = categoryKeys.map((category, index) => {
@@ -45,16 +45,16 @@ const resourcesByCategory = categoryKeys.map((category, index) => {
   return {
     id: `cat-${index + 1}`,
     category,
-    categoryLabel: zhMessages.categoryNames[category] ?? category,
-    countLabel: `${items.length} ${zhMessages.ui.siteCount}`,
+    categoryLabel: enMessages.categoryNames[category] ?? category,
+    countLabel: `${items.length} ${enMessages.ui.siteCount}`,
     items,
   };
 });
 ---
 
 <HomeContent
-  messages={zhMessages}
+  messages={enMessages}
   categories={categories}
   resourcesByCategory={resourcesByCategory}
-  languageSwitchHref="/en/"
+  languageSwitchHref="/"
 />

@@ -1,0 +1,63 @@
+---
+import Card from './Card.astro';
+
+interface ResourceItem {
+  title: string;
+  summary: string;
+  url: string;
+  category: string;
+  searchableName?: string;
+}
+
+interface Props {
+  id: string;
+  category: string;
+  categoryLabel: string;
+  countLabel: string;
+  items: ResourceItem[];
+}
+
+const { id, category, categoryLabel, countLabel, items } = Astro.props;
+---
+
+<section class="category-section" id={id} data-category={category}>
+  <div class="category-head">
+    <h2 class="category-title">{categoryLabel}</h2>
+    <span class="category-count">{countLabel}</span>
+  </div>
+  <div class="grid">
+    {items.map((item) => <Card item={item} categoryLabel={categoryLabel} />)}
+  </div>
+</section>
+
+<style>
+  .category-section {
+    scroll-margin-top: 90px;
+    margin-bottom: 28px;
+  }
+
+  .category-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .category-title {
+    margin: 0;
+    font-size: 24px;
+    letter-spacing: -0.2px;
+  }
+
+  .category-count {
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+  }
+</style>
