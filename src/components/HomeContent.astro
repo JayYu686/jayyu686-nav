@@ -443,7 +443,7 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         -webkit-backdrop-filter: blur(16px);
         color: var(--text);
         font-size: 16px;
-        transition: border-color var(--motion-mid) var(--ease-mid), box-shadow var(--motion-mid) var(--ease-mid), background var(--motion-mid) var(--ease-mid);
+        transition: border-color var(--motion-nav) var(--ease-mid), box-shadow var(--motion-nav) var(--ease-mid), background var(--motion-nav) var(--ease-mid);
         box-shadow: var(--shadow);
       }
 
@@ -503,7 +503,7 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         cursor: pointer;
         white-space: nowrap;
         flex: 0 0 auto;
-        transition: background var(--motion-fast) var(--ease-fast), color var(--motion-fast) var(--ease-fast), border-color var(--motion-fast) var(--ease-fast), box-shadow var(--motion-fast) var(--ease-fast);
+        transition: background var(--motion-fast) var(--ease-fast), color var(--motion-fast) var(--ease-fast), border-color var(--motion-nav) var(--ease-mid), box-shadow var(--motion-nav) var(--ease-mid);
         box-shadow: var(--comp-control-shadow);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
@@ -594,7 +594,7 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         justify-content: flex-start;
         padding: 10px 12px;
         background: transparent;
-        transition: background var(--motion-fast) var(--ease-fast), color var(--motion-fast) var(--ease-fast), border-color var(--motion-fast) var(--ease-fast);
+        transition: background var(--motion-nav) var(--ease-mid), color var(--motion-fast) var(--ease-fast), border-color var(--motion-nav) var(--ease-mid);
         -webkit-tap-highlight-color: transparent;
         box-shadow: none;
       }
@@ -652,7 +652,7 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         opacity: 0;
         visibility: hidden;
         transform: translateY(10px);
-        transition: opacity var(--motion-mid) var(--ease-mid), visibility var(--motion-mid) var(--ease-mid), transform var(--motion-mid) var(--ease-mid), background var(--motion-fast) var(--ease-fast), border-color var(--motion-fast) var(--ease-fast);
+        transition: opacity var(--motion-nav) var(--ease-mid), visibility var(--motion-nav) var(--ease-mid), transform var(--motion-nav) var(--ease-mid), background var(--motion-fast) var(--ease-fast), border-color var(--motion-fast) var(--ease-fast);
         will-change: opacity, transform;
       }
 
