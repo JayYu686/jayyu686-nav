@@ -120,7 +120,7 @@ npm run dev
 
 ### 本次数据扩充（2026-03）
 
-- 已按截图来源批量新增站点，并严格映射到既有分类：
+- 已新增以下站点，并严格映射到既有分类：
 - `论坛 / 社区`：论坛、社区、BBS 与讨论平台。
 - `有趣`：奇趣站点、实验内容与灵感站。
 - `娱乐`：视频与流媒体相关站点。
@@ -133,6 +133,10 @@ npm run dev
 - 本轮继续新增 14 个学术资源站点（已去重）：
 - `DOAJ`、`OpenAlex`、`Crossref Search`、`SpringerLink`、`ScienceDirect`、`JSTOR`、`SSRN`
 - `CORE`、`bioRxiv`、`medRxiv`、`ACL Anthology`、`OpenReview`、`ORCID`、`Unpaywall`
+- 本轮新增 10 个 AI 站点到 `AI / 图像与视频生成`：
+- `nanobananafree.ai`、`imini.ai`、`muset.ai`、`trickle.so`、`Flowith.cc`
+- `tapnow.ai`、`lovart.ai`、`Zenmux.ai`、`imastudio.com`、`flowith.io`
+- 同时将已存在的 `OpenRouter` 条目按需求调整到 `AI / 图像与视频生成`，并更新简介。
 
 ### 去重规则（执行策略）
 
@@ -142,11 +146,13 @@ npm run dev
 
 ### 导入后校验
 
-- 资源总数：`246`
+- 资源总数：`256`
 - `title + category` 重复数：`0`
 - 规范化 URL 重复数：`0`
 - 中文标题缺失 `title_en`：`0`
 - 学术资源条目数：`38`
+- AI 资源条目数：`45`
+- AI 图像与视频生成条目数：`15`
 - 二级分类覆盖率：`100%`（每条资源均含 `subcategory` 与 `subcategory_en`）
 
 ## i18n 路由

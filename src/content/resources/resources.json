@@ -1351,9 +1351,9 @@
         "title": "OpenRouter",
         "url": "https://openrouter.ai/",
         "category": "AI",
-        "summary": "统一的大模型API接口平台，方便开发者调用各类热门AI并查看榜单",
-        "subcategory": "AI开发平台",
-        "subcategory_en": "AI Development Platforms"
+        "summary": "一个聚合多家大模型的统一接口平台，可以调用使用。",
+        "subcategory": "图像与视频生成",
+        "subcategory_en": "Image & Video Generation"
       },
       {
         "title": "Google AI Studio",
@@ -1427,6 +1427,86 @@
         "url": "https://nanobanana.ai/",
         "category": "AI",
         "summary": "轻量且便捷的基于AI智能驱动的图像编辑器与快速修改工具",
+        "subcategory": "图像与视频生成",
+        "subcategory_en": "Image & Video Generation"
+      },
+      {
+        "title": "nanobananafree.ai",
+        "url": "https://nanobananafree.ai/",
+        "category": "AI",
+        "summary": "免费，直接用。一个老牌站点，现在更新成了 Nano Banana Pro 支持免费使用。",
+        "subcategory": "图像与视频生成",
+        "subcategory_en": "Image & Video Generation"
+      },
+      {
+        "title": "imini.ai",
+        "url": "https://imini.ai/",
+        "category": "AI",
+        "summary": "每日限时免费用，图片质量高，中文操作友好，比较靠谱。目前有 Nano Banana Pro、Nano Banana 1 版本。",
+        "subcategory": "图像与视频生成",
+        "subcategory_en": "Image & Video Generation"
+      },
+      {
+        "title": "muset.ai",
+        "url": "https://muset.ai/",
+        "category": "AI",
+        "summary": "beta 版本，AI 原生写作工具，已上线 Nano Banana Pro 限时体验。",
+        "subcategory": "图像与视频生成",
+        "subcategory_en": "Image & Video Generation"
+      },
+      {
+        "title": "trickle.so",
+        "url": "https://trickle.so/",
+        "category": "AI",
+        "summary": "通过自然语言 + 可视化画布创作。",
+        "subcategory": "图像与视频生成",
+        "subcategory_en": "Image & Video Generation"
+      },
+      {
+        "title": "Flowith.cc",
+        "url": "https://flowith.cc/",
+        "category": "AI",
+        "summary": "Bete 版本，能使用 1 和 2 版本，不能上传图片。",
+        "subcategory": "图像与视频生成",
+        "subcategory_en": "Image & Video Generation"
+      },
+      {
+        "title": "tapnow.ai",
+        "url": "https://tapnow.ai/",
+        "category": "AI",
+        "summary": "一款主打快速生成高质量视频的多模态 AI 视频创作平台。",
+        "subcategory": "图像与视频生成",
+        "subcategory_en": "Image & Video Generation"
+      },
+      {
+        "title": "lovart.ai",
+        "url": "https://lovart.ai/",
+        "category": "AI",
+        "summary": "专注于 AI 艺术创作与图片生成，提供多种风格的高质量视觉作品生成工具。",
+        "subcategory": "图像与视频生成",
+        "subcategory_en": "Image & Video Generation"
+      },
+      {
+        "title": "Zenmux.ai",
+        "url": "https://zenmux.ai/",
+        "category": "AI",
+        "summary": "面向专业创作者的 AI 视频生成与编辑平台，可一键生成故事视频。",
+        "subcategory": "图像与视频生成",
+        "subcategory_en": "Image & Video Generation"
+      },
+      {
+        "title": "imastudio.com",
+        "url": "https://imastudio.com/",
+        "category": "AI",
+        "summary": "提供虚拟摄影棚与 AI 视觉内容制作工具，可生成专业级图像。",
+        "subcategory": "图像与视频生成",
+        "subcategory_en": "Image & Video Generation"
+      },
+      {
+        "title": "flowith.io",
+        "url": "https://flowith.io/",
+        "category": "AI",
+        "summary": "一款 AI 社交媒体内容助手，可自动生成、规划并优化品牌在社交平台上的内容。",
         "subcategory": "图像与视频生成",
         "subcategory_en": "Image & Video Generation"
       },
