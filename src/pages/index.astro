@@ -9,6 +9,8 @@ interface ResourceRecord {
   summary: string;
   url: string;
   category: string;
+  subcategory?: string;
+  subcategory_en?: string;
   title_en?: string;
   summary_en?: string;
 }
@@ -31,7 +33,8 @@ const localizedItems = rawItems.map((item) => ({
   ...item,
   title: item.title,
   summary: item.summary,
-  searchableName: [item.title, item.title_en, item.summary, item.summary_en].filter(Boolean).join(' '),
+  subcategory: item.subcategory || item.subcategory_en || '未分组',
+  searchableName: [item.title, item.title_en, item.summary, item.summary_en, item.subcategory, item.subcategory_en].filter(Boolean).join(' '),
 }));
 
 const categoryOrder = [

@@ -7,6 +7,7 @@ interface ResourceItem {
   summary: string;
   url: string;
   category: string;
+  subcategory?: string;
   searchableName?: string;
 }
 
@@ -109,9 +110,22 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         --comp-recent-icon-size: 12px;
         --comp-recent-radius: var(--ref-radius-md);
         --comp-recent-core-radius: 7px;
+        --comp-control-height: 42px;
+        --comp-control-radius: 999px;
+        --comp-control-padding-x: 16px;
+        --comp-control-font-size: 15px;
+        --comp-control-border: color-mix(in srgb, #ffffff 12%, transparent);
+        --comp-control-bg: linear-gradient(160deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.02));
+        --comp-control-bg-hover: linear-gradient(160deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.06));
+        --comp-control-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 8px 20px rgba(5, 10, 24, 0.2);
+        --comp-control-shadow-hover: inset 0 1px 0 rgba(255, 255, 255, 0.18), 0 10px 24px rgba(5, 10, 24, 0.24);
 
-        --motion-fast: 130ms;
-        --motion-mid: 240ms;
+        --motion-tap: 100ms;
+        --motion-card: 220ms;
+        --motion-nav: 240ms;
+        --motion-ornament: 320ms;
+        --motion-fast: var(--motion-tap);
+        --motion-mid: var(--motion-card);
         --motion-slow: 380ms;
         --ease-fast: cubic-bezier(0.4, 0, 0.2, 1);
         --ease-mid: cubic-bezier(0.22, 1, 0.36, 1);
@@ -154,6 +168,11 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         --ref-shadow-1: 0 2px 8px rgba(0, 0, 0, 0.07);
         --ref-shadow-2: 0 8px 24px rgba(0, 0, 0, 0.1);
         --ref-shadow-3: 0 12px 30px rgba(0, 102, 204, 0.22);
+        --comp-control-border: color-mix(in srgb, #000000 14%, transparent);
+        --comp-control-bg: linear-gradient(160deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.72));
+        --comp-control-bg-hover: linear-gradient(160deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.84));
+        --comp-control-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85), 0 8px 18px rgba(0, 0, 0, 0.1);
+        --comp-control-shadow-hover: inset 0 1px 0 rgba(255, 255, 255, 0.95), 0 10px 22px rgba(0, 0, 0, 0.12);
       }
 
       * { box-sizing: border-box; }
@@ -187,7 +206,8 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         filter: blur(120px);
         opacity: 0.5;
         animation: float 20s infinite ease-in-out alternate;
-        transition: opacity 0.4s ease, filter 0.4s ease;
+        transition: opacity var(--motion-ornament) ease, filter var(--motion-ornament) ease;
+        will-change: transform;
       }
 
       .orb-1 { width: 60vw; height: 60vh; background: radial-gradient(circle, #f43f5e, transparent 60%); top: -10%; left: -10%; animation-delay: 0s; }
@@ -439,27 +459,74 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
       .filters {
         display: flex;
         flex-wrap: wrap;
-        gap: var(--ref-space-3);
+        gap: 10px;
         justify-content: center;
         min-width: 0;
       }
 
-      .filter-btn {
-        padding: 8px 14px;
-        min-height: 36px;
-        border-radius: var(--ref-radius-pill);
-        border: 1px solid var(--line);
-        background: var(--panel);
-        color: var(--muted);
-        font-size: 14px;
-        cursor: pointer;
-        transition: background var(--motion-fast) var(--ease-fast), color var(--motion-fast) var(--ease-fast), border-color var(--motion-fast) var(--ease-fast), transform var(--motion-fast) var(--ease-fast);
-        backdrop-filter: blur(8px);
+      .subfilters-wrap {
+        width: 100%;
+        max-width: 100%;
+        display: grid;
+        gap: 6px;
       }
 
-      .filter-btn:hover { background: var(--panel-active); color: var(--text); }
-      .filter-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
-      .filter-btn:focus-visible {
+      .subfilters-title {
+        margin: 0;
+        font-size: 12px;
+        color: var(--muted);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .subfilters-list {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: visible;
+        padding-bottom: 0;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .filter-btn,
+      :global(.subfilter-btn) {
+        min-height: var(--comp-control-height);
+        border-radius: var(--comp-control-radius);
+        border: 1px solid var(--comp-control-border);
+        background: var(--comp-control-bg);
+        color: var(--text-sub);
+        font-size: var(--comp-control-font-size);
+        font-weight: 600;
+        letter-spacing: 0;
+        padding: 0 var(--comp-control-padding-x);
+        cursor: pointer;
+        white-space: nowrap;
+        flex: 0 0 auto;
+        transition: background var(--motion-fast) var(--ease-fast), color var(--motion-fast) var(--ease-fast), border-color var(--motion-fast) var(--ease-fast), box-shadow var(--motion-fast) var(--ease-fast);
+        box-shadow: var(--comp-control-shadow);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+
+      .filter-btn:hover,
+      :global(.subfilter-btn:hover) {
+        color: var(--text);
+        background: var(--comp-control-bg-hover);
+        border-color: color-mix(in srgb, var(--accent) 26%, var(--comp-control-border));
+        box-shadow: var(--comp-control-shadow-hover);
+      }
+
+      .filter-btn.active,
+      :global(.subfilter-btn.active) {
+        color: #fff;
+        background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 92%, #ffffff 8%), color-mix(in srgb, var(--accent) 84%, #101828 16%));
+        border-color: color-mix(in srgb, var(--accent) 62%, transparent);
+        box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 70%, transparent), 0 8px 20px color-mix(in srgb, var(--accent) 28%, transparent);
+      }
+
+      .filter-btn:focus-visible,
+      :global(.subfilter-btn:focus-visible) {
         outline: 2px solid var(--focus-ring);
         outline-offset: 2px;
       }
@@ -496,34 +563,59 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
       .elevator-list {
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 10px;
         max-height: calc(100vh - 120px);
         overflow: auto;
         min-width: 0;
       }
 
-      .elevator-link {
+      .elevator-list-sub {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .elevator-list-sub[hidden],
+      .elevator-list-cat[hidden],
+      .subfilters-wrap[hidden] {
+        display: none !important;
+      }
+
+      :global(.elevator-link) {
         text-decoration: none;
         color: var(--text-sub);
         border: 1px solid transparent;
-        border-radius: var(--ref-radius-md);
-        padding: 8px 10px;
-        min-height: 36px;
-        font-size: 14px;
+        border-radius: var(--ref-radius-lg);
+        min-height: 0;
+        font-size: 15px;
+        line-height: 1.2;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10px 12px;
+        background: transparent;
         transition: background var(--motion-fast) var(--ease-fast), color var(--motion-fast) var(--ease-fast), border-color var(--motion-fast) var(--ease-fast);
         -webkit-tap-highlight-color: transparent;
+        box-shadow: none;
       }
 
-      .elevator-link:hover,
-      .elevator-link.active {
+      :global(.elevator-link-cat),
+      :global(.elevator-link-sub) {
+        min-height: 0;
+        font-size: 15px;
+      }
+
+      :global(.elevator-link:hover),
+      :global(.elevator-link.active) {
         color: var(--text);
-        background: var(--panel-active);
+        background: color-mix(in srgb, var(--panel-active) 92%, transparent);
         border-color: var(--line);
+        box-shadow: none;
       }
 
-      .elevator-link:focus-visible {
+      :global(.elevator-link:focus-visible) {
         color: var(--text);
-        background: var(--panel-active);
+        background: color-mix(in srgb, var(--panel-active) 92%, transparent);
         border-color: var(--accent);
         outline: none;
         box-shadow: inset 0 0 0 1px var(--accent), var(--focus-ring-shadow);
@@ -561,6 +653,7 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         visibility: hidden;
         transform: translateY(10px);
         transition: opacity var(--motion-mid) var(--ease-mid), visibility var(--motion-mid) var(--ease-mid), transform var(--motion-mid) var(--ease-mid), background var(--motion-fast) var(--ease-fast), border-color var(--motion-fast) var(--ease-fast);
+        will-change: opacity, transform;
       }
 
       .back-top.show {
@@ -607,10 +700,35 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
           scrollbar-width: thin;
         }
 
-        .filter-btn {
+        .subfilters-list {
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          overflow-y: hidden;
+          padding-bottom: 0;
+          margin: 0;
+          padding-inline: 0;
+          justify-content: flex-start;
+          scrollbar-width: none;
+        }
+
+        .subfilters-list::-webkit-scrollbar,
+        .elevator-list::-webkit-scrollbar,
+        .elevator-list-sub::-webkit-scrollbar {
+          display: none;
+          height: 0;
+        }
+
+        .filter-btn,
+        :global(.subfilter-btn) {
+          min-height: 40px;
+          padding: 0 14px;
+          font-size: 14px;
+        }
+
+        .filter-btn,
+        :global(.subfilter-btn) {
           white-space: nowrap;
           flex: 0 0 auto;
-          min-height: 40px;
           scroll-snap-align: start;
         }
 
@@ -655,17 +773,40 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
           max-height: none;
           overflow: auto hidden;
           padding-bottom: 2px;
-          gap: 6px;
+          gap: 8px;
           scroll-snap-type: x proximity;
           touch-action: pan-x;
         }
 
-        .elevator-link {
+        :global(.elevator-link) {
           white-space: nowrap;
-          padding: 7px 9px;
-          min-height: 40px;
+          min-height: 0;
           scroll-snap-align: start;
-          font-size: 13px;
+          font-size: 14px;
+          padding: 8px 12px;
+        }
+
+        :global(.elevator-link-cat),
+        :global(.elevator-link-sub) {
+          min-height: 0;
+          padding: 8px 12px;
+          font-size: 14px;
+        }
+
+        .elevator-list-sub {
+          display: flex;
+          flex-direction: row;
+          overflow: auto hidden;
+          gap: 6px;
+          padding-bottom: 2px;
+          scroll-snap-type: x proximity;
+          touch-action: pan-x;
+        }
+
+        :global(.elevator-link-sub) {
+          white-space: nowrap;
+          flex: 0 0 auto;
+          scroll-snap-align: start;
         }
 
         .back-top {
@@ -682,6 +823,9 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
           --comp-recent-icon-size: 10px;
           --comp-recent-radius: 10px;
           --comp-recent-core-radius: 6px;
+          --comp-control-height: 36px;
+          --comp-control-padding-x: 12px;
+          --comp-control-font-size: 13px;
         }
 
         .orb {
@@ -739,26 +883,38 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
 
         .filters { gap: 8px; }
 
+        .subfilters-wrap { gap: 6px; }
+
+        .subfilters-title { font-size: 11px; }
+
+        .filter-btn,
+        :global(.subfilter-btn) {
+          font-size: 13px;
+          min-height: 36px;
+          padding: 0 12px;
+        }
+
         .recent-wrap { gap: 8px; }
 
         .recent-title { font-size: 12px; }
 
         .content-layout { gap: 12px; }
 
-        .filter-btn {
-          font-size: 13px;
-          padding: 7px 12px;
-          min-height: 40px;
-        }
-
         .elevator { top: 8px; }
 
         .elevator-list { gap: 4px; }
 
-        .elevator-link {
-          font-size: 12px;
-          padding: 6px 8px;
-          min-height: 36px;
+        :global(.elevator-link) {
+          font-size: 13px;
+          padding: 7px 10px;
+          min-height: 0;
+        }
+
+        :global(.elevator-link-cat),
+        :global(.elevator-link-sub) {
+          min-height: 0;
+          padding: 7px 10px;
+          font-size: 13px;
         }
 
         .back-top {
@@ -811,7 +967,12 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
       </svg>
     </button>
 
-    <main class="wrap" data-all-category={messages.ui.allCategory} data-recent-limit="10">
+    <main
+      class="wrap"
+      data-all-category={messages.ui.allCategory}
+      data-all-subcategory={messages.ui.allSubcategoryLabel}
+      data-recent-limit="10"
+    >
       <section class="hero">
         <h1>{messages.ui.heroTitle}</h1>
         <p class="sub">{messages.ui.heroSubtitle}</p>
@@ -824,6 +985,10 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
                 {cat.label}
               </button>
             ))}
+          </div>
+          <div class="subfilters-wrap" id="subfilters-wrap" hidden>
+            <p class="subfilters-title">{messages.ui.subcategoryFilterLabel}</p>
+            <div class="subfilters-list" id="subfilters-list"></div>
           </div>
           <div class="recent-wrap" id="recent-wrap" hidden>
             <div class="recent-head">
@@ -838,13 +1003,18 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
       <div class="content-layout">
         <aside class="elevator" aria-label={messages.ui.elevatorAriaLabel}>
           <p class="elevator-title">{messages.ui.quickJump}</p>
-          <div class="elevator-list">
+          <div class="elevator-list elevator-list-cat" id="elevator-list-cat">
             {resourcesByCategory.map((group, idx) => (
-              <a href={`#${group.id}`} class={['elevator-link', idx === 0 ? 'active' : ''].join(' ')} data-target={group.id}>
+              <a
+                href={`#${group.id}`}
+                class={['elevator-link', 'elevator-link-cat', idx === 0 ? 'active' : ''].join(' ')}
+                data-target={group.id}
+              >
                 {group.categoryLabel}
               </a>
             ))}
           </div>
+          <div class="elevator-list elevator-list-sub" id="elevator-list-sub" hidden></div>
         </aside>
 
         <div class="content-main" id="grid">
@@ -867,11 +1037,15 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
     <script is:inline>
       const rootWrap = document.querySelector('.wrap');
       const allCategory = rootWrap ? rootWrap.dataset.allCategory : 'All';
+      const allSubcategory = rootWrap ? rootWrap.dataset.allSubcategory : 'All';
       const input = document.querySelector('.search');
       const cards = document.querySelectorAll('.card');
       const btns = document.querySelectorAll('.filter-btn');
       const sections = document.querySelectorAll('.category-section');
-      const elevatorLinks = document.querySelectorAll('.elevator-link');
+      const elevatorCatList = document.getElementById('elevator-list-cat');
+      const elevatorSubList = document.getElementById('elevator-list-sub');
+      const subfiltersWrap = document.getElementById('subfilters-wrap');
+      const subfiltersList = document.getElementById('subfilters-list');
       const backTopBtn = document.getElementById('back-to-top');
       const empty = document.querySelector('.empty');
       const recentWrap = document.getElementById('recent-wrap');
@@ -881,7 +1055,11 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
       const RECENT_LIMIT_DEFAULT = 10;
       const recentLimitFromData = Number.parseInt(rootWrap?.dataset.recentLimit || '', 10);
       const RECENT_LIMIT = Number.isFinite(recentLimitFromData) && recentLimitFromData > 0 ? recentLimitFromData : RECENT_LIMIT_DEFAULT;
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const getScrollBehavior = () => (prefersReducedMotion ? 'auto' : 'smooth');
       let currentCat = allCategory;
+      let currentSubcategory = allSubcategory;
+      const observedTargets = new Set();
 
       function loadRecentVisits() {
         try {
@@ -975,8 +1153,112 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
       }
 
       function setActiveElevator(id) {
-        elevatorLinks.forEach((link) => {
+        const links = currentCat === allCategory
+          ? elevatorCatList?.querySelectorAll('.elevator-link') || []
+          : elevatorSubList?.querySelectorAll('.elevator-link') || [];
+
+        links.forEach((link) => {
           link.classList.toggle('active', link.dataset.target === id);
+        });
+      }
+
+      function getCategorySection(category) {
+        return Array.from(sections).find((section) => section.dataset.category === category) || null;
+      }
+
+      function getSubcategoryAnchors(category) {
+        const section = getCategorySection(category);
+        if (!section) {
+          return [];
+        }
+
+        const anchors = [];
+        const blocks = section.querySelectorAll('.subcategory-block');
+        blocks.forEach((block) => {
+          const label = block.dataset.subcategory;
+          if (!label || !block.id) {
+            return;
+          }
+          anchors.push({ id: block.id, label });
+        });
+
+        return anchors;
+      }
+
+      function renderSubfilters() {
+        if (!subfiltersWrap || !subfiltersList) {
+          return;
+        }
+
+        if (currentCat === allCategory) {
+          subfiltersWrap.hidden = true;
+          subfiltersList.innerHTML = '';
+          currentSubcategory = allSubcategory;
+          return;
+        }
+
+        const anchors = getSubcategoryAnchors(currentCat);
+        if (!anchors.length) {
+          subfiltersWrap.hidden = true;
+          subfiltersList.innerHTML = '';
+          currentSubcategory = allSubcategory;
+          return;
+        }
+
+        const labels = Array.from(new Set(anchors.map((item) => item.label)));
+        if (currentSubcategory !== allSubcategory && !labels.includes(currentSubcategory)) {
+          currentSubcategory = allSubcategory;
+        }
+
+        subfiltersWrap.hidden = false;
+        subfiltersList.innerHTML = '';
+
+        const makeButton = (label) => {
+          const button = document.createElement('button');
+          button.type = 'button';
+          button.className = `subfilter-btn ${currentSubcategory === label ? 'active' : ''}`;
+          button.dataset.subcategory = label;
+          button.textContent = label;
+          return button;
+        };
+
+        subfiltersList.appendChild(makeButton(allSubcategory));
+        labels.forEach((label) => {
+          subfiltersList.appendChild(makeButton(label));
+        });
+      }
+
+      function renderElevatorMode() {
+        if (!elevatorCatList || !elevatorSubList) {
+          return;
+        }
+
+        if (currentCat === allCategory) {
+          elevatorCatList.hidden = false;
+          elevatorSubList.hidden = true;
+          elevatorSubList.innerHTML = '';
+          return;
+        }
+
+        const anchors = getSubcategoryAnchors(currentCat);
+        if (!anchors.length) {
+          elevatorCatList.hidden = false;
+          elevatorSubList.hidden = true;
+          elevatorSubList.innerHTML = '';
+          return;
+        }
+
+        elevatorCatList.hidden = true;
+        elevatorSubList.hidden = false;
+        elevatorSubList.innerHTML = '';
+
+        anchors.forEach((anchor) => {
+          const link = document.createElement('a');
+          link.href = `#${anchor.id}`;
+          link.className = 'elevator-link elevator-link-sub';
+          link.dataset.target = anchor.id;
+          link.textContent = anchor.label;
+          elevatorSubList.appendChild(link);
         });
       }
 
@@ -992,9 +1274,13 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
           const titleText = card.querySelector('.title')?.textContent?.toLowerCase() || '';
           const descText = card.querySelector('.desc')?.textContent?.toLowerCase() || '';
           const matchCat = currentCat === allCategory || card.dataset.cat === currentCat;
+          const matchSubcategory =
+            currentCat === allCategory ||
+            currentSubcategory === allSubcategory ||
+            card.dataset.subcategory === currentSubcategory;
           const matchText = !query || titleText.includes(query) || descText.includes(query) || (card.dataset.name && card.dataset.name.includes(query));
 
-          if (matchCat && matchText) {
+          if (matchCat && matchSubcategory && matchText) {
             card.style.display = 'flex';
             visibleCount++;
           } else {
@@ -1003,22 +1289,41 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         });
 
         sections.forEach((section) => {
-          const sectionCards = section.querySelectorAll('.card');
+          const subBlocks = section.querySelectorAll('.subcategory-block');
           let hasVisible = false;
-          sectionCards.forEach((card) => {
-            if (card.style.display !== 'none') {
+
+          subBlocks.forEach((block) => {
+            const blockCards = block.querySelectorAll('.card');
+            let blockHasVisible = false;
+            blockCards.forEach((card) => {
+              if (card.style.display !== 'none') {
+                blockHasVisible = true;
+              }
+            });
+            block.style.display = blockHasVisible ? 'block' : 'none';
+            if (blockHasVisible) {
               hasVisible = true;
             }
           });
+
           section.style.display = hasVisible ? 'block' : 'none';
 
-          const link = document.querySelector(`.elevator-link[data-target="${section.id}"]`);
+          const link = elevatorCatList?.querySelector(`.elevator-link[data-target="${section.id}"]`);
           if (link) {
             link.style.display = hasVisible ? 'block' : 'none';
           }
         });
 
+        if (currentCat !== allCategory && elevatorSubList) {
+          const links = elevatorSubList.querySelectorAll('.elevator-link');
+          links.forEach((link) => {
+            const target = link.dataset.target ? document.getElementById(link.dataset.target) : null;
+            link.style.display = target && target.style.display !== 'none' ? 'block' : 'none';
+          });
+        }
+
         empty.style.display = visibleCount === 0 ? 'block' : 'none';
+        refreshObserverTargets();
       }
 
       btns.forEach((btn) => {
@@ -1026,6 +1331,9 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
           btns.forEach((button) => button.classList.remove('active'));
           btn.classList.add('active');
           currentCat = btn.dataset.cat || allCategory;
+          currentSubcategory = allSubcategory;
+          renderSubfilters();
+          renderElevatorMode();
           applyFilters();
         });
       });
@@ -1038,6 +1346,18 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         recentClearBtn.addEventListener('click', clearRecentVisits);
       }
 
+      if (subfiltersList) {
+        subfiltersList.addEventListener('click', (event) => {
+          const target = event.target instanceof HTMLElement ? event.target.closest('.subfilter-btn') : null;
+          if (!target) {
+            return;
+          }
+          currentSubcategory = target.dataset.subcategory || allSubcategory;
+          renderSubfilters();
+          applyFilters();
+        });
+      }
+
       cards.forEach((card) => {
         card.addEventListener('click', () => {
           const title = card.querySelector('.title')?.textContent?.trim() || '';
@@ -1046,22 +1366,42 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         });
       });
 
-      elevatorLinks.forEach((link) => {
-        link.addEventListener('click', (event) => {
+      if (elevatorCatList) {
+        elevatorCatList.addEventListener('click', (event) => {
+          const link = event.target instanceof HTMLElement ? event.target.closest('.elevator-link') : null;
+          if (!link) {
+            return;
+          }
           event.preventDefault();
           const targetId = link.dataset.target;
           const target = targetId ? document.getElementById(targetId) : null;
           if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            target.scrollIntoView({ behavior: getScrollBehavior(), block: 'start' });
             setActiveElevator(targetId);
           }
         });
-      });
+      }
+
+      if (elevatorSubList) {
+        elevatorSubList.addEventListener('click', (event) => {
+          const link = event.target instanceof HTMLElement ? event.target.closest('.elevator-link') : null;
+          if (!link) {
+            return;
+          }
+          event.preventDefault();
+          const targetId = link.dataset.target;
+          const target = targetId ? document.getElementById(targetId) : null;
+          if (target && target.style.display !== 'none') {
+            target.scrollIntoView({ behavior: getScrollBehavior(), block: 'start' });
+            setActiveElevator(targetId);
+          }
+        });
+      }
 
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
-            if (entry.isIntersecting) {
+            if (entry.isIntersecting && entry.target instanceof HTMLElement && entry.target.style.display !== 'none') {
               setActiveElevator(entry.target.id);
             }
           });
@@ -1073,22 +1413,65 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         }
       );
 
-      sections.forEach((section) => observer.observe(section));
+      function refreshObserverTargets() {
+        observedTargets.forEach((el) => observer.unobserve(el));
+        observedTargets.clear();
+
+        const targets = [];
+        if (currentCat === allCategory) {
+          sections.forEach((section) => {
+            if (section.style.display !== 'none') {
+              targets.push(section);
+            }
+          });
+        } else {
+          const section = getCategorySection(currentCat);
+          if (section) {
+            const blocks = section.querySelectorAll('.subcategory-block');
+            blocks.forEach((block) => {
+              if (block.style.display !== 'none') {
+                targets.push(block);
+              }
+            });
+          }
+        }
+
+        targets.forEach((target) => {
+          observer.observe(target);
+          observedTargets.add(target);
+        });
+
+        if (targets[0]?.id) {
+          setActiveElevator(targets[0].id);
+        }
+      }
+
+      let lastScrollY = window.scrollY;
+      let isBackTopTicking = false;
 
       function updateBackTop() {
         if (!backTopBtn) {
+          isBackTopTicking = false;
           return;
         }
-        backTopBtn.classList.toggle('show', window.scrollY > 320);
+        backTopBtn.classList.toggle('show', lastScrollY > 320);
+        isBackTopTicking = false;
       }
 
       if (backTopBtn) {
         backTopBtn.addEventListener('click', () => {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
+          window.scrollTo({ top: 0, behavior: getScrollBehavior() });
         });
       }
 
-      window.addEventListener('scroll', updateBackTop, { passive: true });
+      window.addEventListener('scroll', () => {
+        lastScrollY = window.scrollY;
+        if (isBackTopTicking) {
+          return;
+        }
+        isBackTopTicking = true;
+        window.requestAnimationFrame(updateBackTop);
+      }, { passive: true });
       updateBackTop();
 
       const themeToggleBtn = document.getElementById('theme-toggle');
@@ -1105,6 +1488,8 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         });
       }
 
+      renderSubfilters();
+      renderElevatorMode();
       applyFilters();
       renderRecentVisits();
     </script>

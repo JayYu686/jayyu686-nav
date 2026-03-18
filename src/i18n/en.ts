@@ -12,6 +12,8 @@ export const enMessages: Messages = {
     searchPlaceholder: 'Search by name or keyword...',
     recentVisits: 'Recent Visits',
     clearRecentVisits: 'Clear Recent',
+    subcategoryFilterLabel: 'Subcategory Filter',
+    allSubcategoryLabel: 'All Subcategories',
     allCategory: 'All',
     quickJump: 'Quick Jump',
     emptyText: 'No matching resources found',

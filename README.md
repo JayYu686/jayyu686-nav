@@ -11,7 +11,9 @@
 
 - 全局搜索：按名称与简介关键词快速筛选。
 - 分类筛选：按类别过滤资源。
+- 二级筛选：选中一级分类后按二级标签继续筛选。
 - 电梯导航：侧边栏快速跳转到分类区块。
+- 智能跳转：`全部`模式显示一级分类，单分类模式显示对应二级分类。
 - 返回顶部：长页面一键回顶。
 - 主题切换：浅色/深色模式。
 - 中英切换：中文 `/` 与英文 `/en/`。
@@ -81,6 +83,8 @@ npm run dev
 				"url": "https://example.com",
 				"summary": "一句话简介",
 				"category": "实用工具",
+				"subcategory": "开发效率",
+				"subcategory_en": "Developer Productivity",
 				"title_en": "Optional English Title",
 				"summary_en": "Optional English Summary",
 				"tags": ["可选"],
@@ -100,10 +104,19 @@ npm run dev
 
 可选字段：
 
+- `subcategory`
+- `subcategory_en`
 - `title_en`
 - `summary_en`
 - `tags`
 - `note`
+
+### 二级分类维护约定
+
+- 每个站点必须且仅有一个 `subcategory`（中文）与 `subcategory_en`（英文）。
+- 每个一级分类应至少包含 2 个及以上二级分类，避免筛选退化为单桶。
+- 新增站点时优先复用已有二级分类词汇，减少同义拆分。
+- 可用脚本：`node scripts/assign-subcategories.cjs`（批量分配与校验）。
 
 ### 本次数据扩充（2026-03）
 
@@ -134,6 +147,7 @@ npm run dev
 - 规范化 URL 重复数：`0`
 - 中文标题缺失 `title_en`：`0`
 - 学术资源条目数：`38`
+- 二级分类覆盖率：`100%`（每条资源均含 `subcategory` 与 `subcategory_en`）
 
 ## i18n 路由
 

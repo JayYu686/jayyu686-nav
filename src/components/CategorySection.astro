@@ -6,6 +6,7 @@ interface ResourceItem {
   summary: string;
   url: string;
   category: string;
+  subcategory?: string;
   searchableName?: string;
 }
 
@@ -18,6 +19,21 @@ interface Props {
 }
 
 const { id, category, categoryLabel, countLabel, items } = Astro.props;
+
+const groupedMap = new Map<string, ResourceItem[]>();
+for (const item of items) {
+  const label = item.subcategory?.trim() || 'Uncategorized';
+  if (!groupedMap.has(label)) {
+    groupedMap.set(label, []);
+  }
+  groupedMap.get(label)?.push(item);
+}
+
+const groupedItems = Array.from(groupedMap.entries()).map(([label, grouped], index) => ({
+  label,
+  anchorId: `${id}-sub-${index + 1}`,
+  items: grouped,
+}));
 ---
 
 <section class="category-section" id={id} data-category={category}>
@@ -25,9 +41,22 @@ const { id, category, categoryLabel, countLabel, items } = Astro.props;
     <h2 class="category-title">{categoryLabel}</h2>
     <span class="category-count">{countLabel}</span>
   </div>
-  <div class="grid">
-    {items.map((item) => <Card item={item} categoryLabel={categoryLabel} />)}
-  </div>
+  {groupedItems.map((group) => (
+    <div
+      class="subcategory-block"
+      id={group.anchorId}
+      data-subcategory={group.label}
+      data-subcategory-anchor={group.anchorId}
+    >
+      <div class="subcategory-head">
+        <h3 class="subcategory-title">{group.label}</h3>
+        <span class="subcategory-count">{group.items.length}</span>
+      </div>
+      <div class="grid">
+        {group.items.map((item) => <Card item={item} categoryLabel={categoryLabel} />)}
+      </div>
+    </div>
+  ))}
 </section>
 
 <style>
@@ -41,13 +70,41 @@ const { id, category, categoryLabel, countLabel, items } = Astro.props;
     align-items: baseline;
     justify-content: space-between;
     gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .subcategory-block {
+    margin-bottom: 16px;
+    scroll-margin-top: 96px;
+  }
+
+  .subcategory-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
     margin-bottom: 10px;
+  }
+
+  .subcategory-title {
+    margin: 0;
+    font-size: 14px;
+    color: var(--muted);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  .subcategory-count {
+    font-size: 12px;
+    color: var(--muted);
   }
 
   .category-title {
     margin: 0;
-    font-size: 23px;
-    letter-spacing: -0.18px;
+    font-size: 24px;
+    letter-spacing: -0.24px;
+    font-weight: 750;
   }
 
   .category-count {
@@ -70,6 +127,10 @@ const { id, category, categoryLabel, countLabel, items } = Astro.props;
 
     .category-title { font-size: 21px; }
 
+    .subcategory-block { margin-bottom: 14px; }
+
+    .subcategory-title { font-size: 14px; }
+
     .grid {
       grid-template-columns: minmax(0, 1fr);
         gap: 14px;
@@ -89,6 +150,17 @@ const { id, category, categoryLabel, countLabel, items } = Astro.props;
     }
 
     .category-title { font-size: 19px; }
+
+    .subcategory-block {
+      margin-bottom: 10px;
+      scroll-margin-top: 80px;
+    }
+
+    .subcategory-head { margin-bottom: 8px; }
+
+    .subcategory-title { font-size: 12px; }
+
+    .subcategory-count { font-size: 11px; }
 
     .category-count {
       font-size: 12px;

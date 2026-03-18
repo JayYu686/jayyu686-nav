@@ -8,6 +8,8 @@ export interface Messages {
     searchPlaceholder: string;
     recentVisits: string;
     clearRecentVisits: string;
+    subcategoryFilterLabel: string;
+    allSubcategoryLabel: string;
     allCategory: string;
     quickJump: string;
     emptyText: string;
@@ -33,6 +35,8 @@ export const zhMessages: Messages = {
     searchPlaceholder: '输入名称或拼音全拼搜索...',
     recentVisits: '最近访问',
     clearRecentVisits: '清空最近访问',
+    subcategoryFilterLabel: '二级筛选',
+    allSubcategoryLabel: '全部二级',
     allCategory: '全部',
     quickJump: '快速跳转',
     emptyText: '没有找到匹配的资源',
