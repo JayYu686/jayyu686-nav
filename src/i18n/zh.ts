@@ -25,13 +25,11 @@ export interface Messages {
 
 export const zhMessages: Messages = {
   lang: 'zh-CN',
-  pageTitle: 'JayYuの资源导航站',
-  pageDescription:
-    '精选优质的高效工具、云平台基础设施、前沿学术资源及开发者必备站点，持续沉淀实用心得与避坑指南。',
+  pageTitle: 'Jay Yu の 资源导航站',
+  pageDescription: '',
   ui: {
-    heroTitle: 'JayYuの资源导航站',
-    heroSubtitle:
-      '精选优质的高效工具、云平台基础设施、前沿学术资源及开发者必备站点，持续沉淀实用心得与避坑指南。',
+    heroTitle: 'Jay Yu の 资源导航站',
+    heroSubtitle: '',
     searchPlaceholder: '输入名称或拼音全拼搜索...',
     recentVisits: '最近访问',
     clearRecentVisits: '清空最近访问',

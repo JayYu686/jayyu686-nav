@@ -40,7 +40,6 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{messages.pageTitle}</title>
     <meta name="description" content={messages.pageDescription} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -295,6 +294,27 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         padding: var(--ref-space-9) var(--ref-space-6) 76px;
       }
       .hero { margin-bottom: var(--ref-space-8); text-align: center; }
+
+      .hero-mark {
+        width: 88px;
+        height: 88px;
+        margin: 0 auto var(--ref-space-4);
+        padding: 10px;
+        border-radius: 24px;
+        border: 1px solid color-mix(in srgb, var(--line) 92%, transparent);
+        background: linear-gradient(160deg, color-mix(in srgb, var(--panel-active) 80%, transparent), color-mix(in srgb, var(--panel) 92%, transparent));
+        box-shadow: var(--ref-shadow-1);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+
+      .hero-mark img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: 14px;
+        object-fit: cover;
+      }
 
       h1 {
         font-size: 48px;
@@ -678,6 +698,13 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
       @media (max-width: 900px) {
         .wrap { padding: 50px 18px 68px; }
         .hero { margin-bottom: 28px; }
+        .hero-mark {
+          width: 76px;
+          height: 76px;
+          padding: 9px;
+          border-radius: 20px;
+          margin-bottom: 12px;
+        }
         h1 { font-size: 38px; margin-bottom: 12px; }
         .sub { font-size: 16px; max-width: 540px; }
 
@@ -871,6 +898,18 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
           letter-spacing: -0.2px;
         }
 
+        .hero-mark {
+          width: 68px;
+          height: 68px;
+          padding: 8px;
+          border-radius: 18px;
+          margin-bottom: 10px;
+        }
+
+        .hero-mark img {
+          border-radius: 12px;
+        }
+
         .sub {
           font-size: 14px;
           line-height: 1.5;
@@ -980,6 +1019,9 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
       data-recent-limit="10"
     >
       <section class="hero">
+        <div class="hero-mark" aria-hidden="true">
+          <img src="/apple-touch-icon.png" alt="" width="180" height="180" loading="eager" decoding="async" />
+        </div>
         <h1>{messages.ui.heroTitle}</h1>
         <p class="sub">{messages.ui.heroSubtitle}</p>
 
