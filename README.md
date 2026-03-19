@@ -1,3 +1,7 @@
+<p align="center">
+	<img src="./public/icon-source.png" alt="Jay Yu logo" width="96" height="96" />
+</p>
+
 # Jay Yu の 资源导航站
 
 一个面向开发者和效率用户的导航网站，聚合常用工具、学习资源、娱乐站点与 AI 平台，支持快速检索、分类筛选和中英文切换。
