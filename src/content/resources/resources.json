@@ -2511,6 +2511,156 @@
         "category": "学术资源",
         "subcategory": "引用与学术身份",
         "subcategory_en": "Citation & Research Identity"
+      },
+      {
+        "title": "DNS Checker",
+        "title_en": "DNS Checker",
+        "url": "https://dnschecker.org/",
+        "summary": "全球多节点 DNS 解析查询与传播检测工具。",
+        "summary_en": "Global DNS propagation lookup across multiple resolver nodes.",
+        "category": "域名 / DNS / 建站",
+        "subcategory": "DNS与安全",
+        "subcategory_en": "DNS & Security"
+      },
+      {
+        "title": "crt.sh",
+        "title_en": "crt.sh",
+        "url": "https://crt.sh/",
+        "summary": "证书透明日志检索平台，可查询域名证书签发记录。",
+        "summary_en": "Certificate Transparency log search for domain-issued certificates.",
+        "category": "域名 / DNS / 建站",
+        "subcategory": "DNS与安全",
+        "subcategory_en": "DNS & Security"
+      },
+      {
+        "title": "CodeSandbox",
+        "title_en": "CodeSandbox",
+        "url": "https://codesandbox.io/",
+        "summary": "在线代码沙盒与云端开发环境，支持前后端项目协作。",
+        "summary_en": "Online code sandbox and cloud dev environment for full-stack projects.",
+        "category": "程序员常用网站",
+        "subcategory": "在线IDE",
+        "subcategory_en": "Online IDE"
+      },
+      {
+        "title": "AST Explorer",
+        "title_en": "AST Explorer",
+        "url": "https://astexplorer.net/",
+        "summary": "在线查看 JavaScript/TypeScript 等语法树结构的调试工具。",
+        "summary_en": "Inspect JavaScript/TypeScript AST structures directly in browser.",
+        "category": "程序员常用网站",
+        "subcategory": "开发文档",
+        "subcategory_en": "Developer Documentation"
+      },
+      {
+        "title": "Bundlephobia",
+        "title_en": "Bundlephobia",
+        "url": "https://bundlephobia.com/",
+        "summary": "查看 npm 包体积、依赖与加载影响的性能评估站点。",
+        "summary_en": "Analyze npm package size, dependencies, and bundle impact.",
+        "category": "程序员常用网站",
+        "subcategory": "开发文档",
+        "subcategory_en": "Developer Documentation"
+      },
+      {
+        "title": "quicktype",
+        "title_en": "quicktype",
+        "url": "https://quicktype.io/",
+        "summary": "将 JSON 快速转换为多语言类型定义与模型代码。",
+        "summary_en": "Generate strongly typed models from JSON for multiple languages.",
+        "category": "实用工具",
+        "subcategory": "开发效率",
+        "subcategory_en": "Developer Productivity"
+      },
+      {
+        "title": "JSON Hero",
+        "title_en": "JSON Hero",
+        "url": "https://jsonhero.io/",
+        "summary": "可视化浏览、分析与分享 JSON 数据的在线工具。",
+        "summary_en": "Visualize, inspect, and share JSON data with rich exploration.",
+        "category": "实用工具",
+        "subcategory": "开发效率",
+        "subcategory_en": "Developer Productivity"
+      },
+      {
+        "title": "ReqBin",
+        "title_en": "ReqBin",
+        "url": "https://reqbin.com/",
+        "summary": "在线发送与调试 HTTP 请求，适合接口联调与示例复现。",
+        "summary_en": "Send and debug HTTP requests online for API testing.",
+        "category": "实用工具",
+        "subcategory": "开发效率",
+        "subcategory_en": "Developer Productivity"
+      },
+      {
+        "title": "Beeceptor",
+        "title_en": "Beeceptor",
+        "url": "https://beeceptor.com/",
+        "summary": "创建临时 API 端点并拦截请求，适合 webhook 与集成调试。",
+        "summary_en": "Create mock endpoints and inspect requests for webhook testing.",
+        "category": "实用工具",
+        "subcategory": "自动化与工作流",
+        "subcategory_en": "Automation & Workflow"
+      },
+      {
+        "title": "Webhook.site",
+        "title_en": "Webhook.site",
+        "url": "https://webhook.site/",
+        "summary": "即时生成 webhook 接收地址，快速查看回调请求内容。",
+        "summary_en": "Generate instant webhook URLs and inspect incoming payloads.",
+        "category": "实用工具",
+        "subcategory": "自动化与工作流",
+        "subcategory_en": "Automation & Workflow"
+      },
+      {
+        "title": "httpstatus",
+        "title_en": "httpstatus",
+        "url": "https://httpstatus.io/",
+        "summary": "批量检测 URL 状态码、重定向链路与响应头信息。",
+        "summary_en": "Check status codes, redirects, and headers for multiple URLs.",
+        "category": "实用工具",
+        "subcategory": "安全与网络",
+        "subcategory_en": "Security & Network"
+      },
+      {
+        "title": "SecurityHeaders",
+        "title_en": "SecurityHeaders",
+        "url": "https://securityheaders.com/",
+        "summary": "网站安全响应头在线评分与配置检查工具。",
+        "summary_en": "Evaluate and grade website security header configuration.",
+        "category": "实用工具",
+        "subcategory": "安全与网络",
+        "subcategory_en": "Security & Network"
+      },
+      {
+        "title": "Tabler Icons",
+        "title_en": "Tabler Icons",
+        "url": "https://www.tabler.io/icons",
+        "summary": "高质量开源图标库，支持 SVG 下载与快速检索。",
+        "summary_en": "High-quality open-source icon library with SVG downloads.",
+        "category": "资源",
+        "subcategory": "设计素材",
+        "subcategory_en": "Design Assets"
+      },
+      {
+        "title": "Iconify Icon Sets",
+        "title_en": "Iconify Icon Sets",
+        "url": "https://icon-sets.iconify.design/",
+        "summary": "聚合多套开源图标集合，便于统一检索与引用。",
+        "summary_en": "Aggregated open-source icon sets for fast lookup and integration.",
+        "category": "资源",
+        "subcategory": "设计素材",
+        "subcategory_en": "Design Assets"
+      },
+      {
+        "title": "unDraw",
+        "title_en": "unDraw",
+        "url": "https://undraw.co/",
+        "summary": "可自定义配色的开源插画资源库，适合产品与文档配图。",
+        "summary_en": "Customizable open-source illustration library for product visuals.",
+        "category": "资源",
+        "subcategory": "设计素材",
+        "subcategory_en": "Design Assets"
       }
     ]
   }

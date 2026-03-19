@@ -1,4 +1,4 @@
-# JayYuの资源导航站
+# Jay Yu の 资源导航站
 
 一个面向开发者和效率用户的导航网站，聚合常用工具、学习资源、娱乐站点与 AI 平台，支持快速检索、分类筛选和中英文切换。
 
@@ -129,7 +129,7 @@ npm run dev
 - `学术资源`：论文检索、翻译与学术工具。
 - `实用工具`：效率工具与在线处理工具。
 - 新增与改写条目已统一中文描述，符合中文页面语义。
-- 已补齐所有中文标题的 `title_en` 字段，确保中英双语标题完整。
+- 本轮新增条目均补齐 `title_en` 字段，保证新数据可用于中英展示。
 - 本轮继续新增 14 个学术资源站点（已去重）：
 - `DOAJ`、`OpenAlex`、`Crossref Search`、`SpringerLink`、`ScienceDirect`、`JSTOR`、`SSRN`
 - `CORE`、`bioRxiv`、`medRxiv`、`ACL Anthology`、`OpenReview`、`ORCID`、`Unpaywall`
@@ -137,6 +137,10 @@ npm run dev
 - `nanobananafree.ai`、`imini.ai`、`muset.ai`、`trickle.so`、`Flowith.cc`
 - `tapnow.ai`、`lovart.ai`、`Zenmux.ai`、`imastudio.com`、`flowith.io`
 - 同时将已存在的 `OpenRouter` 条目按需求调整到 `AI / 图像与视频生成`，并更新简介。
+- 本轮新增 15 个高质量且与现有数据不重复的站点：
+- `DNS Checker`、`crt.sh`、`CodeSandbox`、`AST Explorer`、`Bundlephobia`
+- `quicktype`、`JSON Hero`、`ReqBin`、`Beeceptor`、`Webhook.site`
+- `httpstatus`、`SecurityHeaders`、`Tabler Icons`、`Iconify Icon Sets`、`unDraw`
 
 ### 去重规则（执行策略）
 
@@ -146,10 +150,10 @@ npm run dev
 
 ### 导入后校验
 
-- 资源总数：`256`
+- 资源总数：`271`
 - `title + category` 重复数：`0`
 - 规范化 URL 重复数：`0`
-- 中文标题缺失 `title_en`：`0`
+- 中文标题缺失 `title_en`：`148`
 - 学术资源条目数：`38`
 - AI 资源条目数：`45`
 - AI 图像与视频生成条目数：`15`
