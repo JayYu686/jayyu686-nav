@@ -6,6 +6,8 @@ const resourceItemSchema = z.object({
   url: z.string().url(),
   summary: z.string().min(1),
   category: z.string().min(1),
+  sourceIndex: z.number().int().nonnegative().optional(),
+  updatedAt: z.string().datetime({ offset: true }).optional(),
   subcategory: z.string().min(1).optional(),
   subcategory_en: z.string().min(1).optional(),
   title_en: z.string().min(1).optional(),
@@ -30,6 +32,7 @@ const resources = defineCollection({
 
       return rawItems.map((item, index) => ({
         id: `resource-${index + 1}`,
+        sourceIndex: index,
         ...(item as Record<string, unknown>),
       }));
     },

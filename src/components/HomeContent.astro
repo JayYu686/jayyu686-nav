@@ -33,6 +33,7 @@ interface Props {
 }
 
 const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.props;
+const recentCategoryValue = resourcesByCategory[0]?.category || '';
 ---
 
 <html lang={messages.lang}>
@@ -202,18 +203,55 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         bottom: 0;
         z-index: -1;
         overflow: hidden;
-        background: var(--bg-color);
+        isolation: isolate;
+        background-color: var(--bg-color);
+        background-image: url('/background.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
         transition: background-color var(--motion-slow) var(--ease-slow);
       }
 
-      .orb {
+      .aurora-bg::before {
+        content: '';
         position: absolute;
-        border-radius: 50%;
-        filter: blur(120px);
+        inset: 0;
+        pointer-events: none;
+        background-image: url('/background.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        opacity: 0.6;
+        filter: saturate(1.08) brightness(0.82) contrast(1.05);
+        transform: scale(1.02);
+        transform-origin: center;
+      }
+
+      .aurora-bg::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background:
+          radial-gradient(110% 70% at 50% 0%, rgba(88, 166, 255, 0.12), transparent 60%),
+          linear-gradient(180deg, rgba(8, 13, 28, 0.6), rgba(8, 13, 28, 0.45));
+      }
+
+      :root[data-theme='light'] .aurora-bg::before {
         opacity: 0.5;
-        animation: float 20s infinite ease-in-out alternate;
-        transition: opacity var(--motion-ornament) ease, filter var(--motion-ornament) ease;
-        will-change: transform;
+        filter: saturate(0.92) brightness(1.06) contrast(0.94);
+      }
+
+      :root[data-theme='light'] .aurora-bg::after {
+        background:
+          radial-gradient(110% 70% at 50% 0%, rgba(255, 255, 255, 0.26), transparent 62%),
+          linear-gradient(180deg, rgba(255, 255, 255, 0.52), rgba(255, 255, 255, 0.38));
+      }
+
+      .orb {
+        display: none;
       }
 
       .orb-1 { width: 60vw; height: 60vh; background: radial-gradient(circle, #f43f5e, transparent 60%); top: -10%; left: -10%; animation-delay: 0s; }
@@ -297,8 +335,8 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
       .hero { margin-bottom: var(--ref-space-8); text-align: center; }
 
       .hero-mark {
-        width: 88px;
-        height: 88px;
+        width: 112px;
+        height: 112px;
         margin: 0 auto var(--ref-space-4);
         padding: 10px;
         border-radius: 24px;
@@ -318,7 +356,7 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
       }
 
       h1 {
-        font-size: 48px;
+        font-size: 46px;
         font-weight: 800;
         margin: 0 0 var(--ref-space-4);
         background: var(--gradient);
@@ -700,13 +738,13 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         .wrap { padding: 50px 18px 68px; }
         .hero { margin-bottom: 28px; }
         .hero-mark {
-          width: 76px;
-          height: 76px;
+          width: 96px;
+          height: 96px;
           padding: 9px;
           border-radius: 20px;
           margin-bottom: 12px;
         }
-        h1 { font-size: 38px; margin-bottom: 12px; }
+        h1 { font-size: 36px; margin-bottom: 12px; }
         .sub { font-size: 16px; max-width: 540px; }
 
         .toolbar {
@@ -895,13 +933,13 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         }
 
         h1 {
-          font-size: 30px;
+          font-size: 28px;
           letter-spacing: -0.2px;
         }
 
         .hero-mark {
-          width: 68px;
-          height: 68px;
+          width: 88px;
+          height: 88px;
           padding: 8px;
           border-radius: 18px;
           margin-bottom: 10px;
@@ -1017,6 +1055,7 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
       class="wrap"
       data-all-category={messages.ui.allCategory}
       data-all-subcategory={messages.ui.allSubcategoryLabel}
+      data-recent-category={recentCategoryValue}
       data-recent-limit="10"
     >
       <section class="hero">
@@ -1087,6 +1126,7 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
       const rootWrap = document.querySelector('.wrap');
       const allCategory = rootWrap ? rootWrap.dataset.allCategory : 'All';
       const allSubcategory = rootWrap ? rootWrap.dataset.allSubcategory : 'All';
+      const recentCategory = rootWrap ? rootWrap.dataset.recentCategory || '' : '';
       const input = document.querySelector('.search');
       const cards = document.querySelectorAll('.card');
       const btns = document.querySelectorAll('.filter-btn');
@@ -1101,6 +1141,10 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
       const recentList = document.getElementById('recent-list');
       const recentClearBtn = document.getElementById('recent-clear');
       const RECENT_KEY = 'jayyu-recent-visits-v1';
+      const URL_PARAM_CATEGORY = 'category';
+      const URL_PARAM_SUBCATEGORY = 'subcategory';
+      const URL_PARAM_QUERY = 'q';
+      const URL_SYNC_DEBOUNCE_MS = 180;
       const RECENT_LIMIT_DEFAULT = 10;
       const recentLimitFromData = Number.parseInt(rootWrap?.dataset.recentLimit || '', 10);
       const RECENT_LIMIT = Number.isFinite(recentLimitFromData) && recentLimitFromData > 0 ? recentLimitFromData : RECENT_LIMIT_DEFAULT;
@@ -1109,6 +1153,166 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
       let currentCat = allCategory;
       let currentSubcategory = allSubcategory;
       const observedTargets = new Set();
+      const availableCategories = new Set(Array.from(btns).map((btn) => btn.dataset.cat || '').filter(Boolean));
+      let urlSyncTimer = null;
+
+      cards.forEach((card, index) => {
+        card.dataset.order = String(index);
+      });
+
+      function setActiveCategoryButton() {
+        btns.forEach((button) => {
+          const isActive = (button.dataset.cat || allCategory) === currentCat;
+          button.classList.toggle('active', isActive);
+        });
+      }
+
+      function normalizeText(value) {
+        return (value || '').toLowerCase().trim();
+      }
+
+      function tokenizeQuery(value) {
+        return normalizeText(value).split(/\s+/).filter(Boolean);
+      }
+
+      function scoreSearchMatch(card, terms) {
+        if (!terms.length) {
+          return 1;
+        }
+
+        const titleText = normalizeText(card.querySelector('.title')?.textContent);
+        const descText = normalizeText(card.querySelector('.desc')?.textContent);
+        const aliasText = normalizeText(card.dataset.name || '');
+        const fullQuery = terms.join(' ');
+        let score = 0;
+
+        for (const term of terms) {
+          let termScore = 0;
+          if (titleText.includes(term)) {
+            termScore += 5;
+          }
+          if (aliasText.includes(term)) {
+            termScore += 3;
+          }
+          if (descText.includes(term)) {
+            termScore += 1;
+          }
+          if (termScore === 0) {
+            return 0;
+          }
+          score += termScore;
+        }
+
+        if (fullQuery && titleText.includes(fullQuery)) {
+          score += 4;
+        } else if (fullQuery && aliasText.includes(fullQuery)) {
+          score += 2;
+        }
+
+        return score;
+      }
+
+      function writeUrlState() {
+        const params = new URLSearchParams(window.location.search);
+        const query = (input?.value || '').trim();
+
+        if (query) {
+          params.set(URL_PARAM_QUERY, query);
+        } else {
+          params.delete(URL_PARAM_QUERY);
+        }
+
+        if (currentCat !== allCategory) {
+          params.set(URL_PARAM_CATEGORY, currentCat);
+        } else {
+          params.delete(URL_PARAM_CATEGORY);
+        }
+
+        if (currentCat !== allCategory && currentSubcategory !== allSubcategory) {
+          params.set(URL_PARAM_SUBCATEGORY, currentSubcategory);
+        } else {
+          params.delete(URL_PARAM_SUBCATEGORY);
+        }
+
+        const nextQuery = params.toString();
+        const nextUrl = `${window.location.pathname}${nextQuery ? `?${nextQuery}` : ''}${window.location.hash}`;
+        window.history.replaceState(null, '', nextUrl);
+      }
+
+      function syncUrlState(mode = 'immediate') {
+        if (urlSyncTimer) {
+          window.clearTimeout(urlSyncTimer);
+          urlSyncTimer = null;
+        }
+
+        if (mode === 'none') {
+          return;
+        }
+
+        if (mode === 'debounced') {
+          urlSyncTimer = window.setTimeout(() => {
+            writeUrlState();
+            urlSyncTimer = null;
+          }, URL_SYNC_DEBOUNCE_MS);
+          return;
+        }
+
+        writeUrlState();
+      }
+
+      function hydrateStateFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        const query = params.get(URL_PARAM_QUERY) || '';
+        const category = params.get(URL_PARAM_CATEGORY) || allCategory;
+        const subcategory = params.get(URL_PARAM_SUBCATEGORY) || allSubcategory;
+        const isValidCategory = availableCategories.has(category);
+
+        currentCat = isValidCategory ? category : allCategory;
+        currentSubcategory = currentCat === allCategory ? allSubcategory : subcategory;
+
+        if (input) {
+          input.value = query;
+        }
+
+        setActiveCategoryButton();
+
+        if (!isValidCategory || (params.has(URL_PARAM_SUBCATEGORY) && currentCat === allCategory)) {
+          syncUrlState('immediate');
+        }
+      }
+
+      function sortCardsInVisibleBlocks() {
+        sections.forEach((section) => {
+          const blocks = section.querySelectorAll('.subcategory-block');
+          blocks.forEach((block) => {
+            const grid = block.querySelector('.grid');
+            if (!grid) {
+              return;
+            }
+
+            const blockCards = Array.from(grid.querySelectorAll('.card'));
+            blockCards
+              .sort((a, b) => {
+                const visibleA = a.style.display !== 'none';
+                const visibleB = b.style.display !== 'none';
+                if (visibleA !== visibleB) {
+                  return visibleA ? -1 : 1;
+                }
+
+                const scoreA = Number.parseFloat(a.dataset.score || '0');
+                const scoreB = Number.parseFloat(b.dataset.score || '0');
+                if (scoreA !== scoreB) {
+                  return scoreB - scoreA;
+                }
+
+                const orderA = Number.parseInt(a.dataset.order || '0', 10);
+                const orderB = Number.parseInt(b.dataset.order || '0', 10);
+                return orderA - orderB;
+              })
+              .forEach((card) => grid.appendChild(card));
+          });
+        });
+      }
 
       function loadRecentVisits() {
         try {
@@ -1311,29 +1515,31 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         });
       }
 
-      function applyFilters() {
+      function applyFilters(urlSyncMode = 'immediate') {
         if (!input || !empty) {
           return;
         }
 
-        const query = input.value.trim().toLowerCase();
+        const terms = tokenizeQuery(input.value);
         let visibleCount = 0;
 
         cards.forEach((card) => {
-          const titleText = card.querySelector('.title')?.textContent?.toLowerCase() || '';
-          const descText = card.querySelector('.desc')?.textContent?.toLowerCase() || '';
-          const matchCat = currentCat === allCategory || card.dataset.cat === currentCat;
+          const isRecentCard = !!recentCategory && card.dataset.cat === recentCategory;
+          const matchCat = currentCat === allCategory ? !isRecentCard : card.dataset.cat === currentCat;
           const matchSubcategory =
             currentCat === allCategory ||
             currentSubcategory === allSubcategory ||
             card.dataset.subcategory === currentSubcategory;
-          const matchText = !query || titleText.includes(query) || descText.includes(query) || (card.dataset.name && card.dataset.name.includes(query));
+          const searchScore = scoreSearchMatch(card, terms);
+          const matchText = searchScore > 0;
 
           if (matchCat && matchSubcategory && matchText) {
             card.style.display = 'flex';
+            card.dataset.score = String(searchScore);
             visibleCount++;
           } else {
             card.style.display = 'none';
+            card.dataset.score = '0';
           }
         });
 
@@ -1371,25 +1577,33 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
           });
         }
 
+        sortCardsInVisibleBlocks();
         empty.style.display = visibleCount === 0 ? 'block' : 'none';
+        syncUrlState(urlSyncMode);
         refreshObserverTargets();
       }
 
       btns.forEach((btn) => {
         btn.addEventListener('click', () => {
-          btns.forEach((button) => button.classList.remove('active'));
-          btn.classList.add('active');
           currentCat = btn.dataset.cat || allCategory;
           currentSubcategory = allSubcategory;
+          setActiveCategoryButton();
           renderSubfilters();
           renderElevatorMode();
-          applyFilters();
+          applyFilters('immediate');
         });
       });
 
       if (input) {
-        input.addEventListener('input', applyFilters);
+        input.addEventListener('input', () => applyFilters('debounced'));
       }
+
+      window.addEventListener('popstate', () => {
+        hydrateStateFromUrl();
+        renderSubfilters();
+        renderElevatorMode();
+        applyFilters('none');
+      });
 
       if (recentClearBtn) {
         recentClearBtn.addEventListener('click', clearRecentVisits);
@@ -1403,7 +1617,7 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
           }
           currentSubcategory = target.dataset.subcategory || allSubcategory;
           renderSubfilters();
-          applyFilters();
+          applyFilters('immediate');
         });
       }
 
@@ -1537,6 +1751,7 @@ const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.
         });
       }
 
+      hydrateStateFromUrl();
       renderSubfilters();
       renderElevatorMode();
       applyFilters();

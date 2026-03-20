@@ -9,6 +9,8 @@ interface ResourceRecord {
   summary: string;
   url: string;
   category: string;
+  sourceIndex?: number;
+  updatedAt?: string;
   subcategory?: string;
   subcategory_en?: string;
   title_en?: string;
@@ -31,6 +33,16 @@ const fallbackItems = ((resourcesJson as { items?: ResourceRecord[]; resources?:
 const rawItems: ResourceRecord[] = entries.length > 0
   ? entries.map((entry) => entry.data as ResourceRecord)
   : fallbackItems;
+
+const ISO_8601_WITH_OFFSET = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?(?:Z|[+-]\d{2}:\d{2})$/;
+
+const resolveUpdatedTime = (value?: string) => {
+  if (!value || !ISO_8601_WITH_OFFSET.test(value)) {
+    return null;
+  }
+  const ts = Date.parse(value);
+  return Number.isFinite(ts) ? ts : null;
+};
 
 const localizedItems = rawItems.map((item) => ({
   ...item,
@@ -62,8 +74,25 @@ const categoryKeys: string[] = [...new Set(localizedItems.map((item) => item.cat
 });
 
 const recentItems = localizedItems
-  .slice(-RECENT_LIMIT)
-  .reverse()
+  .map((item, index) => ({
+    item,
+    sortIndex: typeof item.sourceIndex === 'number' ? item.sourceIndex : index,
+    updatedTime: resolveUpdatedTime(item.updatedAt),
+  }))
+  .sort((a, b) => {
+    if (a.updatedTime !== null && b.updatedTime !== null) {
+      return b.updatedTime - a.updatedTime;
+    }
+    if (a.updatedTime !== null) {
+      return -1;
+    }
+    if (b.updatedTime !== null) {
+      return 1;
+    }
+    return b.sortIndex - a.sortIndex;
+  })
+  .slice(0, RECENT_LIMIT)
+  .map((entry) => entry.item)
   .map((item) => ({
     ...item,
     category: RECENT_CATEGORY,
