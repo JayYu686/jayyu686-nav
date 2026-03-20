@@ -14,6 +14,7 @@
 ## 核心功能
 
 - 全局搜索：按名称与简介关键词快速筛选。
+- 状态可分享：分类、二级分类与搜索词会同步到 URL 查询参数，刷新后可恢复。
 - 分类筛选：按类别过滤资源。
 - 二级筛选：选中一级分类后按二级标签继续筛选。
 - 电梯导航：侧边栏快速跳转到分类区块。
@@ -88,6 +89,7 @@ npm run dev
 				"url": "https://example.com",
 				"summary": "一句话简介",
 				"category": "实用工具",
+				"updatedAt": "2026-03-20T12:00:00Z",
 				"subcategory": "开发效率",
 				"subcategory_en": "Developer Productivity",
 				"title_en": "Optional English Title",
@@ -113,6 +115,7 @@ npm run dev
 - `subcategory_en`
 - `title_en`
 - `summary_en`
+- `updatedAt`（ISO-8601 时间字符串且必须带时区，如 `2026-03-20T12:00:00Z` 或 `2026-03-20T20:00:00+08:00`，最近更新排序优先使用）
 - `tags`
 - `note`
 
@@ -126,6 +129,7 @@ npm run dev
 ### 最近更新维护约定
 
 - 最近更新列表固定展示 `16` 条，来源为 `resources.json` 中最新新增的条目（文件末尾视为最新）。
+- 若条目包含合法 `updatedAt`，最近更新优先按 `updatedAt` 倒序；缺失或格式非法时回退为按文件新增顺序。
 - 最近更新中的站点会同时保留在原有一级分类中，不会从原分类移除。
 - 最近更新卡片的标签显示站点原始一级分类，不显示“最近更新”标签。
 - 当继续新增站点时，最近更新按新增顺序滚动，仅保留最新 `16` 条。
@@ -159,6 +163,15 @@ npm run dev
 - `DNS Checker`、`crt.sh`、`CodeSandbox`、`AST Explorer`、`Bundlephobia`
 - `quicktype`、`JSON Hero`、`ReqBin`、`Beeceptor`、`Webhook.site`
 - `httpstatus`、`SecurityHeaders`、`Tabler Icons`、`Iconify Icon Sets`、`unDraw`
+- 本轮新增 16 个不重复站点（并完成一级/二级分类落位）：
+- `TinyWow`（实用工具 / 文档与办公）、`diagrams.net`（实用工具 / 图像与设计）
+- `urlscan.io`、`GTmetrix`、`SSL Labs`（实用工具 / 安全与网络）
+- `JSONFormatter.org`（实用工具 / 开发效率）、`Google Fonts`（资源 / 设计素材）
+- `Name.com`（域名 / DNS / 建站 / 域名注册）、`deSEC`（域名 / DNS / 建站 / DNS与安全）
+- `Neocities`（域名 / DNS / 建站 / 静态部署）
+- `Fly.io`、`Coolify`、`Koyeb`（域名 / DNS / 建站 / 云平台建站）
+- `Contabo`（VPS / 云服务 / 高性价比VPS）
+- `Upstash`（程序员常用网站 / 开发文档）、`WebhookTest`（程序员常用网站 / 开发效率）
 - 本轮 AI 分类继续扩充（按二级分类落位）：
 - `AI编程工具`：`Cursor`、`Windsurf`、`Trae（国际版）`、`Trae（国内版）`、`Antigravity`、`GitHub Copilot`、`Cline`、`Continue`、`Tabnine`、`Augment Code`
 - `评测与研究`：`LMSYS Chatbot Arena`、`Hugging Face Open LLM Leaderboard`、`HELM`、`OpenCompass 榜单`，并将 `OpenRouter` 调整到该分类
@@ -173,9 +186,10 @@ npm run dev
 
 ### 导入后校验
 
-- 资源总数：`294`
+- 资源总数：`310`
 - `title + category` 重复数：`0`
 - 规范化 URL 重复数：`0`
+- 域名重复数：`4`（均为历史存量多功能页：`github.com`、`huggingface.co`、`modelscope.cn`）
 - 中文标题缺失 `title_en`：`148`
 - 学术资源条目数：`38`
 - AI 资源条目数：`68`

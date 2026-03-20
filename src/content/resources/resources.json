@@ -2892,6 +2892,166 @@
         "category": "AI",
         "subcategory": "数据与模型平台",
         "subcategory_en": "Data & Model Platforms"
+      },
+      {
+        "title": "TinyWow",
+        "title_en": "TinyWow",
+        "url": "https://tinywow.com/",
+        "summary": "集合 PDF、图片、视频与文本处理的在线工具站，适合快速办公处理。",
+        "summary_en": "All-in-one online toolbox for PDF, image, video, and text tasks.",
+        "category": "实用工具",
+        "subcategory": "文档与办公",
+        "subcategory_en": "Docs & Office"
+      },
+      {
+        "title": "diagrams.net",
+        "title_en": "diagrams.net",
+        "url": "https://www.diagrams.net/",
+        "summary": "开源免费的在线流程图与架构图工具，适合团队协作和系统设计。",
+        "summary_en": "Free open-source diagramming tool for flowcharts, architecture, and collaboration.",
+        "category": "实用工具",
+        "subcategory": "图像与设计",
+        "subcategory_en": "Image & Design"
+      },
+      {
+        "title": "urlscan.io",
+        "title_en": "urlscan.io",
+        "url": "https://urlscan.io/",
+        "summary": "用于分析网页请求链路与潜在风险的在线安全检测平台。",
+        "summary_en": "Online security scanner to inspect web requests and potential threats.",
+        "category": "实用工具",
+        "subcategory": "安全与网络",
+        "subcategory_en": "Security & Network"
+      },
+      {
+        "title": "GTmetrix",
+        "title_en": "GTmetrix",
+        "url": "https://gtmetrix.com/",
+        "summary": "网站性能分析工具，可查看页面速度指标与优化建议。",
+        "summary_en": "Website performance analyzer with speed metrics and optimization suggestions.",
+        "category": "实用工具",
+        "subcategory": "安全与网络",
+        "subcategory_en": "Security & Network"
+      },
+      {
+        "title": "SSL Labs",
+        "title_en": "SSL Labs",
+        "url": "https://www.ssllabs.com/ssltest/",
+        "summary": "权威的 SSL/TLS 配置检测工具，常用于证书与加密套件检查。",
+        "summary_en": "Authoritative SSL/TLS test service for certificate and cipher configuration checks.",
+        "category": "实用工具",
+        "subcategory": "安全与网络",
+        "subcategory_en": "Security & Network"
+      },
+      {
+        "title": "JSONFormatter.org",
+        "title_en": "JSONFormatter.org",
+        "url": "https://jsonformatter.org/",
+        "summary": "提供 JSON 格式化、校验与结构可视化的在线工具集合。",
+        "summary_en": "Online toolkit for JSON formatting, validation, and structure visualization.",
+        "category": "实用工具",
+        "subcategory": "开发效率",
+        "subcategory_en": "Dev Productivity"
+      },
+      {
+        "title": "Google Fonts",
+        "title_en": "Google Fonts",
+        "url": "https://fonts.google.com/",
+        "summary": "Google 官方字体库，支持在线预览与网页字体快速引入。",
+        "summary_en": "Google's official font library with preview and easy web integration.",
+        "category": "资源",
+        "subcategory": "设计素材",
+        "subcategory_en": "Design Assets"
+      },
+      {
+        "title": "Name.com",
+        "title_en": "Name.com",
+        "url": "https://www.name.com/",
+        "summary": "老牌域名注册服务商，支持常见后缀与域名管理服务。",
+        "summary_en": "Long-standing domain registrar with common TLDs and management tools.",
+        "category": "域名 / DNS / 建站",
+        "subcategory": "域名注册",
+        "subcategory_en": "Domain Registration"
+      },
+      {
+        "title": "deSEC",
+        "title_en": "deSEC",
+        "url": "https://desec.io/",
+        "summary": "面向技术用户的免费托管 DNS 服务，支持 DNSSEC。",
+        "summary_en": "Free managed DNS service for technical users with DNSSEC support.",
+        "category": "域名 / DNS / 建站",
+        "subcategory": "DNS与安全",
+        "subcategory_en": "DNS & Security"
+      },
+      {
+        "title": "Neocities",
+        "title_en": "Neocities",
+        "url": "https://neocities.org/",
+        "summary": "简洁的静态网站托管平台，适合个人主页和轻量站点发布。",
+        "summary_en": "Simple static hosting platform for personal pages and lightweight websites.",
+        "category": "域名 / DNS / 建站",
+        "subcategory": "静态部署",
+        "subcategory_en": "Static Hosting"
+      },
+      {
+        "title": "Fly.io",
+        "title_en": "Fly.io",
+        "url": "https://fly.io/",
+        "summary": "支持全球边缘部署的应用托管平台，适合低延迟服务发布。",
+        "summary_en": "Global edge app platform for low-latency deployment.",
+        "category": "域名 / DNS / 建站",
+        "subcategory": "云平台建站",
+        "subcategory_en": "Cloud App Hosting"
+      },
+      {
+        "title": "Coolify",
+        "title_en": "Coolify",
+        "url": "https://coolify.io/",
+        "summary": "开源自托管 PaaS，提供类似云平台的一键部署体验。",
+        "summary_en": "Open-source self-hosted PaaS for one-click app deployments.",
+        "category": "域名 / DNS / 建站",
+        "subcategory": "云平台建站",
+        "subcategory_en": "Cloud App Hosting"
+      },
+      {
+        "title": "Koyeb",
+        "title_en": "Koyeb",
+        "url": "https://www.koyeb.com/",
+        "summary": "面向开发者的全托管应用平台，支持容器与 Git 自动部署。",
+        "summary_en": "Managed app platform supporting containers and Git-based deploys.",
+        "category": "域名 / DNS / 建站",
+        "subcategory": "云平台建站",
+        "subcategory_en": "Cloud App Hosting"
+      },
+      {
+        "title": "Contabo",
+        "title_en": "Contabo",
+        "url": "https://contabo.com/en/",
+        "summary": "以大内存与高磁盘配额著称的高性价比海外 VPS 服务商。",
+        "summary_en": "Budget-friendly VPS provider known for large RAM and storage plans.",
+        "category": "VPS / 云服务",
+        "subcategory": "高性价比VPS",
+        "subcategory_en": "Budget VPS"
+      },
+      {
+        "title": "Upstash",
+        "title_en": "Upstash",
+        "url": "https://upstash.com/",
+        "summary": "面向 Serverless 场景的 Redis/Kafka 服务，按请求计费。",
+        "summary_en": "Serverless Redis and Kafka platform with pay-per-request pricing.",
+        "category": "程序员常用网站",
+        "subcategory": "开发文档",
+        "subcategory_en": "Developer Docs"
+      },
+      {
+        "title": "WebhookTest",
+        "title_en": "WebhookTest",
+        "url": "https://webhooktest.com/",
+        "summary": "用于调试和验证 Webhook 回调请求的在线测试服务。",
+        "summary_en": "Online service to test and inspect incoming webhook requests.",
+        "category": "程序员常用网站",
+        "subcategory": "开发效率",
+        "subcategory_en": "Dev Productivity"
       }
     ]
   }
