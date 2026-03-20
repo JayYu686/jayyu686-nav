@@ -94,6 +94,7 @@ const groupedItems = Array.from(groupedMap.entries()).map(([label, grouped], ind
     font-weight: 600;
     letter-spacing: 0.02em;
     text-transform: uppercase;
+    transition: opacity var(--motion-nav, 240ms) var(--ease-mid, cubic-bezier(0.22, 1, 0.36, 1)), transform var(--motion-nav, 240ms) var(--ease-mid, cubic-bezier(0.22, 1, 0.36, 1));
   }
 
   .subcategory-count {
@@ -106,6 +107,7 @@ const groupedItems = Array.from(groupedMap.entries()).map(([label, grouped], ind
     font-size: 24px;
     letter-spacing: -0.24px;
     font-weight: 750;
+    transition: opacity var(--motion-nav, 240ms) var(--ease-mid, cubic-bezier(0.22, 1, 0.36, 1)), transform var(--motion-nav, 240ms) var(--ease-mid, cubic-bezier(0.22, 1, 0.36, 1));
   }
 
   .category-count {

@@ -251,7 +251,13 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
       }
 
       .orb {
-        display: none;
+        position: absolute;
+        border-radius: 999px;
+        filter: blur(96px);
+        opacity: 0.24;
+        pointer-events: none;
+        transform-origin: center;
+        animation: orb-breathe 18s ease-in-out infinite;
       }
 
       .orb-1 { width: 60vw; height: 60vh; background: radial-gradient(circle, #f43f5e, transparent 60%); top: -10%; left: -10%; animation-delay: 0s; }
@@ -265,11 +271,16 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
       :root[data-theme='light'] .orb-3 { background: radial-gradient(circle, #34d399, transparent 60%); }
       :root[data-theme='light'] .orb-4 { background: radial-gradient(circle, #fbbf24, transparent 60%); }
 
-      @keyframes float {
-        0% { transform: translate(0, 0) scale(1); }
-        33% { transform: translate(30px, -50px) scale(1.1); }
-        66% { transform: translate(-20px, 20px) scale(0.9); }
-        100% { transform: translate(0, 0) scale(1); }
+      @keyframes orb-breathe {
+        0%,
+        100% {
+          opacity: 0.2;
+          transform: scale(0.96);
+        }
+        50% {
+          opacity: 0.34;
+          transform: scale(1.04);
+        }
       }
 
       .lang-btn,
@@ -291,6 +302,12 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
         text-decoration: none;
       }
 
+      .lang-btn:active,
+      .github-btn:active,
+      .theme-btn:active {
+        transform: translateY(-1px) scale(0.98);
+      }
+
       .github-btn {
         right: 128px;
         height: 44px;
@@ -310,9 +327,15 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
       }
       .theme-btn { right: 24px; }
 
-      .github-btn:hover,
-      .lang-btn:hover,
-      .theme-btn:hover { background: var(--panel-active); transform: scale(1.05); }
+      @media (hover: hover) and (pointer: fine) {
+        .github-btn:hover,
+        .lang-btn:hover,
+        .theme-btn:hover {
+          background: var(--panel-active);
+          transform: translateY(-2px) scale(1.04);
+          box-shadow: var(--ref-shadow-2);
+        }
+      }
 
       .github-btn:focus-visible,
       .lang-btn:focus-visible,
@@ -568,18 +591,21 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
         cursor: pointer;
         white-space: nowrap;
         flex: 0 0 auto;
-        transition: background var(--motion-fast) var(--ease-fast), color var(--motion-fast) var(--ease-fast), border-color var(--motion-nav) var(--ease-mid), box-shadow var(--motion-nav) var(--ease-mid);
+        transition: background var(--motion-fast) var(--ease-fast), color var(--motion-fast) var(--ease-fast), border-color var(--motion-nav) var(--ease-mid), box-shadow var(--motion-nav) var(--ease-mid), transform var(--motion-fast) var(--ease-fast);
         box-shadow: var(--comp-control-shadow);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
       }
 
-      .filter-btn:hover,
-      :global(.subfilter-btn:hover) {
-        color: var(--text);
-        background: var(--comp-control-bg-hover);
-        border-color: color-mix(in srgb, var(--accent) 26%, var(--comp-control-border));
-        box-shadow: var(--comp-control-shadow-hover);
+      @media (hover: hover) and (pointer: fine) {
+        .filter-btn:hover,
+        :global(.subfilter-btn:hover) {
+          color: var(--text);
+          background: var(--comp-control-bg-hover);
+          border-color: color-mix(in srgb, var(--accent) 26%, var(--comp-control-border));
+          box-shadow: var(--comp-control-shadow-hover);
+          transform: translateY(-1px) scale(1.02);
+        }
       }
 
       .filter-btn.active,
@@ -594,6 +620,11 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
       :global(.subfilter-btn:focus-visible) {
         outline: 2px solid var(--focus-ring);
         outline-offset: 2px;
+      }
+
+      .filter-btn:active,
+      :global(.subfilter-btn:active) {
+        transform: translateY(0) scale(0.99);
       }
 
       .content-layout {
@@ -901,8 +932,7 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
         }
 
         .orb {
-          filter: blur(86px);
-          opacity: 0.4;
+          display: none;
         }
 
         .orb-4 { display: none; }
@@ -1664,7 +1694,11 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
-            if (entry.isIntersecting && entry.target instanceof HTMLElement && entry.target.style.display !== 'none') {
+            if (!entry.isIntersecting || !(entry.target instanceof HTMLElement) || entry.target.style.display === 'none') {
+              return;
+            }
+
+            if (entry.target.id) {
               setActiveElevator(entry.target.id);
             }
           });
