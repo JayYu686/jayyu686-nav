@@ -46,11 +46,13 @@ export const zhMessages: Messages = {
     themeToggleLabel: '切换主题',
   },
   categoryNames: {
+    '最近更新': '最近更新',
     'VPS / 云服务': 'VPS / 云服务',
     '域名 / DNS / 建站': '域名 / DNS / 建站',
     '学术资源': '学术资源',
     '论坛 / 社区': '论坛 / 社区',
     '程序员常用网站': '程序员常用网站',
+    'AI': 'AI',
     '有趣': '有趣',
     '实用工具': '实用工具',
     '娱乐': '娱乐',
