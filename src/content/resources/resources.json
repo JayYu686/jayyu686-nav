@@ -1351,9 +1351,10 @@
         "title": "OpenRouter",
         "url": "https://openrouter.ai/",
         "category": "AI",
-        "summary": "一个聚合多家大模型的统一接口平台，可以调用使用。",
-        "subcategory": "图像与视频生成",
-        "subcategory_en": "Image & Video Generation"
+        "summary": "多模型聚合入口，提供模型价格、能力对比与热门模型榜单。",
+        "subcategory": "评测与研究",
+        "subcategory_en": "Evaluation & Research",
+        "summary_en": "Model gateway with pricing, capability comparisons, and popular model rankings."
       },
       {
         "title": "Google AI Studio",
@@ -2661,6 +2662,236 @@
         "category": "资源",
         "subcategory": "设计素材",
         "subcategory_en": "Design Assets"
+      },
+      {
+        "title": "Cursor",
+        "title_en": "Cursor",
+        "url": "https://www.cursor.com/",
+        "summary": "主流 AI 原生代码编辑器，支持代码理解、重构与代理式开发。",
+        "summary_en": "Mainstream AI-native code editor for code understanding, refactoring, and agentic workflows.",
+        "category": "AI",
+        "subcategory": "AI编程工具",
+        "subcategory_en": "AI Coding Tools"
+      },
+      {
+        "title": "Windsurf",
+        "title_en": "Windsurf",
+        "url": "https://windsurf.com/",
+        "summary": "面向开发者的 AI 编程环境，强调端到端代码协作与自动化。",
+        "summary_en": "AI coding environment focused on end-to-end developer collaboration and automation.",
+        "category": "AI",
+        "subcategory": "AI编程工具",
+        "subcategory_en": "AI Coding Tools"
+      },
+      {
+        "title": "Trae（国际版）",
+        "title_en": "Trae (Global)",
+        "url": "https://trae.ai/",
+        "summary": "Trae 国际版 AI IDE，面向全球开发者的智能编程体验。",
+        "summary_en": "Global version of Trae AI IDE for international developers.",
+        "category": "AI",
+        "subcategory": "AI编程工具",
+        "subcategory_en": "AI Coding Tools"
+      },
+      {
+        "title": "Trae（国内版）",
+        "title_en": "Trae (China)",
+        "url": "https://www.trae.com.cn/",
+        "summary": "Trae 国内版 AI IDE，提供本地化模型与服务支持。",
+        "summary_en": "China version of Trae AI IDE with localized model and service support.",
+        "category": "AI",
+        "subcategory": "AI编程工具",
+        "subcategory_en": "AI Coding Tools"
+      },
+      {
+        "title": "Antigravity",
+        "title_en": "Antigravity",
+        "url": "https://antigravity.dev/",
+        "summary": "面向工程实践的 AI 编程工具，支持代码生成与项目级协作。",
+        "summary_en": "AI coding tool for practical software engineering and project-level collaboration.",
+        "category": "AI",
+        "subcategory": "AI编程工具",
+        "subcategory_en": "AI Coding Tools"
+      },
+      {
+        "title": "GitHub Copilot",
+        "title_en": "GitHub Copilot",
+        "url": "https://github.com/features/copilot",
+        "summary": "GitHub 官方 AI 编程助手，覆盖编辑器补全、聊天与代码审查。",
+        "summary_en": "Official GitHub AI coding assistant for completion, chat, and code review.",
+        "category": "AI",
+        "subcategory": "AI编程工具",
+        "subcategory_en": "AI Coding Tools"
+      },
+      {
+        "title": "Cline",
+        "title_en": "Cline",
+        "url": "https://cline.bot/",
+        "summary": "以代理模式执行开发任务的 AI 编程助手。",
+        "summary_en": "Agent-style AI coding assistant for executing developer tasks.",
+        "category": "AI",
+        "subcategory": "AI编程工具",
+        "subcategory_en": "AI Coding Tools"
+      },
+      {
+        "title": "Continue",
+        "title_en": "Continue",
+        "url": "https://www.continue.dev/",
+        "summary": "开源 AI 编码助手，可在本地或云端模型之间灵活切换。",
+        "summary_en": "Open-source AI coding assistant supporting local and cloud models.",
+        "category": "AI",
+        "subcategory": "AI编程工具",
+        "subcategory_en": "AI Coding Tools"
+      },
+      {
+        "title": "Tabnine",
+        "title_en": "Tabnine",
+        "url": "https://www.tabnine.com/",
+        "summary": "企业向 AI 编码工具，强调隐私与团队级代码建议。",
+        "summary_en": "Enterprise AI coding tool emphasizing privacy and team-wide suggestions.",
+        "category": "AI",
+        "subcategory": "AI编程工具",
+        "subcategory_en": "AI Coding Tools"
+      },
+      {
+        "title": "Augment Code",
+        "title_en": "Augment Code",
+        "url": "https://www.augmentcode.com/",
+        "summary": "面向大规模代码库的 AI 开发助手。",
+        "summary_en": "AI development assistant built for large codebases.",
+        "category": "AI",
+        "subcategory": "AI编程工具",
+        "subcategory_en": "AI Coding Tools"
+      },
+      {
+        "title": "LMSYS Chatbot Arena",
+        "title_en": "LMSYS Chatbot Arena",
+        "url": "https://lmarena.ai/",
+        "summary": "权威大模型盲测与排行平台，广泛用于模型能力对比。",
+        "summary_en": "Authoritative blind-eval arena and leaderboard for comparing LLMs.",
+        "category": "AI",
+        "subcategory": "评测与研究",
+        "subcategory_en": "Evaluation & Research"
+      },
+      {
+        "title": "Hugging Face Open LLM Leaderboard",
+        "title_en": "Hugging Face Open LLM Leaderboard",
+        "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+        "summary": "开源模型基准排行入口，便于横向比较不同开源 LLM。",
+        "summary_en": "Benchmark leaderboard for comparing open-source LLMs.",
+        "category": "AI",
+        "subcategory": "评测与研究",
+        "subcategory_en": "Evaluation & Research"
+      },
+      {
+        "title": "HELM",
+        "title_en": "HELM",
+        "url": "https://crfm.stanford.edu/helm/",
+        "summary": "斯坦福发布的大模型标准化评测框架与研究项目。",
+        "summary_en": "Stanford benchmark framework for standardized LLM evaluation.",
+        "category": "AI",
+        "subcategory": "评测与研究",
+        "subcategory_en": "Evaluation & Research"
+      },
+      {
+        "title": "OpenCompass 榜单",
+        "title_en": "OpenCompass Leaderboard",
+        "url": "https://opencompass.org.cn/leaderboard-llm",
+        "summary": "国内权威大模型评测体系与公开榜单。",
+        "summary_en": "Authoritative Chinese LLM evaluation framework and public leaderboard.",
+        "category": "AI",
+        "subcategory": "评测与研究",
+        "subcategory_en": "Evaluation & Research"
+      },
+      {
+        "title": "Le Chat",
+        "title_en": "Le Chat",
+        "url": "https://chat.mistral.ai/",
+        "summary": "Mistral 官方通用对话助手，面向日常问答与写作场景。",
+        "summary_en": "Mistral official general-purpose chat assistant.",
+        "category": "AI",
+        "subcategory": "通用对话",
+        "subcategory_en": "General Chat"
+      },
+      {
+        "title": "Meta AI",
+        "title_en": "Meta AI",
+        "url": "https://www.meta.ai/",
+        "summary": "Meta 官方 AI 助手，支持通用问答与多模态交互。",
+        "summary_en": "Meta official AI assistant for general and multimodal interactions.",
+        "category": "AI",
+        "subcategory": "通用对话",
+        "subcategory_en": "General Chat"
+      },
+      {
+        "title": "腾讯元宝",
+        "title_en": "Tencent Yuanbao",
+        "url": "https://yuanbao.tencent.com/",
+        "summary": "腾讯推出的通用 AI 助手，覆盖日常搜索与内容创作。",
+        "summary_en": "Tencent general AI assistant for search and content creation.",
+        "category": "AI",
+        "subcategory": "通用对话",
+        "subcategory_en": "General Chat"
+      },
+      {
+        "title": "Character.AI",
+        "title_en": "Character.AI",
+        "url": "https://character.ai/",
+        "summary": "角色化 AI 对话平台，适合场景化陪聊与创意互动。",
+        "summary_en": "Character-based AI conversation platform for creative interactions.",
+        "category": "AI",
+        "subcategory": "通用对话",
+        "subcategory_en": "General Chat"
+      },
+      {
+        "title": "Pi",
+        "title_en": "Pi",
+        "url": "https://pi.ai/",
+        "summary": "强调自然交流体验的通用 AI 对话助手。",
+        "summary_en": "General chat assistant focused on natural conversational experience.",
+        "category": "AI",
+        "subcategory": "通用对话",
+        "subcategory_en": "General Chat"
+      },
+      {
+        "title": "ModelScope 魔搭社区",
+        "title_en": "ModelScope",
+        "url": "https://modelscope.cn/",
+        "summary": "国内重要的模型与数据社区，支持模型下载与部署。",
+        "summary_en": "Major Chinese model community for model distribution and deployment.",
+        "category": "AI",
+        "subcategory": "数据与模型平台",
+        "subcategory_en": "Data & Model Platforms"
+      },
+      {
+        "title": "Together AI",
+        "title_en": "Together AI",
+        "url": "https://www.together.ai/",
+        "summary": "提供多种开源模型 API 与推理基础设施的平台。",
+        "summary_en": "Platform providing APIs and inference infrastructure for open models.",
+        "category": "AI",
+        "subcategory": "数据与模型平台",
+        "subcategory_en": "Data & Model Platforms"
+      },
+      {
+        "title": "Fireworks AI",
+        "title_en": "Fireworks AI",
+        "url": "https://fireworks.ai/",
+        "summary": "面向生产环境的高性能模型推理与部署平台。",
+        "summary_en": "High-performance model inference platform for production workloads.",
+        "category": "AI",
+        "subcategory": "数据与模型平台",
+        "subcategory_en": "Data & Model Platforms"
+      },
+      {
+        "title": "Civitai",
+        "title_en": "Civitai",
+        "url": "https://civitai.com/",
+        "summary": "生成式 AI 模型与社区分享平台，聚焦图像模型生态。",
+        "summary_en": "Community platform for sharing generative AI models, especially image models.",
+        "category": "AI",
+        "subcategory": "数据与模型平台",
+        "subcategory_en": "Data & Model Platforms"
       }
     ]
   }

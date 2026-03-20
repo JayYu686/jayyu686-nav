@@ -140,11 +140,16 @@ npm run dev
 - 本轮新增 10 个 AI 站点到 `AI / 图像与视频生成`：
 - `nanobananafree.ai`、`imini.ai`、`muset.ai`、`trickle.so`、`Flowith.cc`
 - `tapnow.ai`、`lovart.ai`、`Zenmux.ai`、`imastudio.com`、`flowith.io`
-- 同时将已存在的 `OpenRouter` 条目按需求调整到 `AI / 图像与视频生成`，并更新简介。
+- 同时将已存在的 `OpenRouter` 条目调整到 `AI / 评测与研究`，并更新简介。
 - 本轮新增 15 个高质量且与现有数据不重复的站点：
 - `DNS Checker`、`crt.sh`、`CodeSandbox`、`AST Explorer`、`Bundlephobia`
 - `quicktype`、`JSON Hero`、`ReqBin`、`Beeceptor`、`Webhook.site`
 - `httpstatus`、`SecurityHeaders`、`Tabler Icons`、`Iconify Icon Sets`、`unDraw`
+- 本轮 AI 分类继续扩充（按二级分类落位）：
+- `AI编程工具`：`Cursor`、`Windsurf`、`Trae（国际版）`、`Trae（国内版）`、`Antigravity`、`GitHub Copilot`、`Cline`、`Continue`、`Tabnine`、`Augment Code`
+- `评测与研究`：`LMSYS Chatbot Arena`、`Hugging Face Open LLM Leaderboard`、`HELM`、`OpenCompass 榜单`，并将 `OpenRouter` 调整到该分类
+- `通用对话`：`Le Chat`、`Meta AI`、`腾讯元宝`、`Character.AI`、`Pi`
+- `数据与模型平台`：`ModelScope 魔搭社区`、`Together AI`、`Fireworks AI`、`Civitai`
 
 ### 去重规则（执行策略）
 
@@ -154,13 +159,17 @@ npm run dev
 
 ### 导入后校验
 
-- 资源总数：`271`
+- 资源总数：`294`
 - `title + category` 重复数：`0`
 - 规范化 URL 重复数：`0`
 - 中文标题缺失 `title_en`：`148`
 - 学术资源条目数：`38`
-- AI 资源条目数：`45`
-- AI 图像与视频生成条目数：`15`
+- AI 资源条目数：`68`
+- AI 图像与视频生成条目数：`14`
+- AI 评测与研究条目数：`12`
+- AI 编程工具条目数：`11`
+- AI 数据与模型平台条目数：`6`
+- AI 通用对话条目数：`20`
 - 二级分类覆盖率：`100%`（每条资源均含 `subcategory` 与 `subcategory_en`）
 
 ## i18n 路由
