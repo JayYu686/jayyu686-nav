@@ -65,12 +65,26 @@ const getDomain = (url: string) => {
     -webkit-backdrop-filter: blur(12px);
     text-decoration: none;
     color: var(--text);
-    transition: transform var(--motion-fast, 100ms) var(--ease-fast, cubic-bezier(0.4, 0, 0.2, 1)), box-shadow var(--motion-fast, 100ms) var(--ease-fast, cubic-bezier(0.4, 0, 0.2, 1)), border-color var(--motion-mid, 220ms) var(--ease-mid, cubic-bezier(0.22, 1, 0.36, 1)), background var(--motion-mid, 220ms) var(--ease-mid, cubic-bezier(0.22, 1, 0.36, 1)), opacity var(--motion-card, 220ms) var(--ease-mid, cubic-bezier(0.22, 1, 0.36, 1));
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease, background 0.3s ease;
     display: flex;
     flex-direction: column;
     gap: var(--comp-card-gap, 14px);
     box-shadow: var(--shadow);
     will-change: transform, box-shadow;
+    --card-glow-x: 50%;
+    --card-glow-y: 35%;
+    --card-glow-opacity: 0;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: inherit;
+    background: radial-gradient(220px circle at var(--card-glow-x) var(--card-glow-y), rgba(255, 255, 255, 0.5) 0%, rgba(178, 210, 255, 0.18) 36%, rgba(56, 74, 106, 0.09) 62%, transparent 78%);
+    opacity: var(--card-glow-opacity);
+    transition: opacity var(--motion-mid, 220ms) var(--ease-mid, cubic-bezier(0.22, 1, 0.36, 1));
   }
 
   .card::after {
@@ -87,10 +101,11 @@ const getDomain = (url: string) => {
   }
 
   .card:hover {
-    transform: translateY(-2px);
+    transform: translateY(-5px) scale(1.01);
     border-color: var(--line);
     box-shadow: var(--shadow-hover);
     background: var(--panel-active);
+    --card-glow-opacity: 0.92;
   }
 
   .card:hover::after,
@@ -99,7 +114,7 @@ const getDomain = (url: string) => {
   }
 
   .card:active {
-    transform: translateY(-1px) scale(0.992);
+    transform: translateY(0px) scale(0.98);
   }
 
   .card:focus-visible {
@@ -107,6 +122,15 @@ const getDomain = (url: string) => {
     outline-offset: 2px;
     box-shadow: var(--shadow-hover), var(--focus-ring-shadow, 0 0 0 3px rgba(88, 166, 255, 0.3));
     border-color: var(--accent);
+    --card-glow-opacity: 0.72;
+  }
+
+  :global(:root[data-theme='light']) .card::before {
+    background: radial-gradient(220px circle at var(--card-glow-x) var(--card-glow-y), rgba(255, 255, 255, 0.62) 0%, rgba(203, 221, 255, 0.2) 34%, rgba(98, 80, 54, 0.08) 62%, transparent 78%);
+  }
+
+  :global(:root:not([data-theme='light'])) .card::before {
+    background: radial-gradient(210px circle at var(--card-glow-x) var(--card-glow-y), rgba(170, 206, 255, 0.4) 0%, rgba(116, 156, 225, 0.2) 34%, rgba(24, 35, 54, 0.14) 64%, transparent 80%);
   }
 
   .card-top {
@@ -127,7 +151,7 @@ const getDomain = (url: string) => {
     overflow: hidden;
     flex-shrink: 0;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.24);
-    transition: transform var(--motion-mid, 220ms) var(--ease-mid, cubic-bezier(0.22, 1, 0.36, 1)), background var(--motion-mid, 220ms) var(--ease-mid, cubic-bezier(0.22, 1, 0.36, 1));
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.3s ease;
   }
 
   .icon-box img {
@@ -180,7 +204,7 @@ const getDomain = (url: string) => {
 
   .card:hover .icon-box,
   .card:focus-visible .icon-box {
-    transform: translateY(-1px) scale(1.02);
+    transform: translateY(-2px) scale(1.08) rotate(-2deg);
   }
 
   .card:hover .desc,
@@ -251,6 +275,7 @@ const getDomain = (url: string) => {
       border-color: var(--card-border);
       box-shadow: var(--shadow);
       background: var(--card-bg);
+      --card-glow-opacity: 0;
     }
 
     .card:hover .desc {

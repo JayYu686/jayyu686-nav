@@ -46,7 +46,7 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <meta name="theme-color" content="#0b1020" />
+    <meta name="theme-color" content="#f6f4ef" />
     <script is:inline>
       (function () {
         try {
@@ -66,6 +66,7 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
       }
 
       :root {
+        --title-glow: rgba(255, 255, 255, 1);
         --ref-space-1: 4px;
         --ref-space-2: 8px;
         --ref-space-3: 12px;
@@ -82,27 +83,27 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
         --ref-radius-xl: 20px;
         --ref-radius-pill: 999px;
 
-        --ref-shadow-1: 0 2px 8px rgba(5, 10, 24, 0.18);
-        --ref-shadow-2: 0 8px 24px rgba(5, 10, 24, 0.24);
-        --ref-shadow-3: 0 14px 34px rgba(26, 110, 255, 0.2);
+        --ref-shadow-1: 0 2px 10px rgba(56, 45, 26, 0.08);
+        --ref-shadow-2: 0 10px 24px rgba(56, 45, 26, 0.12);
+        --ref-shadow-3: 0 14px 30px rgba(39, 79, 150, 0.18);
 
         --ref-icon-shell: 44px;
         --ref-icon-shell-sm: 38px;
         --ref-icon-size: 18px;
         --ref-icon-size-sm: 16px;
 
-        --sys-surface-bg: #0b1020;
-        --sys-surface-panel: rgba(18, 26, 43, 0.58);
-        --sys-surface-panel-active: rgba(255, 255, 255, 0.12);
-        --sys-surface-card: rgba(22, 27, 34, 0.56);
-        --sys-outline: rgba(255, 255, 255, 0.08);
-        --sys-outline-soft: rgba(255, 255, 255, 0.05);
-        --sys-text: #f0f6fc;
-        --sys-text-sub: #c9d1d9;
-        --sys-text-muted: #a5b0be;
-        --sys-accent: #58a6ff;
-        --sys-accent-hover: #79c0ff;
-        --sys-gradient-title: linear-gradient(135deg, #a855f7 0%, #3b82f6 50%, #10b981 100%);
+        --sys-surface-bg: #0d1116;
+        --sys-surface-panel: rgba(255, 255, 255, 0.04);
+        --sys-surface-panel-active: rgba(255, 255, 255, 0.08);
+        --sys-surface-card: rgba(255, 255, 255, 0.03);
+        --sys-outline: rgba(255, 255, 255, 0.15);
+        --sys-outline-soft: rgba(255, 255, 255, 0.08);
+        --sys-text: #f0f4f8;
+        --sys-text-sub: #cdd6e4;
+        --sys-text-muted: #9ba6b9;
+        --sys-accent: #78a5ff;
+        --sys-accent-hover: #9dbdff;
+        --sys-gradient-title: linear-gradient(120deg, #9cb8ff 0%, #8fc2ff 48%, #b9a6ff 100%);
 
         --comp-card-radius: var(--ref-radius-xl);
         --comp-card-padding: var(--ref-space-6);
@@ -121,11 +122,16 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
         --comp-control-radius: 999px;
         --comp-control-padding-x: 16px;
         --comp-control-font-size: 15px;
-        --comp-control-border: color-mix(in srgb, #ffffff 12%, transparent);
-        --comp-control-bg: linear-gradient(160deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.02));
-        --comp-control-bg-hover: linear-gradient(160deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.06));
-        --comp-control-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 8px 20px rgba(5, 10, 24, 0.2);
-        --comp-control-shadow-hover: inset 0 1px 0 rgba(255, 255, 255, 0.18), 0 10px 24px rgba(5, 10, 24, 0.24);
+        --comp-control-border: color-mix(in srgb, #d5e4ff 18%, transparent);
+        --comp-control-bg: linear-gradient(160deg, rgba(54, 66, 90, 0.56), rgba(40, 51, 71, 0.36));
+        --comp-control-bg-hover: linear-gradient(160deg, rgba(66, 80, 109, 0.72), rgba(46, 59, 82, 0.52));
+        --comp-control-shadow: inset 0 1px 0 rgba(212, 226, 255, 0.16), 0 8px 18px rgba(5, 9, 17, 0.32);
+        --comp-control-shadow-hover: inset 0 1px 0 rgba(218, 230, 255, 0.22), 0 10px 22px rgba(5, 9, 17, 0.38);
+
+        --cursor-x: 50vw;
+        --cursor-y: 35vh;
+        --cursor-glow-size: min(52vw, 520px);
+        --cursor-glow-opacity: 0;
 
         --motion-tap: 100ms;
         --motion-card: 220ms;
@@ -157,29 +163,31 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
       }
 
       :root[data-theme='light'] {
-        --sys-surface-bg: #fbfbfd;
-        --sys-surface-panel: rgba(245, 245, 247, 0.78);
-        --sys-surface-panel-active: rgba(255, 255, 255, 0.92);
-        --sys-surface-card: rgba(255, 255, 255, 0.72);
-        --sys-outline: rgba(0, 0, 0, 0.08);
-        --sys-outline-soft: rgba(0, 0, 0, 0.05);
-        --sys-text: #1d1d1f;
-        --sys-text-sub: #424245;
-        --sys-text-muted: #5f6368;
-        --sys-accent: #0066cc;
-        --sys-accent-hover: #0077ed;
-        --sys-gradient-title: linear-gradient(135deg, #4f46e5 0%, #db2777 50%, #f59e0b 100%);
-        --focus-ring: rgba(0, 102, 204, 0.9);
-        --focus-ring-shadow: 0 0 0 3px rgba(0, 102, 204, 0.24);
+        --title-glow: rgba(0, 0, 0, 0.85);
+        --sys-surface-bg: #fbfaf6;
+        --sys-surface-panel: rgba(255, 255, 255, 0.78);
+        --sys-surface-panel-active: rgba(255, 255, 255, 0.98);
+        --sys-surface-card: rgba(255, 255, 255, 0.88);
+        --sys-outline: rgba(71, 60, 41, 0.14);
+        --sys-outline-soft: rgba(71, 60, 41, 0.08);
+        --sys-text: #2b2417;
+        --sys-text-sub: #473c2a;
+        --sys-text-muted: #6a5f4d;
+        --sys-accent: #24539d;
+        --sys-accent-hover: #3766b4;
+        --sys-gradient-title: linear-gradient(120deg, #214b90 0%, #6c4da4 48%, #a15f2b 100%);
+        --focus-ring: rgba(36, 83, 157, 0.9);
+        --focus-ring-shadow: 0 0 0 3px rgba(36, 83, 157, 0.22);
 
-        --ref-shadow-1: 0 2px 8px rgba(0, 0, 0, 0.07);
-        --ref-shadow-2: 0 8px 24px rgba(0, 0, 0, 0.1);
-        --ref-shadow-3: 0 12px 30px rgba(0, 102, 204, 0.22);
-        --comp-control-border: color-mix(in srgb, #000000 14%, transparent);
-        --comp-control-bg: linear-gradient(160deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.72));
-        --comp-control-bg-hover: linear-gradient(160deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.84));
-        --comp-control-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85), 0 8px 18px rgba(0, 0, 0, 0.1);
-        --comp-control-shadow-hover: inset 0 1px 0 rgba(255, 255, 255, 0.95), 0 10px 22px rgba(0, 0, 0, 0.12);
+        --ref-shadow-1: 0 2px 8px rgba(63, 52, 34, 0.07);
+        --ref-shadow-2: 0 8px 20px rgba(63, 52, 34, 0.1);
+        --ref-shadow-3: 0 12px 30px rgba(36, 83, 157, 0.2);
+
+        --comp-control-border: color-mix(in srgb, #5f5240 18%, transparent);
+        --comp-control-bg: linear-gradient(160deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.74));
+        --comp-control-bg-hover: linear-gradient(160deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.86));
+        --comp-control-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.94), 0 8px 18px rgba(63, 52, 34, 0.12);
+        --comp-control-shadow-hover: inset 0 1px 0 rgba(255, 255, 255, 0.98), 0 10px 20px rgba(63, 52, 34, 0.16);
       }
 
       * { box-sizing: border-box; }
@@ -205,11 +213,11 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
         overflow: hidden;
         isolation: isolate;
         background-color: var(--bg-color);
-        background-image: url('/background.svg');
+        background-image: url('../assets/Paper003_2K-JPG_Color.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        background-attachment: fixed;
+        background-attachment: scroll;
         transition: background-color var(--motion-slow) var(--ease-slow);
       }
 
@@ -218,15 +226,21 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
         position: absolute;
         inset: 0;
         pointer-events: none;
-        background-image: url('/background.svg');
+        background-image: url('../assets/Paper003_2K-PNG_Color.png');
         background-repeat: no-repeat;
-        background-position: center;
         background-size: cover;
-        background-attachment: fixed;
-        opacity: 0.6;
-        filter: saturate(1.08) brightness(0.82) contrast(1.05);
-        transform: scale(1.02);
-        transform-origin: center;
+        background-position: center;
+        mix-blend-mode: multiply;
+        opacity: 0.2;
+        filter: contrast(1.06);
+        transition: opacity var(--motion-mid) var(--ease-mid);
+        will-change: opacity;
+      }
+
+      :root:not([data-theme='light']) .aurora-bg::before {
+        mix-blend-mode: overlay;
+        opacity: 0.15;
+        filter: contrast(1.2) brightness(0.8);
       }
 
       .aurora-bg::after {
@@ -235,29 +249,34 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
         inset: 0;
         pointer-events: none;
         background:
-          radial-gradient(110% 70% at 50% 0%, rgba(88, 166, 255, 0.12), transparent 60%),
-          linear-gradient(180deg, rgba(8, 13, 28, 0.6), rgba(8, 13, 28, 0.45));
+          radial-gradient(560px circle at var(--cursor-x) var(--cursor-y), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.08) 38%, transparent 72%),
+          radial-gradient(620px circle at calc(100% - var(--cursor-x)) calc(100% - var(--cursor-y)), rgba(105, 90, 62, 0.22), transparent 74%),
+          linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.03));
+        transition: background var(--motion-mid) var(--ease-mid);
+      }
+
+      :root:not([data-theme='light']) .aurora-bg::after {
+        background:
+          radial-gradient(500px circle at var(--cursor-x) var(--cursor-y), rgba(120, 170, 255, 0.18), rgba(56, 84, 138, 0.08) 36%, transparent 74%),
+          radial-gradient(600px circle at calc(100% - var(--cursor-x)) calc(100% - var(--cursor-y)), rgba(0, 0, 0, 0.2), transparent 74%),
+          linear-gradient(180deg, rgba(5, 7, 12, 0.3), rgba(2, 3, 6, 0.8));
       }
 
       :root[data-theme='light'] .aurora-bg::before {
-        opacity: 0.5;
-        filter: saturate(0.92) brightness(1.06) contrast(0.94);
+        opacity: 0.42;
+        mix-blend-mode: multiply;
+        filter: contrast(1.22);
       }
 
       :root[data-theme='light'] .aurora-bg::after {
         background:
-          radial-gradient(110% 70% at 50% 0%, rgba(255, 255, 255, 0.26), transparent 62%),
-          linear-gradient(180deg, rgba(255, 255, 255, 0.52), rgba(255, 255, 255, 0.38));
+          radial-gradient(560px circle at var(--cursor-x) var(--cursor-y), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.08) 38%, transparent 70%),
+          radial-gradient(620px circle at calc(100% - var(--cursor-x)) calc(100% - var(--cursor-y)), rgba(90, 72, 44, 0.28), transparent 74%),
+          linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02));
       }
 
       .orb {
-        position: absolute;
-        border-radius: 999px;
-        filter: blur(96px);
-        opacity: 0.24;
-        pointer-events: none;
-        transform-origin: center;
-        animation: orb-breathe 18s ease-in-out infinite;
+        display: none;
       }
 
       .orb-1 { width: 60vw; height: 60vh; background: radial-gradient(circle, #f43f5e, transparent 60%); top: -10%; left: -10%; animation-delay: 0s; }
@@ -280,6 +299,67 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
         50% {
           opacity: 0.34;
           transform: scale(1.04);
+        }
+      }
+
+      .cursor-glow {
+        position: absolute;
+        width: var(--cursor-glow-size);
+        height: var(--cursor-glow-size);
+        left: calc(var(--cursor-x) - (var(--cursor-glow-size) / 2));
+        top: calc(var(--cursor-y) - (var(--cursor-glow-size) / 2));
+        pointer-events: none;
+        border-radius: 999px;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.74) 0%, rgba(179, 210, 255, 0.26) 34%, rgba(150, 125, 84, 0.08) 58%, transparent 74%);
+        filter: blur(8px);
+        opacity: var(--cursor-glow-opacity);
+        transform: translate3d(0, 0, 0);
+        transition: opacity var(--motion-mid) var(--ease-mid);
+        will-change: transform, opacity;
+        z-index: 0;
+      }
+
+      :root:not([data-theme='light']) .cursor-glow {
+        background: radial-gradient(circle, rgba(125, 168, 255, 0.42) 0%, rgba(90, 126, 210, 0.22) 34%, rgba(45, 62, 103, 0.1) 56%, transparent 76%);
+      }
+
+      .cursor-glow-enabled .cursor-glow {
+        --cursor-glow-opacity: 0.24;
+      }
+
+      .cursor-glow-enabled.cursor-glow-idle .cursor-glow {
+        --cursor-glow-opacity: 0.08;
+      }
+
+      @media (max-width: 900px), (hover: none), (pointer: coarse) {
+        .cursor-glow {
+          display: none;
+        }
+
+        .aurora-bg::before {
+          transform: none;
+        }
+
+        .aurora-bg::after {
+          background:
+            radial-gradient(90% 64% at 50% -6%, rgba(255, 255, 255, 0.24), transparent 72%),
+            linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.04));
+        }
+
+        :root:not([data-theme='light']) .aurora-bg::after {
+          background:
+            radial-gradient(90% 64% at 50% -6%, rgba(108, 150, 230, 0.18), transparent 72%),
+            linear-gradient(180deg, rgba(9, 14, 25, 0.56), rgba(7, 10, 18, 0.76));
+        }
+      }
+
+      @media (min-width: 2560px) {
+        .aurora-bg {
+          background-size: 110% auto;
+        }
+
+        .cursor-glow {
+          --cursor-glow-size: min(48vw, 760px);
         }
       }
 
@@ -382,10 +462,11 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
         font-size: 46px;
         font-weight: 800;
         margin: 0 0 var(--ref-space-4);
-        background: var(--gradient);
+        background: radial-gradient(150px circle at var(--cursor-x) var(--cursor-y), var(--title-glow) 0%, transparent 100%) fixed, var(--gradient);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         letter-spacing: -0.5px;
+        transition: background-size 0.3s ease;
       }
 
       .sub { color: var(--muted); font-size: 18px; line-height: 1.58; max-width: 660px; margin: 0 auto; }
@@ -1052,6 +1133,7 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
   </head>
   <body>
     <div class="aurora-bg">
+      <div class="cursor-glow" aria-hidden="true"></div>
       <div class="orb orb-1"></div>
       <div class="orb orb-2"></div>
       <div class="orb orb-3"></div>
@@ -1179,6 +1261,7 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
       const recentLimitFromData = Number.parseInt(rootWrap?.dataset.recentLimit || '', 10);
       const RECENT_LIMIT = Number.isFinite(recentLimitFromData) && recentLimitFromData > 0 ? recentLimitFromData : RECENT_LIMIT_DEFAULT;
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const rootElement = document.documentElement;
       const getScrollBehavior = () => (prefersReducedMotion ? 'auto' : 'smooth');
       let currentCat = allCategory;
       let currentSubcategory = allSubcategory;
@@ -1782,6 +1865,51 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
             root.setAttribute('data-theme', 'light');
             localStorage.setItem('theme', 'light');
           }
+        });
+      }
+
+      const supportsCursorGlow = !prefersReducedMotion && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+      if (supportsCursorGlow) {
+        document.body.classList.add('cursor-glow-enabled', 'cursor-glow-idle');
+        let nextCursorX = window.innerWidth * 0.5;
+        let nextCursorY = window.innerHeight * 0.35;
+        let glowTicking = false;
+
+        const paintCursorGlow = () => {
+          rootElement.style.setProperty('--cursor-x', `${nextCursorX}px`);
+          rootElement.style.setProperty('--cursor-y', `${nextCursorY}px`);
+          glowTicking = false;
+        };
+
+        const onMouseMove = (event) => {
+          nextCursorX = event.clientX;
+          nextCursorY = event.clientY;
+          document.body.classList.remove('cursor-glow-idle');
+          if (glowTicking) {
+            return;
+          }
+          glowTicking = true;
+          window.requestAnimationFrame(paintCursorGlow);
+        };
+
+        window.addEventListener('mousemove', onMouseMove, { passive: true });
+        document.body.addEventListener('mouseleave', () => {
+          document.body.classList.add('cursor-glow-idle');
+        });
+
+        cards.forEach((card) => {
+          card.addEventListener('mousemove', (event) => {
+            const rect = card.getBoundingClientRect();
+            const localX = ((event.clientX - rect.left) / rect.width) * 100;
+            const localY = ((event.clientY - rect.top) / rect.height) * 100;
+            card.style.setProperty('--card-glow-x', `${Math.max(0, Math.min(100, localX))}%`);
+            card.style.setProperty('--card-glow-y', `${Math.max(0, Math.min(100, localY))}%`);
+          }, { passive: true });
+
+          card.addEventListener('mouseleave', () => {
+            card.style.setProperty('--card-glow-x', '50%');
+            card.style.setProperty('--card-glow-y', '35%');
+          });
         });
       }
 
