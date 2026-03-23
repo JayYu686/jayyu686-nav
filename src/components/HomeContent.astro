@@ -705,7 +705,8 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
 
       .filter-btn:active,
       :global(.subfilter-btn:active) {
-        transform: translateY(0) scale(0.99);
+        transform: translateY(1px) scale(0.95);
+        background: var(--panel-active);
       }
 
       .content-layout {
@@ -867,7 +868,7 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
 
         .search {
           max-width: none;
-          font-size: 15px;
+          font-size: 16px;
           padding: 14px 18px;
         }
 
@@ -881,7 +882,7 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
           scroll-snap-type: x proximity;
           touch-action: pan-x;
           -webkit-overflow-scrolling: touch;
-          scrollbar-width: thin;
+          scrollbar-width: none;
         }
 
         .subfilters-list {
@@ -897,7 +898,8 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
 
         .subfilters-list::-webkit-scrollbar,
         .elevator-list::-webkit-scrollbar,
-        .elevator-list-sub::-webkit-scrollbar {
+        .elevator-list-sub::-webkit-scrollbar,
+        .filters::-webkit-scrollbar {
           display: none;
           height: 0;
         }
@@ -1001,7 +1003,7 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
 
       @media (max-width: 640px) {
         .wrap {
-          padding: 42px 12px 62px;
+          padding: 64px 16px 76px;
           --comp-recent-chip-size: 30px;
           --comp-recent-core-size: 16px;
           --comp-recent-icon-size: 10px;
@@ -1026,14 +1028,14 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
         }
 
         .github-btn {
-          right: 100px;
-          height: 36px;
-          padding: 0 10px;
-          font-size: 11px;
+          right: 104px;
+          height: 40px;
+          padding: 0 12px;
+          font-size: 12px;
         }
 
         .lang-btn {
-          right: 56px;
+          right: 58px;
           width: 40px;
           font-size: 11px;
         }
@@ -1113,10 +1115,10 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
         }
 
         .back-top {
-          width: 40px;
-          height: 40px;
-          right: 12px;
-          bottom: calc(14px + env(safe-area-inset-bottom));
+          width: 44px;
+          height: 44px;
+          right: 16px;
+          bottom: calc(16px + env(safe-area-inset-bottom));
         }
       }
 
