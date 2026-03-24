@@ -184,6 +184,7 @@ npm run dev
 - `评测与研究`：`LMSYS Chatbot Arena`、`Hugging Face Open LLM Leaderboard`、`HELM`、`OpenCompass 榜单`，并将 `OpenRouter` 调整到该分类
 - `通用对话`：`Le Chat`、`Meta AI`、`腾讯元宝`、`Character.AI`、`Pi`
 - `数据与模型平台`：`ModelScope 魔搭社区`、`Together AI`、`Fireworks AI`、`Civitai`
+- 本次新增 10 个高质量开发者/效率/设计资源。
 
 ### 去重规则（执行策略）
 
