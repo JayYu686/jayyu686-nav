@@ -3052,6 +3052,137 @@
         "category": "程序员常用网站",
         "subcategory": "开发效率",
         "subcategory_en": "Dev Productivity"
+      },
+      {
+        "title": "DEV Community",
+        "url": "https://dev.to/",
+        "summary": "一个面向软件开发者的包容性社区，可以在这里分享知识、交流想法。",
+        "category": "工具与效率",
+        "subcategory": "技术社区",
+        "subcategory_en": "Tech Communities",
+        "tags": [
+          "社区",
+          "开发者"
+        ],
+        "note": "新增优质资源"
+      },
+      {
+        "title": "Coolors",
+        "url": "https://coolors.co/",
+        "summary": "极其好用的配色方案生成器，只需敲击空格即可快速获取完美配色搭配。",
+        "category": "设计师工具",
+        "subcategory": "配色",
+        "subcategory_en": "Colors",
+        "tags": [
+          "设计",
+          "配色"
+        ],
+        "note": "新增优质资源"
+      },
+      {
+        "title": "Postman",
+        "url": "https://www.postman.com/",
+        "summary": "全球领先的 API 协作与测试开发平台，支持请求调试、自动化测试等。",
+        "category": "工具与效率",
+        "subcategory": "API 测试",
+        "subcategory_en": "API Testing",
+        "tags": [
+          "API",
+          "测试"
+        ],
+        "note": "新增优质资源"
+      },
+      {
+        "title": "Ngrok",
+        "url": "https://ngrok.com/",
+        "summary": "知名内网穿透工具，能够将你本地的开发服务器快速暴露到公网上以便测试与分享。",
+        "category": "工具与效率",
+        "subcategory": "网络工具",
+        "subcategory_en": "Network Tools",
+        "tags": [
+          "内网穿透",
+          "网络"
+        ],
+        "note": "新增优质资源"
+      },
+      {
+        "title": "JWT.io",
+        "url": "https://jwt.io/",
+        "summary": "快速解码、验证并生成 JSON Web Token (JWT) 的在线调试极其好用的工具。",
+        "category": "工具与效率",
+        "subcategory": "在线工具",
+        "subcategory_en": "Online Tools",
+        "tags": [
+          "JWT",
+          "调试"
+        ],
+        "note": "新增优质资源"
+      },
+      {
+        "title": "Insomnia",
+        "url": "https://insomnia.rest/",
+        "summary": "一款开源、跨平台的 API 测试客户端，支持 GraphQL、REST 及 gRPC，界面极其简洁清爽。",
+        "category": "工具与效率",
+        "subcategory": "API 测试",
+        "subcategory_en": "API Testing",
+        "tags": [
+          "API",
+          "测试",
+          "开源"
+        ],
+        "note": "新增优质资源"
+      },
+      {
+        "title": "Dribbble",
+        "url": "https://dribbble.com/",
+        "summary": "汇集了全球顶尖设计师的作品展示平台，寻找 UI/UX 设计灵感和设计素材的首选。",
+        "category": "灵感与资源",
+        "subcategory": "设计灵感",
+        "subcategory_en": "Design Inspiration",
+        "tags": [
+          "设计",
+          "灵感"
+        ],
+        "note": "新增优质资源"
+      },
+      {
+        "title": "CSS-Tricks",
+        "url": "https://css-tricks.com/",
+        "summary": "历史悠久且非常权威的前端开发技巧网站，尤其在 CSS 与现代化布局(Flex/Grid)教程方面质量极高。",
+        "category": "学习资源",
+        "subcategory": "前端开发",
+        "subcategory_en": "Frontend",
+        "tags": [
+          "CSS",
+          "教程"
+        ],
+        "note": "新增优质资源"
+      },
+      {
+        "title": "Ray.so",
+        "url": "https://ray.so/",
+        "summary": "能够将你的代码片段一键生成精美、高颜值的代码分享图片并自带渐变背景。",
+        "category": "工具与效率",
+        "subcategory": "代码分享",
+        "subcategory_en": "Code Snippet",
+        "tags": [
+          "代码分享",
+          "设计"
+        ],
+        "note": "新增优质资源"
+      },
+      {
+        "title": "Shields.io",
+        "url": "https://shields.io/",
+        "summary": "为开源项目提供各种状态徽章的生成服务（例如编译状态、版本号、下载量等 SVG 小图标）。",
+        "category": "工具与效率",
+        "subcategory": "在线工具",
+        "subcategory_en": "Online Tools",
+        "tags": [
+          "徽章",
+          "GitHub"
+        ],
+        "note": "新增优质资源"
       }
     ]
   }

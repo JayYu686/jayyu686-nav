@@ -1,5 +1,5 @@
 <p align="center">
-	<img src="./public/icon-source.png" alt="Jay Yu logo" width="96" height="96" />
+	<img src="./public/icon-source.png" alt="Jay Yu logo" width="108" height="108" />
 </p>
 
 # Jay Yu の 资源导航站
