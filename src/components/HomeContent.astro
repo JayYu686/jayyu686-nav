@@ -46,6 +46,9 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&display=swap" rel="stylesheet" />
     <meta name="theme-color" content="#f6f4ef" />
     <script is:inline>
       (function () {
@@ -194,13 +197,20 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
 
       body {
         margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', 'PingFang SC', 'Segoe UI', sans-serif;
+        font-family: 'Noto Serif SC', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', 'PingFang SC', 'Segoe UI', serif;
         -webkit-font-smoothing: antialiased;
         background-color: var(--bg-color);
         color: var(--text);
         min-height: 100vh;
         overflow-x: hidden;
         transition: background-color var(--motion-slow) var(--ease-slow), color var(--motion-slow) var(--ease-slow);
+      }
+
+      input,
+      button,
+      textarea,
+      select {
+        font-family: inherit;
       }
 
       .aurora-bg {
