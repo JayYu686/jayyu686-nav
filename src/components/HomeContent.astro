@@ -206,10 +206,10 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
         transition: background-color var(--motion-slow) var(--ease-slow), color var(--motion-slow) var(--ease-slow);
       }
 
-      input,
-      button,
-      textarea,
-      select {
+      :global(input),
+      :global(button),
+      :global(textarea),
+      :global(select) {
         font-family: inherit;
       }
 
