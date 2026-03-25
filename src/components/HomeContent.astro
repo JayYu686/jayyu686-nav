@@ -374,8 +374,9 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
       }
 
       .lang-btn,
-      .github-btn,
-      .theme-btn {
+        .github-btn,
+        .effect-btn,
+        .theme-btn {
         position: fixed;
         top: 24px;
         background: var(--panel);
@@ -393,8 +394,9 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
       }
 
       .lang-btn:active,
-      .github-btn:active,
-      .theme-btn:active {
+        .github-btn:active,
+        .effect-btn:active,
+        .theme-btn:active {
         transform: translateY(-1px) scale(0.98);
       }
 
@@ -421,8 +423,9 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
 
       @media (hover: hover) and (pointer: fine) {
         .github-btn:hover,
-        .lang-btn:hover,
-        .theme-btn:hover {
+          .lang-btn:hover,
+          .effect-btn:hover,
+          .theme-btn:hover {
           background: var(--panel-active);
           transform: translateY(-2px) scale(1.04);
           box-shadow: var(--ref-shadow-2);
@@ -430,8 +433,9 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
       }
 
       .github-btn:focus-visible,
-      .lang-btn:focus-visible,
-      .theme-btn:focus-visible {
+        .lang-btn:focus-visible,
+        .effect-btn:focus-visible,
+        .theme-btn:focus-visible {
         outline: 2px solid var(--focus-ring);
         outline-offset: 2px;
         box-shadow: var(--focus-ring-shadow);
@@ -950,6 +954,7 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
 
         .lang-btn,
         .github-btn,
+        .effect-btn,
         .theme-btn {
           top: 14px;
           height: 40px;
@@ -1052,6 +1057,7 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
 
         .lang-btn,
         .github-btn,
+        .effect-btn,
         .theme-btn {
           top: calc(10px + env(safe-area-inset-top));
           height: 40px;
