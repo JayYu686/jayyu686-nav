@@ -19,6 +19,7 @@ export interface Messages {
     elevatorAriaLabel: string;
     siteCount: string;
     themeToggleLabel: string;
+    effectToggleLabel: string;
   };
   categoryNames: Record<string, string>;
 }
@@ -44,6 +45,7 @@ export const zhMessages: Messages = {
     elevatorAriaLabel: '分类快速导航',
     siteCount: '个站点',
     themeToggleLabel: '切换主题',
+    effectToggleLabel: '切换动效',
   },
   categoryNames: {
     '最近更新': '最近更新',

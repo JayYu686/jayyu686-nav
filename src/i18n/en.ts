@@ -23,6 +23,7 @@ export const enMessages: Messages = {
     elevatorAriaLabel: 'Category quick navigation',
     siteCount: 'sites',
     themeToggleLabel: 'Toggle Theme',
+    effectToggleLabel: 'Toggle Effects',
   },
   categoryNames: {
     'Recent Updates': 'Recent Updates',
