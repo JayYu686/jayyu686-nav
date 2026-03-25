@@ -401,7 +401,7 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
       }
 
       .github-btn {
-        right: 128px;
+        right: 180px;
         height: 44px;
         padding: 0 14px;
         border-radius: 999px;
@@ -961,16 +961,20 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
         }
 
         .github-btn {
-          right: 108px;
-          padding: 0 12px;
-          font-size: 12px;
-        }
+            right: 156px;
+            padding: 0 12px;
+            font-size: 12px;
+          }
 
-        .lang-btn {
-          right: 62px;
-          width: 40px;
-          font-size: 12px;
-        }
+          .lang-btn {
+            right: 110px;
+            width: 40px;
+            font-size: 12px;
+          }
+
+          .effect-btn {
+            right: 62px;
+            width: 40px;
 
         .theme-btn {
           right: 14px;
@@ -1064,17 +1068,21 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
         }
 
         .github-btn {
-          right: 104px;
-          height: 40px;
-          padding: 0 12px;
-          font-size: 12px;
-        }
+            right: 150px;
+            height: 40px;
+            padding: 0 12px;
+            font-size: 12px;
+          }
 
-        .lang-btn {
-          right: 58px;
-          width: 40px;
-          font-size: 11px;
-        }
+          .lang-btn {
+            right: 104px;
+            width: 40px;
+            font-size: 11px;
+          }
+
+          .effect-btn {
+            right: 58px;
+            width: 40px;
 
         .theme-btn {
           right: 12px;
@@ -1904,6 +1912,7 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
       const effectToggleBtn = document.getElementById('effect-toggle');
       if (effectToggleBtn) {
         effectToggleBtn.addEventListener('click', () => {
+          const root = document.documentElement;
           if (root.getAttribute('data-no-effects') === 'true') {
             root.removeAttribute('data-no-effects');
             localStorage.setItem('no-effects', 'false');
