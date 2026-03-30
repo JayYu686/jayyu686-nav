@@ -1,5 +1,5 @@
 ---
-name: jayyu-nav-functional-ui-upgrade
+name: jayyunavdesign
 description: Improve this Astro 6 navigation site from both functionality and visual UI. Use when user asks for feature enhancements, interaction optimization, page redesign, usability polishing, or conversion-quality front-end iteration.
 ---
 

@@ -53,6 +53,11 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
     <script is:inline>
       (function () {
         try {
+          var localNoEffects = localStorage.getItem('no-effects');
+          if (localNoEffects === 'true') {
+            document.documentElement.setAttribute('data-no-effects', 'true');
+          }
+
           var localTheme = localStorage.getItem('theme');
           var sysTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
           var theme = localTheme || sysTheme;
@@ -956,25 +961,26 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
         .github-btn,
         .effect-btn,
         .theme-btn {
-          top: 14px;
+          top: calc(14px + env(safe-area-inset-top));
           height: 40px;
         }
 
         .github-btn {
-            right: 156px;
-            padding: 0 12px;
-            font-size: 12px;
-          }
+          right: 156px;
+          padding: 0 12px;
+          font-size: 12px;
+        }
 
-          .lang-btn {
-            right: 110px;
-            width: 40px;
-            font-size: 12px;
-          }
+        .lang-btn {
+          right: 110px;
+          width: 40px;
+          font-size: 12px;
+        }
 
-          .effect-btn {
-            right: 62px;
-            width: 40px;
+        .effect-btn {
+          right: 62px;
+          width: 40px;
+        }
 
         .theme-btn {
           right: 14px;
@@ -1068,21 +1074,22 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
         }
 
         .github-btn {
-            right: 150px;
-            height: 40px;
-            padding: 0 12px;
-            font-size: 12px;
-          }
+          right: 150px;
+          height: 40px;
+          padding: 0 12px;
+          font-size: 12px;
+        }
 
-          .lang-btn {
-            right: 104px;
-            width: 40px;
-            font-size: 11px;
-          }
+        .lang-btn {
+          right: 104px;
+          width: 40px;
+          font-size: 11px;
+        }
 
-          .effect-btn {
-            right: 58px;
-            width: 40px;
+        .effect-btn {
+          right: 58px;
+          width: 40px;
+        }
 
         .theme-btn {
           right: 12px;
