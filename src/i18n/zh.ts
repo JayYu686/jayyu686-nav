@@ -27,7 +27,7 @@ export interface Messages {
 export const zhMessages: Messages = {
   lang: 'zh-CN',
   pageTitle: 'Jay Yu の 资源导航站',
-  pageDescription: '',
+  pageDescription: '一个面向开发者和效率用户的资源导航站，聚合实用工具、云服务、学术资源与常用技术网站。',
   ui: {
     heroTitle: 'Jay Yu の 资源导航站',
     heroSubtitle: '',

@@ -34,6 +34,33 @@ interface Props {
 
 const { messages, categories, resourcesByCategory, languageSwitchHref } = Astro.props;
 const recentCategoryValue = resourcesByCategory[0]?.category || '';
+const isEnglish = messages.lang.toLowerCase().startsWith('en');
+const localeCode = isEnglish ? 'en' : 'zh-CN';
+const siteOrigin = (Astro.site?.toString().replace(/\/$/, '') ?? 'https://jayyu686.top');
+const pagePath = isEnglish ? '/en/' : '/';
+const alternatePath = isEnglish ? '/' : '/en/';
+const canonicalUrl = `${siteOrigin}${pagePath}`;
+const alternateUrl = `${siteOrigin}${alternatePath}`;
+const fallbackDescription = isEnglish
+  ? 'A curated navigation of efficient tools, cloud infrastructure, research resources, and essential developer websites.'
+  : '一个面向开发者与效率用户的资源导航站，聚合实用工具、云服务、学术资源与常用技术网站。';
+const pageDescription = messages.pageDescription?.trim() || fallbackDescription;
+const ogLocale = isEnglish ? 'en_US' : 'zh_CN';
+const alternateOgLocale = isEnglish ? 'zh_CN' : 'en_US';
+const ogImageUrl = `${siteOrigin}/android-chrome-512x512.png`;
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: messages.pageTitle,
+  url: canonicalUrl,
+  inLanguage: localeCode,
+  description: pageDescription,
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: `${canonicalUrl}?q={search_term_string}`,
+    'query-input': 'required name=search_term_string',
+  },
+};
 ---
 
 <html lang={messages.lang}>
@@ -41,7 +68,25 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{messages.pageTitle}</title>
-    <meta name="description" content={messages.pageDescription} />
+    <meta name="description" content={pageDescription} />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" hreflang={localeCode} href={canonicalUrl} />
+    <link rel="alternate" hreflang={isEnglish ? 'zh-CN' : 'en'} href={alternateUrl} />
+    <link rel="alternate" hreflang="x-default" href={`${siteOrigin}/`} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="JayYu Resource Navigation" />
+    <meta property="og:title" content={messages.pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:locale" content={ogLocale} />
+    <meta property="og:locale:alternate" content={alternateOgLocale} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:alt" content={messages.pageTitle} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={messages.pageTitle} />
+    <meta name="twitter:description" content={pageDescription} />
+    <meta name="twitter:image" content={ogImageUrl} />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -50,6 +95,7 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&display=swap" rel="stylesheet" />
     <meta name="theme-color" content="#f6f4ef" />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(structuredData)}></script>
     <script is:inline>
       (function () {
         try {
