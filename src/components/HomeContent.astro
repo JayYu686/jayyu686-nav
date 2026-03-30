@@ -1207,7 +1207,7 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
       GitHub
     </a>
 
-    <button class="effect-btn" id="effect-toggle" aria-label={messages.ui.effectToggleLabel} title={messages.ui.effectToggleLabel}>
+    <button type="button" class="effect-btn" id="effect-toggle" aria-label={messages.ui.effectToggleLabel} title={messages.ui.effectToggleLabel} aria-pressed="false">
         <svg class="effect-on-icon" viewBox="0 0 24 24">
           <path d="M7.5,5.6L5,7L6.4,4.5L5,2L7.5,3.4L10,2L8.6,4.5L10,7L7.5,5.6z M19.5,15.4L22,14l-1.4,2.5L22,19l-2.5-1.4L17,19l1.4-2.5L17,14L19.5,15.4z M22,2l-2.5,1.4L17,2l1.4,2.5L17,7l2.5-1.4L22,7l-1.4-2.5L22,2z M14.9,7.6l-1.5-1.5c-0.4-0.4-1-0.4-1.4,0l-9.5,9.5c-0.4,0.4-0.4,1,0,1.4l1.5,1.5c0.4,0.4,1,0.4,1.4,0l9.5-9.5C15.3,8.6,15.3,8,14.9,7.6z"></path>
         </svg>
@@ -1216,7 +1216,7 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
           <line x1="2" y1="2" x2="22" y2="22" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
         </svg>
       </button>
-      <button class="theme-btn" id="theme-toggle" aria-label={messages.ui.themeToggleLabel}>
+      <button type="button" class="theme-btn" id="theme-toggle" aria-label={messages.ui.themeToggleLabel} aria-pressed="false">
       <svg class="sun-icon" viewBox="0 0 24 24">
         <path d="M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5S14.76,7,12,7z M2,13h2c0.55,0,1-0.45,1-1s-0.45-1-1-1H2c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13h2c0.55,0,1-0.45,1-1s-0.45-1-1-1h-2c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1S11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0s-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95c-0.39-0.39-1.03-0.39-1.41,0s-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41s-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41s-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path>
       </svg>
@@ -1310,6 +1310,8 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
       const subfiltersWrap = document.getElementById('subfilters-wrap');
       const subfiltersList = document.getElementById('subfilters-list');
       const backTopBtn = document.getElementById('back-to-top');
+      const effectToggleBtn = document.getElementById('effect-toggle');
+      const themeToggleBtn = document.getElementById('theme-toggle');
       const empty = document.querySelector('.empty');
       const recentWrap = document.getElementById('recent-wrap');
       const recentList = document.getElementById('recent-list');
@@ -1325,6 +1327,18 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       const rootElement = document.documentElement;
       const getScrollBehavior = () => (prefersReducedMotion ? 'auto' : 'smooth');
+
+      function syncToggleButtonA11yState() {
+        if (effectToggleBtn) {
+          const noEffectsEnabled = rootElement.getAttribute('data-no-effects') === 'true';
+          effectToggleBtn.setAttribute('aria-pressed', noEffectsEnabled ? 'true' : 'false');
+        }
+        if (themeToggleBtn) {
+          const lightThemeEnabled = rootElement.getAttribute('data-theme') === 'light';
+          themeToggleBtn.setAttribute('aria-pressed', lightThemeEnabled ? 'true' : 'false');
+        }
+      }
+
       let currentCat = allCategory;
       let currentSubcategory = allSubcategory;
       const observedTargets = new Set();
@@ -1586,7 +1600,13 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
           : elevatorSubList?.querySelectorAll('.elevator-link') || [];
 
         links.forEach((link) => {
-          link.classList.toggle('active', link.dataset.target === id);
+          const isActive = link.dataset.target === id;
+          link.classList.toggle('active', isActive);
+          if (isActive) {
+            link.setAttribute('aria-current', 'location');
+          } else {
+            link.removeAttribute('aria-current');
+          }
         });
       }
 
@@ -1916,7 +1936,6 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
       }, { passive: true });
       updateBackTop();
 
-      const effectToggleBtn = document.getElementById('effect-toggle');
       if (effectToggleBtn) {
         effectToggleBtn.addEventListener('click', () => {
           const root = document.documentElement;
@@ -1927,10 +1946,10 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
             root.setAttribute('data-no-effects', 'true');
             localStorage.setItem('no-effects', 'true');
           }
+          syncToggleButtonA11yState();
         });
       }
 
-      const themeToggleBtn = document.getElementById('theme-toggle');
       if (themeToggleBtn) {
         themeToggleBtn.addEventListener('click', () => {
           const root = document.documentElement;
@@ -1941,8 +1960,11 @@ const recentCategoryValue = resourcesByCategory[0]?.category || '';
             root.setAttribute('data-theme', 'light');
             localStorage.setItem('theme', 'light');
           }
+          syncToggleButtonA11yState();
         });
       }
+
+      syncToggleButtonA11yState();
 
       const supportsCursorGlow = !prefersReducedMotion && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
       if (supportsCursorGlow) {

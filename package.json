@@ -8,8 +8,14 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "typecheck": "astro check",
+    "check": "npm run typecheck && npm run build",
     "preview": "astro preview",
     "astro": "astro"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
     "astro": "^6.0.2"
