@@ -7,6 +7,7 @@ interface ResourceItem {
   subcategory?: string;
   searchableName?: string;
   sourceCategoryLabel?: string;
+  iconPath?: string;
 }
 
 interface Props {
@@ -18,10 +19,46 @@ const { item, categoryLabel } = Astro.props;
 
 const getDomain = (url: string) => {
   try {
-    return new URL(url).hostname;
+    return new URL(url).hostname.replace(/^www\./, '');
   } catch {
     return '';
   }
+};
+
+const hashToHue = (seed: string) => {
+  let hash = 0;
+  for (let i = 0; i < seed.length; i += 1) {
+    hash = ((hash * 31) + seed.charCodeAt(i)) >>> 0;
+  }
+  return hash % 360;
+};
+
+const escapeSvgText = (value: string) => value
+  .replace(/&/g, '&amp;')
+  .replace(/</g, '&lt;')
+  .replace(/>/g, '&gt;')
+  .replace(/"/g, '&quot;')
+  .replace(/'/g, '&#39;');
+
+const getIconInitial = (seed: string) => {
+  const first = Array.from(seed.trim())[0] || 'S';
+  return escapeSvgText(first.toUpperCase());
+};
+
+const buildGeneratedIconDataUrl = (seed: string) => {
+  const hue = hashToHue(seed || 'site');
+  const hueAlt = (hue + 34) % 360;
+  const initial = getIconInitial(seed || 'S');
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="${initial}"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="hsl(${hue} 72% 56%)"/><stop offset="100%" stop-color="hsl(${hueAlt} 68% 44%)"/></linearGradient></defs><rect width="64" height="64" rx="14" fill="url(#g)"/><text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" fill="rgba(255,255,255,0.96)" font-family="Segoe UI,Arial,sans-serif" font-weight="700" font-size="30">${initial}</text></svg>`;
+  return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
+};
+
+const resolveIconSrc = (resource: ResourceItem) => {
+  if (resource.iconPath) {
+    return resource.iconPath;
+  }
+  const seed = getDomain(resource.url) || resource.title || 'site';
+  return buildGeneratedIconDataUrl(seed);
 };
 ---
 
@@ -37,11 +74,10 @@ const getDomain = (url: string) => {
   <div class="card-top">
     <div class="icon-box">
       <img
-        src={`https://icon.horse/icon/${getDomain(item.url)}`}
-        alt={item.title}
+        src={resolveIconSrc(item)}
+        alt=""
         loading="lazy"
         decoding="async"
-        onerror={`this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=${getDomain(item.url)}&sz=64';`}
       />
     </div>
     <div class="info">
