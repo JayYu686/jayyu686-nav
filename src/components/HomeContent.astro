@@ -100,8 +100,15 @@ const structuredData = {
       (function () {
         try {
           var localNoEffects = localStorage.getItem('no-effects');
+          var hasStoredNoEffectsPreference = localNoEffects === 'true' || localNoEffects === 'false';
           if (localNoEffects === 'true') {
             document.documentElement.setAttribute('data-no-effects', 'true');
+          } else if (!hasStoredNoEffectsPreference) {
+            var lowMemoryDevice = typeof navigator.deviceMemory === 'number' && navigator.deviceMemory <= 4;
+            var lowCpuDevice = typeof navigator.hardwareConcurrency === 'number' && navigator.hardwareConcurrency <= 4;
+            if (lowMemoryDevice || lowCpuDevice) {
+              document.documentElement.setAttribute('data-no-effects', 'true');
+            }
           }
 
           var localTheme = localStorage.getItem('theme');
@@ -1367,12 +1374,14 @@ const structuredData = {
       const URL_PARAM_SUBCATEGORY = 'subcategory';
       const URL_PARAM_QUERY = 'q';
       const URL_SYNC_DEBOUNCE_MS = 180;
+      const INPUT_FILTER_DEBOUNCE_MS = 120;
       const RECENT_LIMIT_DEFAULT = 10;
       const recentLimitFromData = Number.parseInt(rootWrap?.dataset.recentLimit || '', 10);
       const RECENT_LIMIT = Number.isFinite(recentLimitFromData) && recentLimitFromData > 0 ? recentLimitFromData : RECENT_LIMIT_DEFAULT;
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       const rootElement = document.documentElement;
       const getScrollBehavior = () => (prefersReducedMotion ? 'auto' : 'smooth');
+      const cardSearchIndex = new Map();
 
       function syncToggleButtonA11yState() {
         if (effectToggleBtn) {
@@ -1390,9 +1399,16 @@ const structuredData = {
       const observedTargets = new Set();
       const availableCategories = new Set(Array.from(btns).map((btn) => btn.dataset.cat || '').filter(Boolean));
       let urlSyncTimer = null;
+      let inputFilterTimer = null;
+      let observerRefreshFrame = null;
 
       cards.forEach((card, index) => {
         card.dataset.order = String(index);
+        cardSearchIndex.set(card, {
+          titleText: normalizeText(card.querySelector('.title')?.textContent),
+          descText: normalizeText(card.querySelector('.desc')?.textContent),
+          aliasText: normalizeText(card.dataset.name || ''),
+        });
       });
 
       function setActiveCategoryButton() {
@@ -1415,9 +1431,10 @@ const structuredData = {
           return 1;
         }
 
-        const titleText = normalizeText(card.querySelector('.title')?.textContent);
-        const descText = normalizeText(card.querySelector('.desc')?.textContent);
-        const aliasText = normalizeText(card.dataset.name || '');
+        const indexedText = cardSearchIndex.get(card);
+        const titleText = indexedText?.titleText || '';
+        const descText = indexedText?.descText || '';
+        const aliasText = indexedText?.aliasText || '';
         const fullQuery = terms.join(' ');
         let score = 0;
 
@@ -1525,9 +1542,8 @@ const structuredData = {
               return;
             }
 
-            const blockCards = Array.from(grid.querySelectorAll('.card'));
-            blockCards
-              .sort((a, b) => {
+            const originalOrder = Array.from(grid.querySelectorAll('.card'));
+            const sortedCards = originalOrder.slice().sort((a, b) => {
                 const visibleA = a.style.display !== 'none';
                 const visibleB = b.style.display !== 'none';
                 if (visibleA !== visibleB) {
@@ -1543,9 +1559,30 @@ const structuredData = {
                 const orderA = Number.parseInt(a.dataset.order || '0', 10);
                 const orderB = Number.parseInt(b.dataset.order || '0', 10);
                 return orderA - orderB;
-              })
-              .forEach((card) => grid.appendChild(card));
+              });
+
+            const orderChanged = sortedCards.some((card, index) => card !== originalOrder[index]);
+            if (orderChanged) {
+              sortedCards.forEach((card) => grid.appendChild(card));
+            }
           });
+        });
+      }
+
+      function cancelQueuedFilter() {
+        if (inputFilterTimer) {
+          window.clearTimeout(inputFilterTimer);
+          inputFilterTimer = null;
+        }
+      }
+
+      function scheduleObserverRefresh() {
+        if (observerRefreshFrame) {
+          window.cancelAnimationFrame(observerRefreshFrame);
+        }
+        observerRefreshFrame = window.requestAnimationFrame(() => {
+          observerRefreshFrame = null;
+          refreshObserverTargets();
         });
       }
 
@@ -1565,6 +1602,26 @@ const structuredData = {
         } catch (error) {}
       }
 
+      function getRecentIconInitial(value) {
+        const normalized = (value || '').trim();
+        if (!normalized) {
+          return 'S';
+        }
+        return normalized.charAt(0).toUpperCase();
+      }
+
+      function buildRecentIconDataUrl(seed) {
+        const normalizedSeed = String(seed || 'site');
+        const initial = getRecentIconInitial(normalizedSeed);
+        let hue = 0;
+        for (let i = 0; i < normalizedSeed.length; i++) {
+          hue = (hue + normalizedSeed.charCodeAt(i) * (i + 5)) % 360;
+        }
+        const hueAlt = (hue + 28) % 360;
+        const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="${initial}"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="hsl(${hue} 70% 56%)"/><stop offset="100%" stop-color="hsl(${hueAlt} 66% 44%)"/></linearGradient></defs><rect width="64" height="64" rx="14" fill="url(#g)"/><text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" fill="rgba(255,255,255,0.96)" font-family="Segoe UI,Arial,sans-serif" font-weight="700" font-size="32">${initial}</text></svg>`;
+        return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
+      }
+
       function renderRecentVisits() {
         if (!recentWrap || !recentList) {
           return;
@@ -1572,6 +1629,7 @@ const structuredData = {
 
         const list = loadRecentVisits();
         recentList.innerHTML = '';
+        const fragment = document.createDocumentFragment();
 
         if (!list.length) {
           recentWrap.hidden = true;
@@ -1603,24 +1661,17 @@ const structuredData = {
           icon.alt = item.title;
           icon.loading = 'lazy';
           icon.decoding = 'async';
-          try {
-            const host = new URL(item.url).hostname;
-            icon.src = 'https://icon.horse/icon/' + host;
-            icon.onerror = function () {
-              this.onerror = null;
-              this.src = 'https://www.google.com/s2/favicons?domain=' + host + '&sz=64';
-            };
-          } catch (error) {
-            icon.src = 'https://www.google.com/s2/favicons?domain=example.com&sz=64';
-          }
+          icon.src = buildRecentIconDataUrl(item.title || item.url);
 
           const iconWrap = document.createElement('span');
           iconWrap.className = 'recent-icon-wrap';
           iconWrap.appendChild(icon);
 
           link.appendChild(iconWrap);
-          recentList.appendChild(link);
+          fragment.appendChild(link);
         });
+
+        recentList.appendChild(fragment);
       }
 
       function recordVisit(url, title) {
@@ -1762,6 +1813,7 @@ const structuredData = {
         }
 
         const terms = tokenizeQuery(input.value);
+        const shouldSortByScore = terms.length > 0;
         let visibleCount = 0;
 
         cards.forEach((card) => {
@@ -1818,14 +1870,17 @@ const structuredData = {
           });
         }
 
-        sortCardsInVisibleBlocks();
+        if (shouldSortByScore) {
+          sortCardsInVisibleBlocks();
+        }
         empty.style.display = visibleCount === 0 ? 'block' : 'none';
         syncUrlState(urlSyncMode);
-        refreshObserverTargets();
+        scheduleObserverRefresh();
       }
 
       btns.forEach((btn) => {
         btn.addEventListener('click', () => {
+          cancelQueuedFilter();
           currentCat = btn.dataset.cat || allCategory;
           currentSubcategory = allSubcategory;
           setActiveCategoryButton();
@@ -1836,10 +1891,17 @@ const structuredData = {
       });
 
       if (input) {
-        input.addEventListener('input', () => applyFilters('debounced'));
+        input.addEventListener('input', () => {
+          cancelQueuedFilter();
+          inputFilterTimer = window.setTimeout(() => {
+            inputFilterTimer = null;
+            applyFilters('debounced');
+          }, INPUT_FILTER_DEBOUNCE_MS);
+        });
       }
 
       window.addEventListener('popstate', () => {
+        cancelQueuedFilter();
         hydrateStateFromUrl();
         renderSubfilters();
         renderElevatorMode();
@@ -1858,6 +1920,7 @@ const structuredData = {
           }
           currentSubcategory = target.dataset.subcategory || allSubcategory;
           renderSubfilters();
+          cancelQueuedFilter();
           applyFilters('immediate');
         });
       }
@@ -2012,7 +2075,8 @@ const structuredData = {
 
       syncToggleButtonA11yState();
 
-      const supportsCursorGlow = !prefersReducedMotion && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+      const noEffectsEnabledAtBoot = rootElement.getAttribute('data-no-effects') === 'true';
+      const supportsCursorGlow = !noEffectsEnabledAtBoot && !prefersReducedMotion && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
       if (supportsCursorGlow) {
         document.body.classList.add('cursor-glow-enabled', 'cursor-glow-idle');
         let nextCursorX = window.innerWidth * 0.5;
