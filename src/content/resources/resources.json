@@ -3183,6 +3183,23 @@
           "GitHub"
         ],
         "note": "新增优质资源"
+      },
+      {
+        "title": "agent-qa",
+        "url": "https://vostride.com",
+        "summary": "自然语言 Web、Android 和 iOS 测试，具备 memidex 持久记忆、经验证的自我改进与可审查的运行证据。",
+        "category": "实用工具",
+        "subcategory": "开发效率",
+        "subcategory_en": "Developer Productivity",
+        "title_en": "agent-qa",
+        "summary_en": "Natural-language web, Android and iOS testing with memidex persistent memory, validated self-improvement, and reviewable run evidence.",
+        "tags": [
+          "AI",
+          "测试",
+          "CLI",
+          "MCP"
+        ],
+        "note": "FSL-1.1-ALv2；模型及服务费用随配置和用量变化。"
       }
     ]
   }
